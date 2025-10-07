@@ -1,0 +1,2476 @@
+"table","code","name"
+analysis_granularity_types,EVENT_CALL,Single Call Detection
+analysis_granularity_types,EVENT_ENCOUNTER,Individual or Group Detection
+analysis_granularity_types,INTERVAL,Binned Time Intervals
+analysis_processing_types,POST-PROCESSED,Post-Processed
+analysis_processing_types,REAL-TIME,Real-Time
+analysis_quality_types,FULLY_VALIDATED,Fully Validated
+analysis_quality_types,NOT_VALIDATED,Not Validated
+analysis_quality_types,PARTIALLY_VALIDATED,Partially Validated
+behaviors,COMPETION,Competition
+behaviors,CONTACT,Contact
+behaviors,FORAGING,Foraging
+behaviors,INDIVIDUAL_ID,Individual Identification
+behaviors,MATING,Mating
+behaviors,MIGRATION,Migration
+behaviors,MOM_CALF,Mother/Calf Interaction
+behaviors,PREDATION,Predation Response Call
+behaviors,RESTING,Resting
+behaviors,SAG,Surface Active Group (SAG)
+behaviors,SOCIAL,Socializing
+behaviors,STRESS,Stress
+behaviors,TRAVELING,Traveling
+call_types,BESE_MIX,Bearded seal mixed calls
+call_types,BLWH_A,Blue whale A calls
+call_types,BLWH_ARCHD,Blue whale arch/D call
+call_types,BLWH_B,Blue whale B calls
+call_types,BLWH_D,Blue whale D calls
+call_types,BLWH_MIX,"Blue whale mix of A/B/AB song, arch, and D calls"
+call_types,BLWH_SONG,Blue whale A/B/AB song
+call_types,BOWH_MIX,Bowhead whale mixed calls
+call_types,BOWH_NONSONG,Bowhead whale non-song calls
+call_types,BOWH_SONG,Bowhead whale song
+call_types,BRWH_DS,Bryde's whale downsweeps
+call_types,BRWH_MIX,Bryde's whale mixed call types
+call_types,BRWH_TONAL,Bryde's whale tonal calls
+call_types,COD_GRUNT,Cod grunt
+call_types,FIWH_130HZ,Fin whale 130-Hz note
+call_types,FIWH_20HZ,Fin whale 20-Hz pulse
+call_types,FIWH_40HZ,Fin whale 40-Hz downsweep
+call_types,FIWH_MIX,Fin whale mixed call types
+call_types,GRWH_CALL1,Gray whale Class 1 call type
+call_types,GRWH_CALL2,Gray whale Class 2 call type
+call_types,GRWH_CALL3,Gray whale Class 3 call type
+call_types,GRWH_CALL4,Gray whale Class 4 call type
+call_types,GRWH_MIX,Gray whale mixed calls
+call_types,GUNSHOT,Gunshot-like sound produced by a whale
+call_types,HUWH_MIX,Humpback whale song and social
+call_types,HUWH_SOCIAL,Humpback whale social
+call_types,HUWH_SONG,Humpback whale song
+call_types,MIWH_BOING,Minke whale boing
+call_types,MIWH_DS,Minke whale downsweep produced by both common and Antarctic minke whales
+call_types,MIWH_PT,Minke whale pulse train (general)
+call_types,MIWH_PTC,Minke whale pulse train/constant
+call_types,MIWH_PTSD,Minke whale pulse train/slow-down
+call_types,MIWH_PTSU,Minke whale pulse train/speed-up
+call_types,MIWH_STAR,Minke whale Star Wars vocalization
+call_types,MIWHAN_BIODUCK,Antarctic minke whale bio-duck call
+call_types,OD_BURST_PULSE,Odontocete burst pulse
+call_types,OD_BUZZ,Generic odontocete buzz
+call_types,OD_CLICK_FM,Frequency modulated upsweep (e.g. beaked whales)
+call_types,OD_CLICK_IMP,Impulsive click type (few cycles in waveform)
+call_types,OD_CLICK_MIX,Mix of click types (e.g. FM clicks and impulsive clicks)
+call_types,OD_CLICK_NBHF,Narrow band high frequency click
+call_types,OD_LF_TONE,Odontocete low frequency (<3 kHz) tonal call
+call_types,OD_MIX,Mix of a bunch odontocete call types
+call_types,OD_PULSE,Odontocete pulsed call for biphonating species
+call_types,OD_WHIS,Generic whistles
+call_types,OD_WHIS_HF,High frequency dolphin whistles (>32 kHz)
+call_types,OD_WHIS_MIX,Combination of whistle types (e.g. generic and signature)
+call_types,OD_WHIS_SIG,Signature whistles
+call_types,PWDO_CLICKA,Pacific white-sided dolphin A click
+call_types,PWDO_CLICKB,Pacific white-sided dolphin B click
+call_types,RCWH_DS,Rice's whale downsweep
+call_types,RCWH_MOAN,Rice's whale moan
+call_types,RW_CTW,"Right whale constant, tonal, or waver call"
+call_types,RW_DC,Right whale downcall
+call_types,RW_MIX,Right whale mixed call types
+call_types,RW_MOAN,Right whale moan
+call_types,RW_SCREAM,Right whale scream or scream/warble
+call_types,RW_UPCALL,Right whale upcall
+call_types,SEWH_DS39HZ,Sei whale 39-21 Hz downsweep
+call_types,SEWH_DS80HZ,Sei whale 80-30 Hz downsweep
+call_types,SPWH_CODA,Sperm whale coda
+call_types,SPWH_CREAK,Sperm whale creak
+call_types,SPWH_FORG,Sperm whale foraging mix
+call_types,SPWH_MIX,Sperm whale social mix
+call_types,SPWH_SLCC,Sperm whale slow clicks-clangs
+call_types,SPWH_SOCBZ,Sperm whale social buzz
+call_types,SPWH_SQUEAL,Sperm whale squeal
+call_types,SPWH_TRUMPET,Sperm whale trumpet
+call_types,SPWH_USC,Sperm whale usual click
+call_types,WALR_MIX,Walrus mixed calls
+call_types_sound_sources,BESE_MIX:BESE,BESE_MIX:BESE
+call_types_sound_sources,BLWH_A:BLWH,BLWH_A:BLWH
+call_types_sound_sources,BLWH_ARCHD:BLWH,BLWH_ARCHD:BLWH
+call_types_sound_sources,BLWH_B:BLWH,BLWH_B:BLWH
+call_types_sound_sources,BLWH_D:BLWH,BLWH_D:BLWH
+call_types_sound_sources,BLWH_MIX:BLWH,BLWH_MIX:BLWH
+call_types_sound_sources,BLWH_SONG:BLWH,BLWH_SONG:BLWH
+call_types_sound_sources,BOWH_MIX:BOWH,BOWH_MIX:BOWH
+call_types_sound_sources,BOWH_NONSONG:BOWH,BOWH_NONSONG:BOWH
+call_types_sound_sources,BOWH_SONG:BOWH,BOWH_SONG:BOWH
+call_types_sound_sources,BRWH_DS:BRWH,BRWH_DS:BRWH
+call_types_sound_sources,BRWH_MIX:BRWH,BRWH_MIX:BRWH
+call_types_sound_sources,BRWH_TONAL:BRWH,BRWH_TONAL:BRWH
+call_types_sound_sources,COD_GRUNT:ATCO,COD_GRUNT:ATCO
+call_types_sound_sources,COD_GRUNT:NSCO,COD_GRUNT:NSCO
+call_types_sound_sources,COD_GRUNT:PACO,COD_GRUNT:PACO
+call_types_sound_sources,FIWH_130HZ:FIWH,FIWH_130HZ:FIWH
+call_types_sound_sources,FIWH_20HZ:FIWH,FIWH_20HZ:FIWH
+call_types_sound_sources,FIWH_40HZ:FIWH,FIWH_40HZ:FIWH
+call_types_sound_sources,FIWH_MIX:FIWH,FIWH_MIX:FIWH
+call_types_sound_sources,GRWH_CALL1:GRWH,GRWH_CALL1:GRWH
+call_types_sound_sources,GRWH_CALL2:GRWH,GRWH_CALL2:GRWH
+call_types_sound_sources,GRWH_CALL3:GRWH,GRWH_CALL3:GRWH
+call_types_sound_sources,GRWH_CALL4:GRWH,GRWH_CALL4:GRWH
+call_types_sound_sources,GRWH_MIX:GRWH,GRWH_MIX:GRWH
+call_types_sound_sources,GUNSHOT:BOWH,GUNSHOT:BOWH
+call_types_sound_sources,GUNSHOT:HUWH,GUNSHOT:HUWH
+call_types_sound_sources,GUNSHOT:NPRW,GUNSHOT:NPRW
+call_types_sound_sources,GUNSHOT:RIWH,GUNSHOT:RIWH
+call_types_sound_sources,GUNSHOT:SRWH,GUNSHOT:SRWH
+call_types_sound_sources,HUWH_MIX:HUWH,HUWH_MIX:HUWH
+call_types_sound_sources,HUWH_SOCIAL:HUWH,HUWH_SOCIAL:HUWH
+call_types_sound_sources,HUWH_SONG:HUWH,HUWH_SONG:HUWH
+call_types_sound_sources,MIWH_BOING:MIWH,MIWH_BOING:MIWH
+call_types_sound_sources,MIWH_DS:MIWH,MIWH_DS:MIWH
+call_types_sound_sources,MIWH_DS:MIWHAN,MIWH_DS:MIWHAN
+call_types_sound_sources,MIWH_PT:MIWH,MIWH_PT:MIWH
+call_types_sound_sources,MIWH_PTC:MIWH,MIWH_PTC:MIWH
+call_types_sound_sources,MIWH_PTSD:MIWH,MIWH_PTSD:MIWH
+call_types_sound_sources,MIWH_PTSU:MIWH,MIWH_PTSU:MIWH
+call_types_sound_sources,MIWH_STAR:MIWH,MIWH_STAR:MIWH
+call_types_sound_sources,MIWHAN_BIODUCK:MIWHAN,MIWHAN_BIODUCK:MIWHAN
+call_types_sound_sources,OD_BURST_PULSE:AHDO,OD_BURST_PULSE:AHDO
+call_types_sound_sources,OD_BURST_PULSE:ANBW,OD_BURST_PULSE:ANBW
+call_types_sound_sources,OD_BURST_PULSE:ARBW,OD_BURST_PULSE:ARBW
+call_types_sound_sources,OD_BURST_PULSE:ARDO,OD_BURST_PULSE:ARDO
+call_types_sound_sources,OD_BURST_PULSE:ASDO,OD_BURST_PULSE:ASDO
+call_types_sound_sources,OD_BURST_PULSE:AUSDO,OD_BURST_PULSE:AUSDO
+call_types_sound_sources,OD_BURST_PULSE:BBWH,OD_BURST_PULSE:BBWH
+call_types_sound_sources,OD_BURST_PULSE:BELU,OD_BURST_PULSE:BELU
+call_types_sound_sources,OD_BURST_PULSE:BLBW,OD_BURST_PULSE:BLBW
+call_types_sound_sources,OD_BURST_PULSE:BLDO,OD_BURST_PULSE:BLDO
+call_types_sound_sources,OD_BURST_PULSE:BODO,OD_BURST_PULSE:BODO
+call_types_sound_sources,OD_BURST_PULSE:BODOCOCA,OD_BURST_PULSE:BODOCOCA
+call_types_sound_sources,OD_BURST_PULSE:BODOOFCA,OD_BURST_PULSE:BODOOFCA
+call_types_sound_sources,OD_BURST_PULSE:BOGR,OD_BURST_PULSE:BOGR
+call_types_sound_sources,OD_BURST_PULSE:BOSP,OD_BURST_PULSE:BOSP
+call_types_sound_sources,OD_BURST_PULSE:BRDO,OD_BURST_PULSE:BRDO
+call_types_sound_sources,OD_BURST_PULSE:BUPO,OD_BURST_PULSE:BUPO
+call_types_sound_sources,OD_BURST_PULSE:BW29,OD_BURST_PULSE:BW29
+call_types_sound_sources,OD_BURST_PULSE:BW39V,OD_BURST_PULSE:BW39V
+call_types_sound_sources,OD_BURST_PULSE:BW41,OD_BURST_PULSE:BW41
+call_types_sound_sources,OD_BURST_PULSE:BW43,OD_BURST_PULSE:BW43
+call_types_sound_sources,OD_BURST_PULSE:BW53,OD_BURST_PULSE:BW53
+call_types_sound_sources,OD_BURST_PULSE:BW58,OD_BURST_PULSE:BW58
+call_types_sound_sources,OD_BURST_PULSE:BW70,OD_BURST_PULSE:BW70
+call_types_sound_sources,OD_BURST_PULSE:BWB,OD_BURST_PULSE:BWB
+call_types_sound_sources,OD_BURST_PULSE:BWC,OD_BURST_PULSE:BWC
+call_types_sound_sources,OD_BURST_PULSE:BWG,OD_BURST_PULSE:BWG
+call_types_sound_sources,OD_BURST_PULSE:CASP,OD_BURST_PULSE:CASP
+call_types_sound_sources,OD_BURST_PULSE:CLDO,OD_BURST_PULSE:CLDO
+call_types_sound_sources,OD_BURST_PULSE:CODO,OD_BURST_PULSE:CODO
+call_types_sound_sources,OD_BURST_PULSE:CUBW,OD_BURST_PULSE:CUBW
+call_types_sound_sources,OD_BURST_PULSE:DAPO,OD_BURST_PULSE:DAPO
+call_types_sound_sources,OD_BURST_PULSE:DEBW,OD_BURST_PULSE:DEBW
+call_types_sound_sources,OD_BURST_PULSE:DESP,OD_BURST_PULSE:DESP
+call_types_sound_sources,OD_BURST_PULSE:DSDO,OD_BURST_PULSE:DSDO
+call_types_sound_sources,OD_BURST_PULSE:DSWH,OD_BURST_PULSE:DSWH
+call_types_sound_sources,OD_BURST_PULSE:DUDO,OD_BURST_PULSE:DUDO
+call_types_sound_sources,OD_BURST_PULSE:ESDO,OD_BURST_PULSE:ESDO
+call_types_sound_sources,OD_BURST_PULSE:FIPO,OD_BURST_PULSE:FIPO
+call_types_sound_sources,OD_BURST_PULSE:FIPOEA,OD_BURST_PULSE:FIPOEA
+call_types_sound_sources,OD_BURST_PULSE:FIPOIP,OD_BURST_PULSE:FIPOIP
+call_types_sound_sources,OD_BURST_PULSE:FIPOYA,OD_BURST_PULSE:FIPOYA
+call_types_sound_sources,OD_BURST_PULSE:FKWH,OD_BURST_PULSE:FKWH
+call_types_sound_sources,OD_BURST_PULSE:FRAN,OD_BURST_PULSE:FRAN
+call_types_sound_sources,OD_BURST_PULSE:FRDO,OD_BURST_PULSE:FRDO
+call_types_sound_sources,OD_BURST_PULSE:GBWH,OD_BURST_PULSE:GBWH
+call_types_sound_sources,OD_BURST_PULSE:GEBW,OD_BURST_PULSE:GEBW
+call_types_sound_sources,OD_BURST_PULSE:GOBW,OD_BURST_PULSE:GOBW
+call_types_sound_sources,OD_BURST_PULSE:GRAM,OD_BURST_PULSE:GRAM
+call_types_sound_sources,OD_BURST_PULSE:GRDO,OD_BURST_PULSE:GRDO
+call_types_sound_sources,OD_BURST_PULSE:GSDO,OD_BURST_PULSE:GSDO
+call_types_sound_sources,OD_BURST_PULSE:GTBW,OD_BURST_PULSE:GTBW
+call_types_sound_sources,OD_BURST_PULSE:GUDO,OD_BURST_PULSE:GUDO
+call_types_sound_sources,OD_BURST_PULSE:HAPO,OD_BURST_PULSE:HAPO
+call_types_sound_sources,OD_BURST_PULSE:HEADO,OD_BURST_PULSE:HEADO
+call_types_sound_sources,OD_BURST_PULSE:HEBW,OD_BURST_PULSE:HEBW
+call_types_sound_sources,OD_BURST_PULSE:HECDO,OD_BURST_PULSE:HECDO
+call_types_sound_sources,OD_BURST_PULSE:HODO,OD_BURST_PULSE:HODO
+call_types_sound_sources,OD_BURST_PULSE:HUBW,OD_BURST_PULSE:HUBW
+call_types_sound_sources,OD_BURST_PULSE:INRDO,OD_BURST_PULSE:INRDO
+call_types_sound_sources,OD_BURST_PULSE:IOBD,OD_BURST_PULSE:IOBD
+call_types_sound_sources,OD_BURST_PULSE:IPHD,OD_BURST_PULSE:IPHD
+call_types_sound_sources,OD_BURST_PULSE:IRRDO,OD_BURST_PULSE:IRRDO
+call_types_sound_sources,OD_BURST_PULSE:KIWH,OD_BURST_PULSE:KIWH
+call_types_sound_sources,OD_BURST_PULSE:KIWHAANT,OD_BURST_PULSE:KIWHAANT
+call_types_sound_sources,OD_BURST_PULSE:KIWHBANT,OD_BURST_PULSE:KIWHBANT
+call_types_sound_sources,OD_BURST_PULSE:KIWHCANT,OD_BURST_PULSE:KIWHCANT
+call_types_sound_sources,OD_BURST_PULSE:KIWHOF,OD_BURST_PULSE:KIWHOF
+call_types_sound_sources,OD_BURST_PULSE:KIWHRE,OD_BURST_PULSE:KIWHRE
+call_types_sound_sources,OD_BURST_PULSE:KIWHTR,OD_BURST_PULSE:KIWHTR
+call_types_sound_sources,OD_BURST_PULSE:LBCD,OD_BURST_PULSE:LBCD
+call_types_sound_sources,OD_BURST_PULSE:LBWH,OD_BURST_PULSE:LBWH
+call_types_sound_sources,OD_BURST_PULSE:LFPW,OD_BURST_PULSE:LFPW
+call_types_sound_sources,OD_BURST_PULSE:MEPK,OD_BURST_PULSE:MEPK
+call_types_sound_sources,OD_BURST_PULSE:MEWH,OD_BURST_PULSE:MEWH
+call_types_sound_sources,OD_BURST_PULSE:MMME,OD_BURST_PULSE:MMME
+call_types_sound_sources,OD_BURST_PULSE:NAWH,OD_BURST_PULSE:NAWH
+call_types_sound_sources,OD_BURST_PULSE:NBWH,OD_BURST_PULSE:NBWH
+call_types_sound_sources,OD_BURST_PULSE:NRWD,OD_BURST_PULSE:NRWD
+call_types_sound_sources,OD_BURST_PULSE:OBDO,OD_BURST_PULSE:OBDO
+call_types_sound_sources,OD_BURST_PULSE:PEBW,OD_BURST_PULSE:PEBW
+call_types_sound_sources,OD_BURST_PULSE:PEDO,OD_BURST_PULSE:PEDO
+call_types_sound_sources,OD_BURST_PULSE:PIWH,OD_BURST_PULSE:PIWH
+call_types_sound_sources,OD_BURST_PULSE:PSDO,OD_BURST_PULSE:PSDO
+call_types_sound_sources,OD_BURST_PULSE:PSWH,OD_BURST_PULSE:PSWH
+call_types_sound_sources,OD_BURST_PULSE:PWDO,OD_BURST_PULSE:PWDO
+call_types_sound_sources,OD_BURST_PULSE:PYBW,OD_BURST_PULSE:PYBW
+call_types_sound_sources,OD_BURST_PULSE:PYKW,OD_BURST_PULSE:PYKW
+call_types_sound_sources,OD_BURST_PULSE:RTDO,OD_BURST_PULSE:RTDO
+call_types_sound_sources,OD_BURST_PULSE:SADO,OD_BURST_PULSE:SADO
+call_types_sound_sources,OD_BURST_PULSE:SBWH,OD_BURST_PULSE:SBWH
+call_types_sound_sources,OD_BURST_PULSE:SFPW,OD_BURST_PULSE:SFPW
+call_types_sound_sources,OD_BURST_PULSE:SHBW,OD_BURST_PULSE:SHBW
+call_types_sound_sources,OD_BURST_PULSE:SNDO,OD_BURST_PULSE:SNDO
+call_types_sound_sources,OD_BURST_PULSE:SOBW,OD_BURST_PULSE:SOBW
+call_types_sound_sources,OD_BURST_PULSE:SPDOOF,OD_BURST_PULSE:SPDOOF
+call_types_sound_sources,OD_BURST_PULSE:SPDOPA,OD_BURST_PULSE:SPDOPA
+call_types_sound_sources,OD_BURST_PULSE:SPPO,OD_BURST_PULSE:SPPO
+call_types_sound_sources,OD_BURST_PULSE:SRWD,OD_BURST_PULSE:SRWD
+call_types_sound_sources,OD_BURST_PULSE:SSDO,OD_BURST_PULSE:SSDO
+call_types_sound_sources,OD_BURST_PULSE:STBWH,OD_BURST_PULSE:STBWH
+call_types_sound_sources,OD_BURST_PULSE:STDO,OD_BURST_PULSE:STDO
+call_types_sound_sources,OD_BURST_PULSE:STTWH,OD_BURST_PULSE:STTWH
+call_types_sound_sources,OD_BURST_PULSE:STWH,OD_BURST_PULSE:STWH
+call_types_sound_sources,OD_BURST_PULSE:TMSD,OD_BURST_PULSE:TMSD
+call_types_sound_sources,OD_BURST_PULSE:TRBW,OD_BURST_PULSE:TRBW
+call_types_sound_sources,OD_BURST_PULSE:TUDO,OD_BURST_PULSE:TUDO
+call_types_sound_sources,OD_BURST_PULSE:UBWA,OD_BURST_PULSE:UBWA
+call_types_sound_sources,OD_BURST_PULSE:UECASD,OD_BURST_PULSE:UECASD
+call_types_sound_sources,OD_BURST_PULSE:UNBD,OD_BURST_PULSE:UNBD
+call_types_sound_sources,OD_BURST_PULSE:UNBF,OD_BURST_PULSE:UNBF
+call_types_sound_sources,OD_BURST_PULSE:UNBW,OD_BURST_PULSE:UNBW
+call_types_sound_sources,OD_BURST_PULSE:UNCW,OD_BURST_PULSE:UNCW
+call_types_sound_sources,OD_BURST_PULSE:UNDO,OD_BURST_PULSE:UNDO
+call_types_sound_sources,OD_BURST_PULSE:UNDS,OD_BURST_PULSE:UNDS
+call_types_sound_sources,OD_BURST_PULSE:UNKO,OD_BURST_PULSE:UNKO
+call_types_sound_sources,OD_BURST_PULSE:UNLAG,OD_BURST_PULSE:UNLAG
+call_types_sound_sources,OD_BURST_PULSE:UNLD,OD_BURST_PULSE:UNLD
+call_types_sound_sources,OD_BURST_PULSE:UNMD,OD_BURST_PULSE:UNMD
+call_types_sound_sources,OD_BURST_PULSE:UNME,OD_BURST_PULSE:UNME
+call_types_sound_sources,OD_BURST_PULSE:UNPO,OD_BURST_PULSE:UNPO
+call_types_sound_sources,OD_BURST_PULSE:UNRB,OD_BURST_PULSE:UNRB
+call_types_sound_sources,OD_BURST_PULSE:UNSB,OD_BURST_PULSE:UNSB
+call_types_sound_sources,OD_BURST_PULSE:UNSBW,OD_BURST_PULSE:UNSBW
+call_types_sound_sources,OD_BURST_PULSE:UNSC,OD_BURST_PULSE:UNSC
+call_types_sound_sources,OD_BURST_PULSE:UNSPDO,OD_BURST_PULSE:UNSPDO
+call_types_sound_sources,OD_BURST_PULSE:VAQU,OD_BURST_PULSE:VAQU
+call_types_sound_sources,OD_BURST_PULSE:WBDO,OD_BURST_PULSE:WBDO
+call_types_sound_sources,OD_BURST_PULSE:WBSDO,OD_BURST_PULSE:WBSDO
+call_types_sound_sources,OD_BURST_PULSE:WSDO,OD_BURST_PULSE:WSDO
+call_types_sound_sources,OD_BUZZ:AHDO,OD_BUZZ:AHDO
+call_types_sound_sources,OD_BUZZ:ANBW,OD_BUZZ:ANBW
+call_types_sound_sources,OD_BUZZ:ARBW,OD_BUZZ:ARBW
+call_types_sound_sources,OD_BUZZ:ARDO,OD_BUZZ:ARDO
+call_types_sound_sources,OD_BUZZ:ASDO,OD_BUZZ:ASDO
+call_types_sound_sources,OD_BUZZ:AUSDO,OD_BUZZ:AUSDO
+call_types_sound_sources,OD_BUZZ:BBWH,OD_BUZZ:BBWH
+call_types_sound_sources,OD_BUZZ:BELU,OD_BUZZ:BELU
+call_types_sound_sources,OD_BUZZ:BLBW,OD_BUZZ:BLBW
+call_types_sound_sources,OD_BUZZ:BLDO,OD_BUZZ:BLDO
+call_types_sound_sources,OD_BUZZ:BODO,OD_BUZZ:BODO
+call_types_sound_sources,OD_BUZZ:BODOCOCA,OD_BUZZ:BODOCOCA
+call_types_sound_sources,OD_BUZZ:BODOOFCA,OD_BUZZ:BODOOFCA
+call_types_sound_sources,OD_BUZZ:BOGR,OD_BUZZ:BOGR
+call_types_sound_sources,OD_BUZZ:BOSP,OD_BUZZ:BOSP
+call_types_sound_sources,OD_BUZZ:BRDO,OD_BUZZ:BRDO
+call_types_sound_sources,OD_BUZZ:BUPO,OD_BUZZ:BUPO
+call_types_sound_sources,OD_BUZZ:BW29,OD_BUZZ:BW29
+call_types_sound_sources,OD_BUZZ:BW39V,OD_BUZZ:BW39V
+call_types_sound_sources,OD_BUZZ:BW41,OD_BUZZ:BW41
+call_types_sound_sources,OD_BUZZ:BW43,OD_BUZZ:BW43
+call_types_sound_sources,OD_BUZZ:BW53,OD_BUZZ:BW53
+call_types_sound_sources,OD_BUZZ:BW58,OD_BUZZ:BW58
+call_types_sound_sources,OD_BUZZ:BW70,OD_BUZZ:BW70
+call_types_sound_sources,OD_BUZZ:BWB,OD_BUZZ:BWB
+call_types_sound_sources,OD_BUZZ:BWC,OD_BUZZ:BWC
+call_types_sound_sources,OD_BUZZ:BWG,OD_BUZZ:BWG
+call_types_sound_sources,OD_BUZZ:CASP,OD_BUZZ:CASP
+call_types_sound_sources,OD_BUZZ:CLDO,OD_BUZZ:CLDO
+call_types_sound_sources,OD_BUZZ:CODO,OD_BUZZ:CODO
+call_types_sound_sources,OD_BUZZ:CUBW,OD_BUZZ:CUBW
+call_types_sound_sources,OD_BUZZ:DAPO,OD_BUZZ:DAPO
+call_types_sound_sources,OD_BUZZ:DEBW,OD_BUZZ:DEBW
+call_types_sound_sources,OD_BUZZ:DESP,OD_BUZZ:DESP
+call_types_sound_sources,OD_BUZZ:DSDO,OD_BUZZ:DSDO
+call_types_sound_sources,OD_BUZZ:DSWH,OD_BUZZ:DSWH
+call_types_sound_sources,OD_BUZZ:DUDO,OD_BUZZ:DUDO
+call_types_sound_sources,OD_BUZZ:ESDO,OD_BUZZ:ESDO
+call_types_sound_sources,OD_BUZZ:FIPO,OD_BUZZ:FIPO
+call_types_sound_sources,OD_BUZZ:FIPOEA,OD_BUZZ:FIPOEA
+call_types_sound_sources,OD_BUZZ:FIPOIP,OD_BUZZ:FIPOIP
+call_types_sound_sources,OD_BUZZ:FIPOYA,OD_BUZZ:FIPOYA
+call_types_sound_sources,OD_BUZZ:FKWH,OD_BUZZ:FKWH
+call_types_sound_sources,OD_BUZZ:FRAN,OD_BUZZ:FRAN
+call_types_sound_sources,OD_BUZZ:FRDO,OD_BUZZ:FRDO
+call_types_sound_sources,OD_BUZZ:GBWH,OD_BUZZ:GBWH
+call_types_sound_sources,OD_BUZZ:GEBW,OD_BUZZ:GEBW
+call_types_sound_sources,OD_BUZZ:GOBW,OD_BUZZ:GOBW
+call_types_sound_sources,OD_BUZZ:GRAM,OD_BUZZ:GRAM
+call_types_sound_sources,OD_BUZZ:GRDO,OD_BUZZ:GRDO
+call_types_sound_sources,OD_BUZZ:GSDO,OD_BUZZ:GSDO
+call_types_sound_sources,OD_BUZZ:GTBW,OD_BUZZ:GTBW
+call_types_sound_sources,OD_BUZZ:GUDO,OD_BUZZ:GUDO
+call_types_sound_sources,OD_BUZZ:HAPO,OD_BUZZ:HAPO
+call_types_sound_sources,OD_BUZZ:HEADO,OD_BUZZ:HEADO
+call_types_sound_sources,OD_BUZZ:HEBW,OD_BUZZ:HEBW
+call_types_sound_sources,OD_BUZZ:HECDO,OD_BUZZ:HECDO
+call_types_sound_sources,OD_BUZZ:HODO,OD_BUZZ:HODO
+call_types_sound_sources,OD_BUZZ:HUBW,OD_BUZZ:HUBW
+call_types_sound_sources,OD_BUZZ:INRDO,OD_BUZZ:INRDO
+call_types_sound_sources,OD_BUZZ:IOBD,OD_BUZZ:IOBD
+call_types_sound_sources,OD_BUZZ:IPHD,OD_BUZZ:IPHD
+call_types_sound_sources,OD_BUZZ:IRRDO,OD_BUZZ:IRRDO
+call_types_sound_sources,OD_BUZZ:KIWH,OD_BUZZ:KIWH
+call_types_sound_sources,OD_BUZZ:KIWHAANT,OD_BUZZ:KIWHAANT
+call_types_sound_sources,OD_BUZZ:KIWHBANT,OD_BUZZ:KIWHBANT
+call_types_sound_sources,OD_BUZZ:KIWHCANT,OD_BUZZ:KIWHCANT
+call_types_sound_sources,OD_BUZZ:KIWHOF,OD_BUZZ:KIWHOF
+call_types_sound_sources,OD_BUZZ:KIWHRE,OD_BUZZ:KIWHRE
+call_types_sound_sources,OD_BUZZ:KIWHTR,OD_BUZZ:KIWHTR
+call_types_sound_sources,OD_BUZZ:LBCD,OD_BUZZ:LBCD
+call_types_sound_sources,OD_BUZZ:LBWH,OD_BUZZ:LBWH
+call_types_sound_sources,OD_BUZZ:LFPW,OD_BUZZ:LFPW
+call_types_sound_sources,OD_BUZZ:MEPK,OD_BUZZ:MEPK
+call_types_sound_sources,OD_BUZZ:MEWH,OD_BUZZ:MEWH
+call_types_sound_sources,OD_BUZZ:MMME,OD_BUZZ:MMME
+call_types_sound_sources,OD_BUZZ:NAWH,OD_BUZZ:NAWH
+call_types_sound_sources,OD_BUZZ:NBWH,OD_BUZZ:NBWH
+call_types_sound_sources,OD_BUZZ:NRWD,OD_BUZZ:NRWD
+call_types_sound_sources,OD_BUZZ:OBDO,OD_BUZZ:OBDO
+call_types_sound_sources,OD_BUZZ:PEBW,OD_BUZZ:PEBW
+call_types_sound_sources,OD_BUZZ:PEDO,OD_BUZZ:PEDO
+call_types_sound_sources,OD_BUZZ:PIWH,OD_BUZZ:PIWH
+call_types_sound_sources,OD_BUZZ:PSDO,OD_BUZZ:PSDO
+call_types_sound_sources,OD_BUZZ:PSWH,OD_BUZZ:PSWH
+call_types_sound_sources,OD_BUZZ:PWDO,OD_BUZZ:PWDO
+call_types_sound_sources,OD_BUZZ:PYBW,OD_BUZZ:PYBW
+call_types_sound_sources,OD_BUZZ:PYKW,OD_BUZZ:PYKW
+call_types_sound_sources,OD_BUZZ:RTDO,OD_BUZZ:RTDO
+call_types_sound_sources,OD_BUZZ:SADO,OD_BUZZ:SADO
+call_types_sound_sources,OD_BUZZ:SBWH,OD_BUZZ:SBWH
+call_types_sound_sources,OD_BUZZ:SFPW,OD_BUZZ:SFPW
+call_types_sound_sources,OD_BUZZ:SHBW,OD_BUZZ:SHBW
+call_types_sound_sources,OD_BUZZ:SNDO,OD_BUZZ:SNDO
+call_types_sound_sources,OD_BUZZ:SOBW,OD_BUZZ:SOBW
+call_types_sound_sources,OD_BUZZ:SPDOOF,OD_BUZZ:SPDOOF
+call_types_sound_sources,OD_BUZZ:SPDOPA,OD_BUZZ:SPDOPA
+call_types_sound_sources,OD_BUZZ:SPPO,OD_BUZZ:SPPO
+call_types_sound_sources,OD_BUZZ:SRWD,OD_BUZZ:SRWD
+call_types_sound_sources,OD_BUZZ:SSDO,OD_BUZZ:SSDO
+call_types_sound_sources,OD_BUZZ:STBWH,OD_BUZZ:STBWH
+call_types_sound_sources,OD_BUZZ:STDO,OD_BUZZ:STDO
+call_types_sound_sources,OD_BUZZ:STTWH,OD_BUZZ:STTWH
+call_types_sound_sources,OD_BUZZ:STWH,OD_BUZZ:STWH
+call_types_sound_sources,OD_BUZZ:TMSD,OD_BUZZ:TMSD
+call_types_sound_sources,OD_BUZZ:TRBW,OD_BUZZ:TRBW
+call_types_sound_sources,OD_BUZZ:TUDO,OD_BUZZ:TUDO
+call_types_sound_sources,OD_BUZZ:UBWA,OD_BUZZ:UBWA
+call_types_sound_sources,OD_BUZZ:UECASD,OD_BUZZ:UECASD
+call_types_sound_sources,OD_BUZZ:UNBD,OD_BUZZ:UNBD
+call_types_sound_sources,OD_BUZZ:UNBF,OD_BUZZ:UNBF
+call_types_sound_sources,OD_BUZZ:UNBW,OD_BUZZ:UNBW
+call_types_sound_sources,OD_BUZZ:UNCW,OD_BUZZ:UNCW
+call_types_sound_sources,OD_BUZZ:UNDO,OD_BUZZ:UNDO
+call_types_sound_sources,OD_BUZZ:UNDS,OD_BUZZ:UNDS
+call_types_sound_sources,OD_BUZZ:UNKO,OD_BUZZ:UNKO
+call_types_sound_sources,OD_BUZZ:UNLAG,OD_BUZZ:UNLAG
+call_types_sound_sources,OD_BUZZ:UNLD,OD_BUZZ:UNLD
+call_types_sound_sources,OD_BUZZ:UNMD,OD_BUZZ:UNMD
+call_types_sound_sources,OD_BUZZ:UNME,OD_BUZZ:UNME
+call_types_sound_sources,OD_BUZZ:UNPO,OD_BUZZ:UNPO
+call_types_sound_sources,OD_BUZZ:UNRB,OD_BUZZ:UNRB
+call_types_sound_sources,OD_BUZZ:UNSB,OD_BUZZ:UNSB
+call_types_sound_sources,OD_BUZZ:UNSBW,OD_BUZZ:UNSBW
+call_types_sound_sources,OD_BUZZ:UNSC,OD_BUZZ:UNSC
+call_types_sound_sources,OD_BUZZ:UNSPDO,OD_BUZZ:UNSPDO
+call_types_sound_sources,OD_BUZZ:VAQU,OD_BUZZ:VAQU
+call_types_sound_sources,OD_BUZZ:WBDO,OD_BUZZ:WBDO
+call_types_sound_sources,OD_BUZZ:WBSDO,OD_BUZZ:WBSDO
+call_types_sound_sources,OD_BUZZ:WSDO,OD_BUZZ:WSDO
+call_types_sound_sources,OD_CLICK_FM:AHDO,OD_CLICK_FM:AHDO
+call_types_sound_sources,OD_CLICK_FM:ANBW,OD_CLICK_FM:ANBW
+call_types_sound_sources,OD_CLICK_FM:ARBW,OD_CLICK_FM:ARBW
+call_types_sound_sources,OD_CLICK_FM:ARDO,OD_CLICK_FM:ARDO
+call_types_sound_sources,OD_CLICK_FM:ASDO,OD_CLICK_FM:ASDO
+call_types_sound_sources,OD_CLICK_FM:AUSDO,OD_CLICK_FM:AUSDO
+call_types_sound_sources,OD_CLICK_FM:BBWH,OD_CLICK_FM:BBWH
+call_types_sound_sources,OD_CLICK_FM:BELU,OD_CLICK_FM:BELU
+call_types_sound_sources,OD_CLICK_FM:BLBW,OD_CLICK_FM:BLBW
+call_types_sound_sources,OD_CLICK_FM:BLDO,OD_CLICK_FM:BLDO
+call_types_sound_sources,OD_CLICK_FM:BODO,OD_CLICK_FM:BODO
+call_types_sound_sources,OD_CLICK_FM:BODOCOCA,OD_CLICK_FM:BODOCOCA
+call_types_sound_sources,OD_CLICK_FM:BODOOFCA,OD_CLICK_FM:BODOOFCA
+call_types_sound_sources,OD_CLICK_FM:BOGR,OD_CLICK_FM:BOGR
+call_types_sound_sources,OD_CLICK_FM:BOSP,OD_CLICK_FM:BOSP
+call_types_sound_sources,OD_CLICK_FM:BRDO,OD_CLICK_FM:BRDO
+call_types_sound_sources,OD_CLICK_FM:BUPO,OD_CLICK_FM:BUPO
+call_types_sound_sources,OD_CLICK_FM:BW29,OD_CLICK_FM:BW29
+call_types_sound_sources,OD_CLICK_FM:BW39V,OD_CLICK_FM:BW39V
+call_types_sound_sources,OD_CLICK_FM:BW41,OD_CLICK_FM:BW41
+call_types_sound_sources,OD_CLICK_FM:BW43,OD_CLICK_FM:BW43
+call_types_sound_sources,OD_CLICK_FM:BW53,OD_CLICK_FM:BW53
+call_types_sound_sources,OD_CLICK_FM:BW58,OD_CLICK_FM:BW58
+call_types_sound_sources,OD_CLICK_FM:BW70,OD_CLICK_FM:BW70
+call_types_sound_sources,OD_CLICK_FM:BWB,OD_CLICK_FM:BWB
+call_types_sound_sources,OD_CLICK_FM:BWC,OD_CLICK_FM:BWC
+call_types_sound_sources,OD_CLICK_FM:BWG,OD_CLICK_FM:BWG
+call_types_sound_sources,OD_CLICK_FM:CASP,OD_CLICK_FM:CASP
+call_types_sound_sources,OD_CLICK_FM:CLDO,OD_CLICK_FM:CLDO
+call_types_sound_sources,OD_CLICK_FM:CODO,OD_CLICK_FM:CODO
+call_types_sound_sources,OD_CLICK_FM:CUBW,OD_CLICK_FM:CUBW
+call_types_sound_sources,OD_CLICK_FM:DAPO,OD_CLICK_FM:DAPO
+call_types_sound_sources,OD_CLICK_FM:DEBW,OD_CLICK_FM:DEBW
+call_types_sound_sources,OD_CLICK_FM:DESP,OD_CLICK_FM:DESP
+call_types_sound_sources,OD_CLICK_FM:DSDO,OD_CLICK_FM:DSDO
+call_types_sound_sources,OD_CLICK_FM:DSWH,OD_CLICK_FM:DSWH
+call_types_sound_sources,OD_CLICK_FM:DUDO,OD_CLICK_FM:DUDO
+call_types_sound_sources,OD_CLICK_FM:ESDO,OD_CLICK_FM:ESDO
+call_types_sound_sources,OD_CLICK_FM:FIPO,OD_CLICK_FM:FIPO
+call_types_sound_sources,OD_CLICK_FM:FIPOEA,OD_CLICK_FM:FIPOEA
+call_types_sound_sources,OD_CLICK_FM:FIPOIP,OD_CLICK_FM:FIPOIP
+call_types_sound_sources,OD_CLICK_FM:FIPOYA,OD_CLICK_FM:FIPOYA
+call_types_sound_sources,OD_CLICK_FM:FKWH,OD_CLICK_FM:FKWH
+call_types_sound_sources,OD_CLICK_FM:FRAN,OD_CLICK_FM:FRAN
+call_types_sound_sources,OD_CLICK_FM:FRDO,OD_CLICK_FM:FRDO
+call_types_sound_sources,OD_CLICK_FM:GBWH,OD_CLICK_FM:GBWH
+call_types_sound_sources,OD_CLICK_FM:GEBW,OD_CLICK_FM:GEBW
+call_types_sound_sources,OD_CLICK_FM:GOBW,OD_CLICK_FM:GOBW
+call_types_sound_sources,OD_CLICK_FM:GRAM,OD_CLICK_FM:GRAM
+call_types_sound_sources,OD_CLICK_FM:GRDO,OD_CLICK_FM:GRDO
+call_types_sound_sources,OD_CLICK_FM:GSDO,OD_CLICK_FM:GSDO
+call_types_sound_sources,OD_CLICK_FM:GTBW,OD_CLICK_FM:GTBW
+call_types_sound_sources,OD_CLICK_FM:GUDO,OD_CLICK_FM:GUDO
+call_types_sound_sources,OD_CLICK_FM:HAPO,OD_CLICK_FM:HAPO
+call_types_sound_sources,OD_CLICK_FM:HEADO,OD_CLICK_FM:HEADO
+call_types_sound_sources,OD_CLICK_FM:HEBW,OD_CLICK_FM:HEBW
+call_types_sound_sources,OD_CLICK_FM:HECDO,OD_CLICK_FM:HECDO
+call_types_sound_sources,OD_CLICK_FM:HODO,OD_CLICK_FM:HODO
+call_types_sound_sources,OD_CLICK_FM:HUBW,OD_CLICK_FM:HUBW
+call_types_sound_sources,OD_CLICK_FM:INRDO,OD_CLICK_FM:INRDO
+call_types_sound_sources,OD_CLICK_FM:IOBD,OD_CLICK_FM:IOBD
+call_types_sound_sources,OD_CLICK_FM:IPHD,OD_CLICK_FM:IPHD
+call_types_sound_sources,OD_CLICK_FM:IRRDO,OD_CLICK_FM:IRRDO
+call_types_sound_sources,OD_CLICK_FM:KIWH,OD_CLICK_FM:KIWH
+call_types_sound_sources,OD_CLICK_FM:KIWHAANT,OD_CLICK_FM:KIWHAANT
+call_types_sound_sources,OD_CLICK_FM:KIWHBANT,OD_CLICK_FM:KIWHBANT
+call_types_sound_sources,OD_CLICK_FM:KIWHCANT,OD_CLICK_FM:KIWHCANT
+call_types_sound_sources,OD_CLICK_FM:KIWHOF,OD_CLICK_FM:KIWHOF
+call_types_sound_sources,OD_CLICK_FM:KIWHRE,OD_CLICK_FM:KIWHRE
+call_types_sound_sources,OD_CLICK_FM:KIWHTR,OD_CLICK_FM:KIWHTR
+call_types_sound_sources,OD_CLICK_FM:LBCD,OD_CLICK_FM:LBCD
+call_types_sound_sources,OD_CLICK_FM:LBWH,OD_CLICK_FM:LBWH
+call_types_sound_sources,OD_CLICK_FM:LFPW,OD_CLICK_FM:LFPW
+call_types_sound_sources,OD_CLICK_FM:MEPK,OD_CLICK_FM:MEPK
+call_types_sound_sources,OD_CLICK_FM:MEWH,OD_CLICK_FM:MEWH
+call_types_sound_sources,OD_CLICK_FM:MMME,OD_CLICK_FM:MMME
+call_types_sound_sources,OD_CLICK_FM:NAWH,OD_CLICK_FM:NAWH
+call_types_sound_sources,OD_CLICK_FM:NBWH,OD_CLICK_FM:NBWH
+call_types_sound_sources,OD_CLICK_FM:NRWD,OD_CLICK_FM:NRWD
+call_types_sound_sources,OD_CLICK_FM:OBDO,OD_CLICK_FM:OBDO
+call_types_sound_sources,OD_CLICK_FM:PEBW,OD_CLICK_FM:PEBW
+call_types_sound_sources,OD_CLICK_FM:PEDO,OD_CLICK_FM:PEDO
+call_types_sound_sources,OD_CLICK_FM:PIWH,OD_CLICK_FM:PIWH
+call_types_sound_sources,OD_CLICK_FM:PSDO,OD_CLICK_FM:PSDO
+call_types_sound_sources,OD_CLICK_FM:PSWH,OD_CLICK_FM:PSWH
+call_types_sound_sources,OD_CLICK_FM:PWDO,OD_CLICK_FM:PWDO
+call_types_sound_sources,OD_CLICK_FM:PYBW,OD_CLICK_FM:PYBW
+call_types_sound_sources,OD_CLICK_FM:PYKW,OD_CLICK_FM:PYKW
+call_types_sound_sources,OD_CLICK_FM:RTDO,OD_CLICK_FM:RTDO
+call_types_sound_sources,OD_CLICK_FM:SADO,OD_CLICK_FM:SADO
+call_types_sound_sources,OD_CLICK_FM:SBWH,OD_CLICK_FM:SBWH
+call_types_sound_sources,OD_CLICK_FM:SFPW,OD_CLICK_FM:SFPW
+call_types_sound_sources,OD_CLICK_FM:SHBW,OD_CLICK_FM:SHBW
+call_types_sound_sources,OD_CLICK_FM:SNDO,OD_CLICK_FM:SNDO
+call_types_sound_sources,OD_CLICK_FM:SOBW,OD_CLICK_FM:SOBW
+call_types_sound_sources,OD_CLICK_FM:SPDOOF,OD_CLICK_FM:SPDOOF
+call_types_sound_sources,OD_CLICK_FM:SPDOPA,OD_CLICK_FM:SPDOPA
+call_types_sound_sources,OD_CLICK_FM:SPPO,OD_CLICK_FM:SPPO
+call_types_sound_sources,OD_CLICK_FM:SRWD,OD_CLICK_FM:SRWD
+call_types_sound_sources,OD_CLICK_FM:SSDO,OD_CLICK_FM:SSDO
+call_types_sound_sources,OD_CLICK_FM:STBWH,OD_CLICK_FM:STBWH
+call_types_sound_sources,OD_CLICK_FM:STDO,OD_CLICK_FM:STDO
+call_types_sound_sources,OD_CLICK_FM:STTWH,OD_CLICK_FM:STTWH
+call_types_sound_sources,OD_CLICK_FM:STWH,OD_CLICK_FM:STWH
+call_types_sound_sources,OD_CLICK_FM:TMSD,OD_CLICK_FM:TMSD
+call_types_sound_sources,OD_CLICK_FM:TRBW,OD_CLICK_FM:TRBW
+call_types_sound_sources,OD_CLICK_FM:TUDO,OD_CLICK_FM:TUDO
+call_types_sound_sources,OD_CLICK_FM:UBWA,OD_CLICK_FM:UBWA
+call_types_sound_sources,OD_CLICK_FM:UECASD,OD_CLICK_FM:UECASD
+call_types_sound_sources,OD_CLICK_FM:UNBD,OD_CLICK_FM:UNBD
+call_types_sound_sources,OD_CLICK_FM:UNBF,OD_CLICK_FM:UNBF
+call_types_sound_sources,OD_CLICK_FM:UNBW,OD_CLICK_FM:UNBW
+call_types_sound_sources,OD_CLICK_FM:UNCW,OD_CLICK_FM:UNCW
+call_types_sound_sources,OD_CLICK_FM:UNDO,OD_CLICK_FM:UNDO
+call_types_sound_sources,OD_CLICK_FM:UNDS,OD_CLICK_FM:UNDS
+call_types_sound_sources,OD_CLICK_FM:UNKO,OD_CLICK_FM:UNKO
+call_types_sound_sources,OD_CLICK_FM:UNLAG,OD_CLICK_FM:UNLAG
+call_types_sound_sources,OD_CLICK_FM:UNLD,OD_CLICK_FM:UNLD
+call_types_sound_sources,OD_CLICK_FM:UNMD,OD_CLICK_FM:UNMD
+call_types_sound_sources,OD_CLICK_FM:UNME,OD_CLICK_FM:UNME
+call_types_sound_sources,OD_CLICK_FM:UNPO,OD_CLICK_FM:UNPO
+call_types_sound_sources,OD_CLICK_FM:UNRB,OD_CLICK_FM:UNRB
+call_types_sound_sources,OD_CLICK_FM:UNSB,OD_CLICK_FM:UNSB
+call_types_sound_sources,OD_CLICK_FM:UNSBW,OD_CLICK_FM:UNSBW
+call_types_sound_sources,OD_CLICK_FM:UNSC,OD_CLICK_FM:UNSC
+call_types_sound_sources,OD_CLICK_FM:UNSPDO,OD_CLICK_FM:UNSPDO
+call_types_sound_sources,OD_CLICK_FM:VAQU,OD_CLICK_FM:VAQU
+call_types_sound_sources,OD_CLICK_FM:WBDO,OD_CLICK_FM:WBDO
+call_types_sound_sources,OD_CLICK_FM:WBSDO,OD_CLICK_FM:WBSDO
+call_types_sound_sources,OD_CLICK_FM:WSDO,OD_CLICK_FM:WSDO
+call_types_sound_sources,OD_CLICK_IMP:AHDO,OD_CLICK_IMP:AHDO
+call_types_sound_sources,OD_CLICK_IMP:ANBW,OD_CLICK_IMP:ANBW
+call_types_sound_sources,OD_CLICK_IMP:ARBW,OD_CLICK_IMP:ARBW
+call_types_sound_sources,OD_CLICK_IMP:ARDO,OD_CLICK_IMP:ARDO
+call_types_sound_sources,OD_CLICK_IMP:ASDO,OD_CLICK_IMP:ASDO
+call_types_sound_sources,OD_CLICK_IMP:AUSDO,OD_CLICK_IMP:AUSDO
+call_types_sound_sources,OD_CLICK_IMP:BBWH,OD_CLICK_IMP:BBWH
+call_types_sound_sources,OD_CLICK_IMP:BELU,OD_CLICK_IMP:BELU
+call_types_sound_sources,OD_CLICK_IMP:BLBW,OD_CLICK_IMP:BLBW
+call_types_sound_sources,OD_CLICK_IMP:BLDO,OD_CLICK_IMP:BLDO
+call_types_sound_sources,OD_CLICK_IMP:BODO,OD_CLICK_IMP:BODO
+call_types_sound_sources,OD_CLICK_IMP:BODOCOCA,OD_CLICK_IMP:BODOCOCA
+call_types_sound_sources,OD_CLICK_IMP:BODOOFCA,OD_CLICK_IMP:BODOOFCA
+call_types_sound_sources,OD_CLICK_IMP:BOGR,OD_CLICK_IMP:BOGR
+call_types_sound_sources,OD_CLICK_IMP:BOSP,OD_CLICK_IMP:BOSP
+call_types_sound_sources,OD_CLICK_IMP:BRDO,OD_CLICK_IMP:BRDO
+call_types_sound_sources,OD_CLICK_IMP:BUPO,OD_CLICK_IMP:BUPO
+call_types_sound_sources,OD_CLICK_IMP:BW29,OD_CLICK_IMP:BW29
+call_types_sound_sources,OD_CLICK_IMP:BW39V,OD_CLICK_IMP:BW39V
+call_types_sound_sources,OD_CLICK_IMP:BW41,OD_CLICK_IMP:BW41
+call_types_sound_sources,OD_CLICK_IMP:BW43,OD_CLICK_IMP:BW43
+call_types_sound_sources,OD_CLICK_IMP:BW53,OD_CLICK_IMP:BW53
+call_types_sound_sources,OD_CLICK_IMP:BW58,OD_CLICK_IMP:BW58
+call_types_sound_sources,OD_CLICK_IMP:BW70,OD_CLICK_IMP:BW70
+call_types_sound_sources,OD_CLICK_IMP:BWB,OD_CLICK_IMP:BWB
+call_types_sound_sources,OD_CLICK_IMP:BWC,OD_CLICK_IMP:BWC
+call_types_sound_sources,OD_CLICK_IMP:BWG,OD_CLICK_IMP:BWG
+call_types_sound_sources,OD_CLICK_IMP:CASP,OD_CLICK_IMP:CASP
+call_types_sound_sources,OD_CLICK_IMP:CLDO,OD_CLICK_IMP:CLDO
+call_types_sound_sources,OD_CLICK_IMP:CODO,OD_CLICK_IMP:CODO
+call_types_sound_sources,OD_CLICK_IMP:CUBW,OD_CLICK_IMP:CUBW
+call_types_sound_sources,OD_CLICK_IMP:DAPO,OD_CLICK_IMP:DAPO
+call_types_sound_sources,OD_CLICK_IMP:DEBW,OD_CLICK_IMP:DEBW
+call_types_sound_sources,OD_CLICK_IMP:DESP,OD_CLICK_IMP:DESP
+call_types_sound_sources,OD_CLICK_IMP:DSDO,OD_CLICK_IMP:DSDO
+call_types_sound_sources,OD_CLICK_IMP:DSWH,OD_CLICK_IMP:DSWH
+call_types_sound_sources,OD_CLICK_IMP:DUDO,OD_CLICK_IMP:DUDO
+call_types_sound_sources,OD_CLICK_IMP:ESDO,OD_CLICK_IMP:ESDO
+call_types_sound_sources,OD_CLICK_IMP:FIPO,OD_CLICK_IMP:FIPO
+call_types_sound_sources,OD_CLICK_IMP:FIPOEA,OD_CLICK_IMP:FIPOEA
+call_types_sound_sources,OD_CLICK_IMP:FIPOIP,OD_CLICK_IMP:FIPOIP
+call_types_sound_sources,OD_CLICK_IMP:FIPOYA,OD_CLICK_IMP:FIPOYA
+call_types_sound_sources,OD_CLICK_IMP:FKWH,OD_CLICK_IMP:FKWH
+call_types_sound_sources,OD_CLICK_IMP:FRAN,OD_CLICK_IMP:FRAN
+call_types_sound_sources,OD_CLICK_IMP:FRDO,OD_CLICK_IMP:FRDO
+call_types_sound_sources,OD_CLICK_IMP:GBWH,OD_CLICK_IMP:GBWH
+call_types_sound_sources,OD_CLICK_IMP:GEBW,OD_CLICK_IMP:GEBW
+call_types_sound_sources,OD_CLICK_IMP:GOBW,OD_CLICK_IMP:GOBW
+call_types_sound_sources,OD_CLICK_IMP:GRAM,OD_CLICK_IMP:GRAM
+call_types_sound_sources,OD_CLICK_IMP:GRDO,OD_CLICK_IMP:GRDO
+call_types_sound_sources,OD_CLICK_IMP:GSDO,OD_CLICK_IMP:GSDO
+call_types_sound_sources,OD_CLICK_IMP:GTBW,OD_CLICK_IMP:GTBW
+call_types_sound_sources,OD_CLICK_IMP:GUDO,OD_CLICK_IMP:GUDO
+call_types_sound_sources,OD_CLICK_IMP:HAPO,OD_CLICK_IMP:HAPO
+call_types_sound_sources,OD_CLICK_IMP:HEADO,OD_CLICK_IMP:HEADO
+call_types_sound_sources,OD_CLICK_IMP:HEBW,OD_CLICK_IMP:HEBW
+call_types_sound_sources,OD_CLICK_IMP:HECDO,OD_CLICK_IMP:HECDO
+call_types_sound_sources,OD_CLICK_IMP:HODO,OD_CLICK_IMP:HODO
+call_types_sound_sources,OD_CLICK_IMP:HUBW,OD_CLICK_IMP:HUBW
+call_types_sound_sources,OD_CLICK_IMP:INRDO,OD_CLICK_IMP:INRDO
+call_types_sound_sources,OD_CLICK_IMP:IOBD,OD_CLICK_IMP:IOBD
+call_types_sound_sources,OD_CLICK_IMP:IPHD,OD_CLICK_IMP:IPHD
+call_types_sound_sources,OD_CLICK_IMP:IRRDO,OD_CLICK_IMP:IRRDO
+call_types_sound_sources,OD_CLICK_IMP:KIWH,OD_CLICK_IMP:KIWH
+call_types_sound_sources,OD_CLICK_IMP:KIWHAANT,OD_CLICK_IMP:KIWHAANT
+call_types_sound_sources,OD_CLICK_IMP:KIWHBANT,OD_CLICK_IMP:KIWHBANT
+call_types_sound_sources,OD_CLICK_IMP:KIWHCANT,OD_CLICK_IMP:KIWHCANT
+call_types_sound_sources,OD_CLICK_IMP:KIWHOF,OD_CLICK_IMP:KIWHOF
+call_types_sound_sources,OD_CLICK_IMP:KIWHRE,OD_CLICK_IMP:KIWHRE
+call_types_sound_sources,OD_CLICK_IMP:KIWHTR,OD_CLICK_IMP:KIWHTR
+call_types_sound_sources,OD_CLICK_IMP:LBCD,OD_CLICK_IMP:LBCD
+call_types_sound_sources,OD_CLICK_IMP:LBWH,OD_CLICK_IMP:LBWH
+call_types_sound_sources,OD_CLICK_IMP:LFPW,OD_CLICK_IMP:LFPW
+call_types_sound_sources,OD_CLICK_IMP:MEPK,OD_CLICK_IMP:MEPK
+call_types_sound_sources,OD_CLICK_IMP:MEWH,OD_CLICK_IMP:MEWH
+call_types_sound_sources,OD_CLICK_IMP:MMME,OD_CLICK_IMP:MMME
+call_types_sound_sources,OD_CLICK_IMP:NAWH,OD_CLICK_IMP:NAWH
+call_types_sound_sources,OD_CLICK_IMP:NBWH,OD_CLICK_IMP:NBWH
+call_types_sound_sources,OD_CLICK_IMP:NRWD,OD_CLICK_IMP:NRWD
+call_types_sound_sources,OD_CLICK_IMP:OBDO,OD_CLICK_IMP:OBDO
+call_types_sound_sources,OD_CLICK_IMP:PEBW,OD_CLICK_IMP:PEBW
+call_types_sound_sources,OD_CLICK_IMP:PEDO,OD_CLICK_IMP:PEDO
+call_types_sound_sources,OD_CLICK_IMP:PIWH,OD_CLICK_IMP:PIWH
+call_types_sound_sources,OD_CLICK_IMP:PSDO,OD_CLICK_IMP:PSDO
+call_types_sound_sources,OD_CLICK_IMP:PSWH,OD_CLICK_IMP:PSWH
+call_types_sound_sources,OD_CLICK_IMP:PWDO,OD_CLICK_IMP:PWDO
+call_types_sound_sources,OD_CLICK_IMP:PYBW,OD_CLICK_IMP:PYBW
+call_types_sound_sources,OD_CLICK_IMP:PYKW,OD_CLICK_IMP:PYKW
+call_types_sound_sources,OD_CLICK_IMP:RTDO,OD_CLICK_IMP:RTDO
+call_types_sound_sources,OD_CLICK_IMP:SADO,OD_CLICK_IMP:SADO
+call_types_sound_sources,OD_CLICK_IMP:SBWH,OD_CLICK_IMP:SBWH
+call_types_sound_sources,OD_CLICK_IMP:SFPW,OD_CLICK_IMP:SFPW
+call_types_sound_sources,OD_CLICK_IMP:SHBW,OD_CLICK_IMP:SHBW
+call_types_sound_sources,OD_CLICK_IMP:SNDO,OD_CLICK_IMP:SNDO
+call_types_sound_sources,OD_CLICK_IMP:SOBW,OD_CLICK_IMP:SOBW
+call_types_sound_sources,OD_CLICK_IMP:SPDOOF,OD_CLICK_IMP:SPDOOF
+call_types_sound_sources,OD_CLICK_IMP:SPDOPA,OD_CLICK_IMP:SPDOPA
+call_types_sound_sources,OD_CLICK_IMP:SPPO,OD_CLICK_IMP:SPPO
+call_types_sound_sources,OD_CLICK_IMP:SRWD,OD_CLICK_IMP:SRWD
+call_types_sound_sources,OD_CLICK_IMP:SSDO,OD_CLICK_IMP:SSDO
+call_types_sound_sources,OD_CLICK_IMP:STBWH,OD_CLICK_IMP:STBWH
+call_types_sound_sources,OD_CLICK_IMP:STDO,OD_CLICK_IMP:STDO
+call_types_sound_sources,OD_CLICK_IMP:STTWH,OD_CLICK_IMP:STTWH
+call_types_sound_sources,OD_CLICK_IMP:STWH,OD_CLICK_IMP:STWH
+call_types_sound_sources,OD_CLICK_IMP:TMSD,OD_CLICK_IMP:TMSD
+call_types_sound_sources,OD_CLICK_IMP:TRBW,OD_CLICK_IMP:TRBW
+call_types_sound_sources,OD_CLICK_IMP:TUDO,OD_CLICK_IMP:TUDO
+call_types_sound_sources,OD_CLICK_IMP:UBWA,OD_CLICK_IMP:UBWA
+call_types_sound_sources,OD_CLICK_IMP:UECASD,OD_CLICK_IMP:UECASD
+call_types_sound_sources,OD_CLICK_IMP:UNBD,OD_CLICK_IMP:UNBD
+call_types_sound_sources,OD_CLICK_IMP:UNBF,OD_CLICK_IMP:UNBF
+call_types_sound_sources,OD_CLICK_IMP:UNBW,OD_CLICK_IMP:UNBW
+call_types_sound_sources,OD_CLICK_IMP:UNCW,OD_CLICK_IMP:UNCW
+call_types_sound_sources,OD_CLICK_IMP:UNDO,OD_CLICK_IMP:UNDO
+call_types_sound_sources,OD_CLICK_IMP:UNDS,OD_CLICK_IMP:UNDS
+call_types_sound_sources,OD_CLICK_IMP:UNKO,OD_CLICK_IMP:UNKO
+call_types_sound_sources,OD_CLICK_IMP:UNLAG,OD_CLICK_IMP:UNLAG
+call_types_sound_sources,OD_CLICK_IMP:UNLD,OD_CLICK_IMP:UNLD
+call_types_sound_sources,OD_CLICK_IMP:UNMD,OD_CLICK_IMP:UNMD
+call_types_sound_sources,OD_CLICK_IMP:UNME,OD_CLICK_IMP:UNME
+call_types_sound_sources,OD_CLICK_IMP:UNPO,OD_CLICK_IMP:UNPO
+call_types_sound_sources,OD_CLICK_IMP:UNRB,OD_CLICK_IMP:UNRB
+call_types_sound_sources,OD_CLICK_IMP:UNSB,OD_CLICK_IMP:UNSB
+call_types_sound_sources,OD_CLICK_IMP:UNSBW,OD_CLICK_IMP:UNSBW
+call_types_sound_sources,OD_CLICK_IMP:UNSC,OD_CLICK_IMP:UNSC
+call_types_sound_sources,OD_CLICK_IMP:UNSPDO,OD_CLICK_IMP:UNSPDO
+call_types_sound_sources,OD_CLICK_IMP:VAQU,OD_CLICK_IMP:VAQU
+call_types_sound_sources,OD_CLICK_IMP:WBDO,OD_CLICK_IMP:WBDO
+call_types_sound_sources,OD_CLICK_IMP:WBSDO,OD_CLICK_IMP:WBSDO
+call_types_sound_sources,OD_CLICK_IMP:WSDO,OD_CLICK_IMP:WSDO
+call_types_sound_sources,OD_CLICK_MIX:AHDO,OD_CLICK_MIX:AHDO
+call_types_sound_sources,OD_CLICK_MIX:ANBW,OD_CLICK_MIX:ANBW
+call_types_sound_sources,OD_CLICK_MIX:ARBW,OD_CLICK_MIX:ARBW
+call_types_sound_sources,OD_CLICK_MIX:ARDO,OD_CLICK_MIX:ARDO
+call_types_sound_sources,OD_CLICK_MIX:ASDO,OD_CLICK_MIX:ASDO
+call_types_sound_sources,OD_CLICK_MIX:AUSDO,OD_CLICK_MIX:AUSDO
+call_types_sound_sources,OD_CLICK_MIX:BBWH,OD_CLICK_MIX:BBWH
+call_types_sound_sources,OD_CLICK_MIX:BELU,OD_CLICK_MIX:BELU
+call_types_sound_sources,OD_CLICK_MIX:BLBW,OD_CLICK_MIX:BLBW
+call_types_sound_sources,OD_CLICK_MIX:BLDO,OD_CLICK_MIX:BLDO
+call_types_sound_sources,OD_CLICK_MIX:BODO,OD_CLICK_MIX:BODO
+call_types_sound_sources,OD_CLICK_MIX:BODOCOCA,OD_CLICK_MIX:BODOCOCA
+call_types_sound_sources,OD_CLICK_MIX:BODOOFCA,OD_CLICK_MIX:BODOOFCA
+call_types_sound_sources,OD_CLICK_MIX:BOGR,OD_CLICK_MIX:BOGR
+call_types_sound_sources,OD_CLICK_MIX:BOSP,OD_CLICK_MIX:BOSP
+call_types_sound_sources,OD_CLICK_MIX:BRDO,OD_CLICK_MIX:BRDO
+call_types_sound_sources,OD_CLICK_MIX:BUPO,OD_CLICK_MIX:BUPO
+call_types_sound_sources,OD_CLICK_MIX:BW29,OD_CLICK_MIX:BW29
+call_types_sound_sources,OD_CLICK_MIX:BW39V,OD_CLICK_MIX:BW39V
+call_types_sound_sources,OD_CLICK_MIX:BW41,OD_CLICK_MIX:BW41
+call_types_sound_sources,OD_CLICK_MIX:BW43,OD_CLICK_MIX:BW43
+call_types_sound_sources,OD_CLICK_MIX:BW53,OD_CLICK_MIX:BW53
+call_types_sound_sources,OD_CLICK_MIX:BW58,OD_CLICK_MIX:BW58
+call_types_sound_sources,OD_CLICK_MIX:BW70,OD_CLICK_MIX:BW70
+call_types_sound_sources,OD_CLICK_MIX:BWB,OD_CLICK_MIX:BWB
+call_types_sound_sources,OD_CLICK_MIX:BWC,OD_CLICK_MIX:BWC
+call_types_sound_sources,OD_CLICK_MIX:BWG,OD_CLICK_MIX:BWG
+call_types_sound_sources,OD_CLICK_MIX:CASP,OD_CLICK_MIX:CASP
+call_types_sound_sources,OD_CLICK_MIX:CLDO,OD_CLICK_MIX:CLDO
+call_types_sound_sources,OD_CLICK_MIX:CODO,OD_CLICK_MIX:CODO
+call_types_sound_sources,OD_CLICK_MIX:CUBW,OD_CLICK_MIX:CUBW
+call_types_sound_sources,OD_CLICK_MIX:DAPO,OD_CLICK_MIX:DAPO
+call_types_sound_sources,OD_CLICK_MIX:DEBW,OD_CLICK_MIX:DEBW
+call_types_sound_sources,OD_CLICK_MIX:DESP,OD_CLICK_MIX:DESP
+call_types_sound_sources,OD_CLICK_MIX:DSDO,OD_CLICK_MIX:DSDO
+call_types_sound_sources,OD_CLICK_MIX:DSWH,OD_CLICK_MIX:DSWH
+call_types_sound_sources,OD_CLICK_MIX:DUDO,OD_CLICK_MIX:DUDO
+call_types_sound_sources,OD_CLICK_MIX:ESDO,OD_CLICK_MIX:ESDO
+call_types_sound_sources,OD_CLICK_MIX:FIPO,OD_CLICK_MIX:FIPO
+call_types_sound_sources,OD_CLICK_MIX:FIPOEA,OD_CLICK_MIX:FIPOEA
+call_types_sound_sources,OD_CLICK_MIX:FIPOIP,OD_CLICK_MIX:FIPOIP
+call_types_sound_sources,OD_CLICK_MIX:FIPOYA,OD_CLICK_MIX:FIPOYA
+call_types_sound_sources,OD_CLICK_MIX:FKWH,OD_CLICK_MIX:FKWH
+call_types_sound_sources,OD_CLICK_MIX:FRAN,OD_CLICK_MIX:FRAN
+call_types_sound_sources,OD_CLICK_MIX:FRDO,OD_CLICK_MIX:FRDO
+call_types_sound_sources,OD_CLICK_MIX:GBWH,OD_CLICK_MIX:GBWH
+call_types_sound_sources,OD_CLICK_MIX:GEBW,OD_CLICK_MIX:GEBW
+call_types_sound_sources,OD_CLICK_MIX:GOBW,OD_CLICK_MIX:GOBW
+call_types_sound_sources,OD_CLICK_MIX:GRAM,OD_CLICK_MIX:GRAM
+call_types_sound_sources,OD_CLICK_MIX:GRDO,OD_CLICK_MIX:GRDO
+call_types_sound_sources,OD_CLICK_MIX:GSDO,OD_CLICK_MIX:GSDO
+call_types_sound_sources,OD_CLICK_MIX:GTBW,OD_CLICK_MIX:GTBW
+call_types_sound_sources,OD_CLICK_MIX:GUDO,OD_CLICK_MIX:GUDO
+call_types_sound_sources,OD_CLICK_MIX:HAPO,OD_CLICK_MIX:HAPO
+call_types_sound_sources,OD_CLICK_MIX:HEADO,OD_CLICK_MIX:HEADO
+call_types_sound_sources,OD_CLICK_MIX:HEBW,OD_CLICK_MIX:HEBW
+call_types_sound_sources,OD_CLICK_MIX:HECDO,OD_CLICK_MIX:HECDO
+call_types_sound_sources,OD_CLICK_MIX:HODO,OD_CLICK_MIX:HODO
+call_types_sound_sources,OD_CLICK_MIX:HUBW,OD_CLICK_MIX:HUBW
+call_types_sound_sources,OD_CLICK_MIX:INRDO,OD_CLICK_MIX:INRDO
+call_types_sound_sources,OD_CLICK_MIX:IOBD,OD_CLICK_MIX:IOBD
+call_types_sound_sources,OD_CLICK_MIX:IPHD,OD_CLICK_MIX:IPHD
+call_types_sound_sources,OD_CLICK_MIX:IRRDO,OD_CLICK_MIX:IRRDO
+call_types_sound_sources,OD_CLICK_MIX:KIWH,OD_CLICK_MIX:KIWH
+call_types_sound_sources,OD_CLICK_MIX:KIWHAANT,OD_CLICK_MIX:KIWHAANT
+call_types_sound_sources,OD_CLICK_MIX:KIWHBANT,OD_CLICK_MIX:KIWHBANT
+call_types_sound_sources,OD_CLICK_MIX:KIWHCANT,OD_CLICK_MIX:KIWHCANT
+call_types_sound_sources,OD_CLICK_MIX:KIWHOF,OD_CLICK_MIX:KIWHOF
+call_types_sound_sources,OD_CLICK_MIX:KIWHRE,OD_CLICK_MIX:KIWHRE
+call_types_sound_sources,OD_CLICK_MIX:KIWHTR,OD_CLICK_MIX:KIWHTR
+call_types_sound_sources,OD_CLICK_MIX:LBCD,OD_CLICK_MIX:LBCD
+call_types_sound_sources,OD_CLICK_MIX:LBWH,OD_CLICK_MIX:LBWH
+call_types_sound_sources,OD_CLICK_MIX:LFPW,OD_CLICK_MIX:LFPW
+call_types_sound_sources,OD_CLICK_MIX:MEPK,OD_CLICK_MIX:MEPK
+call_types_sound_sources,OD_CLICK_MIX:MEWH,OD_CLICK_MIX:MEWH
+call_types_sound_sources,OD_CLICK_MIX:MMME,OD_CLICK_MIX:MMME
+call_types_sound_sources,OD_CLICK_MIX:NAWH,OD_CLICK_MIX:NAWH
+call_types_sound_sources,OD_CLICK_MIX:NBWH,OD_CLICK_MIX:NBWH
+call_types_sound_sources,OD_CLICK_MIX:NRWD,OD_CLICK_MIX:NRWD
+call_types_sound_sources,OD_CLICK_MIX:OBDO,OD_CLICK_MIX:OBDO
+call_types_sound_sources,OD_CLICK_MIX:PEBW,OD_CLICK_MIX:PEBW
+call_types_sound_sources,OD_CLICK_MIX:PEDO,OD_CLICK_MIX:PEDO
+call_types_sound_sources,OD_CLICK_MIX:PIWH,OD_CLICK_MIX:PIWH
+call_types_sound_sources,OD_CLICK_MIX:PSDO,OD_CLICK_MIX:PSDO
+call_types_sound_sources,OD_CLICK_MIX:PSWH,OD_CLICK_MIX:PSWH
+call_types_sound_sources,OD_CLICK_MIX:PWDO,OD_CLICK_MIX:PWDO
+call_types_sound_sources,OD_CLICK_MIX:PYBW,OD_CLICK_MIX:PYBW
+call_types_sound_sources,OD_CLICK_MIX:PYKW,OD_CLICK_MIX:PYKW
+call_types_sound_sources,OD_CLICK_MIX:RTDO,OD_CLICK_MIX:RTDO
+call_types_sound_sources,OD_CLICK_MIX:SADO,OD_CLICK_MIX:SADO
+call_types_sound_sources,OD_CLICK_MIX:SBWH,OD_CLICK_MIX:SBWH
+call_types_sound_sources,OD_CLICK_MIX:SFPW,OD_CLICK_MIX:SFPW
+call_types_sound_sources,OD_CLICK_MIX:SHBW,OD_CLICK_MIX:SHBW
+call_types_sound_sources,OD_CLICK_MIX:SNDO,OD_CLICK_MIX:SNDO
+call_types_sound_sources,OD_CLICK_MIX:SOBW,OD_CLICK_MIX:SOBW
+call_types_sound_sources,OD_CLICK_MIX:SPDOOF,OD_CLICK_MIX:SPDOOF
+call_types_sound_sources,OD_CLICK_MIX:SPDOPA,OD_CLICK_MIX:SPDOPA
+call_types_sound_sources,OD_CLICK_MIX:SPPO,OD_CLICK_MIX:SPPO
+call_types_sound_sources,OD_CLICK_MIX:SRWD,OD_CLICK_MIX:SRWD
+call_types_sound_sources,OD_CLICK_MIX:SSDO,OD_CLICK_MIX:SSDO
+call_types_sound_sources,OD_CLICK_MIX:STBWH,OD_CLICK_MIX:STBWH
+call_types_sound_sources,OD_CLICK_MIX:STDO,OD_CLICK_MIX:STDO
+call_types_sound_sources,OD_CLICK_MIX:STTWH,OD_CLICK_MIX:STTWH
+call_types_sound_sources,OD_CLICK_MIX:STWH,OD_CLICK_MIX:STWH
+call_types_sound_sources,OD_CLICK_MIX:TMSD,OD_CLICK_MIX:TMSD
+call_types_sound_sources,OD_CLICK_MIX:TRBW,OD_CLICK_MIX:TRBW
+call_types_sound_sources,OD_CLICK_MIX:TUDO,OD_CLICK_MIX:TUDO
+call_types_sound_sources,OD_CLICK_MIX:UBWA,OD_CLICK_MIX:UBWA
+call_types_sound_sources,OD_CLICK_MIX:UECASD,OD_CLICK_MIX:UECASD
+call_types_sound_sources,OD_CLICK_MIX:UNBD,OD_CLICK_MIX:UNBD
+call_types_sound_sources,OD_CLICK_MIX:UNBF,OD_CLICK_MIX:UNBF
+call_types_sound_sources,OD_CLICK_MIX:UNBW,OD_CLICK_MIX:UNBW
+call_types_sound_sources,OD_CLICK_MIX:UNCW,OD_CLICK_MIX:UNCW
+call_types_sound_sources,OD_CLICK_MIX:UNDO,OD_CLICK_MIX:UNDO
+call_types_sound_sources,OD_CLICK_MIX:UNDS,OD_CLICK_MIX:UNDS
+call_types_sound_sources,OD_CLICK_MIX:UNKO,OD_CLICK_MIX:UNKO
+call_types_sound_sources,OD_CLICK_MIX:UNLAG,OD_CLICK_MIX:UNLAG
+call_types_sound_sources,OD_CLICK_MIX:UNLD,OD_CLICK_MIX:UNLD
+call_types_sound_sources,OD_CLICK_MIX:UNMD,OD_CLICK_MIX:UNMD
+call_types_sound_sources,OD_CLICK_MIX:UNME,OD_CLICK_MIX:UNME
+call_types_sound_sources,OD_CLICK_MIX:UNPO,OD_CLICK_MIX:UNPO
+call_types_sound_sources,OD_CLICK_MIX:UNRB,OD_CLICK_MIX:UNRB
+call_types_sound_sources,OD_CLICK_MIX:UNSB,OD_CLICK_MIX:UNSB
+call_types_sound_sources,OD_CLICK_MIX:UNSBW,OD_CLICK_MIX:UNSBW
+call_types_sound_sources,OD_CLICK_MIX:UNSC,OD_CLICK_MIX:UNSC
+call_types_sound_sources,OD_CLICK_MIX:UNSPDO,OD_CLICK_MIX:UNSPDO
+call_types_sound_sources,OD_CLICK_MIX:VAQU,OD_CLICK_MIX:VAQU
+call_types_sound_sources,OD_CLICK_MIX:WBDO,OD_CLICK_MIX:WBDO
+call_types_sound_sources,OD_CLICK_MIX:WBSDO,OD_CLICK_MIX:WBSDO
+call_types_sound_sources,OD_CLICK_MIX:WSDO,OD_CLICK_MIX:WSDO
+call_types_sound_sources,OD_CLICK_NBHF:AHDO,OD_CLICK_NBHF:AHDO
+call_types_sound_sources,OD_CLICK_NBHF:ANBW,OD_CLICK_NBHF:ANBW
+call_types_sound_sources,OD_CLICK_NBHF:ARBW,OD_CLICK_NBHF:ARBW
+call_types_sound_sources,OD_CLICK_NBHF:ARDO,OD_CLICK_NBHF:ARDO
+call_types_sound_sources,OD_CLICK_NBHF:ASDO,OD_CLICK_NBHF:ASDO
+call_types_sound_sources,OD_CLICK_NBHF:AUSDO,OD_CLICK_NBHF:AUSDO
+call_types_sound_sources,OD_CLICK_NBHF:BBWH,OD_CLICK_NBHF:BBWH
+call_types_sound_sources,OD_CLICK_NBHF:BELU,OD_CLICK_NBHF:BELU
+call_types_sound_sources,OD_CLICK_NBHF:BLBW,OD_CLICK_NBHF:BLBW
+call_types_sound_sources,OD_CLICK_NBHF:BLDO,OD_CLICK_NBHF:BLDO
+call_types_sound_sources,OD_CLICK_NBHF:BODO,OD_CLICK_NBHF:BODO
+call_types_sound_sources,OD_CLICK_NBHF:BODOCOCA,OD_CLICK_NBHF:BODOCOCA
+call_types_sound_sources,OD_CLICK_NBHF:BODOOFCA,OD_CLICK_NBHF:BODOOFCA
+call_types_sound_sources,OD_CLICK_NBHF:BOGR,OD_CLICK_NBHF:BOGR
+call_types_sound_sources,OD_CLICK_NBHF:BOSP,OD_CLICK_NBHF:BOSP
+call_types_sound_sources,OD_CLICK_NBHF:BRDO,OD_CLICK_NBHF:BRDO
+call_types_sound_sources,OD_CLICK_NBHF:BUPO,OD_CLICK_NBHF:BUPO
+call_types_sound_sources,OD_CLICK_NBHF:BW29,OD_CLICK_NBHF:BW29
+call_types_sound_sources,OD_CLICK_NBHF:BW39V,OD_CLICK_NBHF:BW39V
+call_types_sound_sources,OD_CLICK_NBHF:BW41,OD_CLICK_NBHF:BW41
+call_types_sound_sources,OD_CLICK_NBHF:BW43,OD_CLICK_NBHF:BW43
+call_types_sound_sources,OD_CLICK_NBHF:BW53,OD_CLICK_NBHF:BW53
+call_types_sound_sources,OD_CLICK_NBHF:BW58,OD_CLICK_NBHF:BW58
+call_types_sound_sources,OD_CLICK_NBHF:BW70,OD_CLICK_NBHF:BW70
+call_types_sound_sources,OD_CLICK_NBHF:BWB,OD_CLICK_NBHF:BWB
+call_types_sound_sources,OD_CLICK_NBHF:BWC,OD_CLICK_NBHF:BWC
+call_types_sound_sources,OD_CLICK_NBHF:BWG,OD_CLICK_NBHF:BWG
+call_types_sound_sources,OD_CLICK_NBHF:CASP,OD_CLICK_NBHF:CASP
+call_types_sound_sources,OD_CLICK_NBHF:CLDO,OD_CLICK_NBHF:CLDO
+call_types_sound_sources,OD_CLICK_NBHF:CODO,OD_CLICK_NBHF:CODO
+call_types_sound_sources,OD_CLICK_NBHF:CUBW,OD_CLICK_NBHF:CUBW
+call_types_sound_sources,OD_CLICK_NBHF:DAPO,OD_CLICK_NBHF:DAPO
+call_types_sound_sources,OD_CLICK_NBHF:DEBW,OD_CLICK_NBHF:DEBW
+call_types_sound_sources,OD_CLICK_NBHF:DESP,OD_CLICK_NBHF:DESP
+call_types_sound_sources,OD_CLICK_NBHF:DSDO,OD_CLICK_NBHF:DSDO
+call_types_sound_sources,OD_CLICK_NBHF:DSWH,OD_CLICK_NBHF:DSWH
+call_types_sound_sources,OD_CLICK_NBHF:DUDO,OD_CLICK_NBHF:DUDO
+call_types_sound_sources,OD_CLICK_NBHF:ESDO,OD_CLICK_NBHF:ESDO
+call_types_sound_sources,OD_CLICK_NBHF:FIPO,OD_CLICK_NBHF:FIPO
+call_types_sound_sources,OD_CLICK_NBHF:FIPOEA,OD_CLICK_NBHF:FIPOEA
+call_types_sound_sources,OD_CLICK_NBHF:FIPOIP,OD_CLICK_NBHF:FIPOIP
+call_types_sound_sources,OD_CLICK_NBHF:FIPOYA,OD_CLICK_NBHF:FIPOYA
+call_types_sound_sources,OD_CLICK_NBHF:FKWH,OD_CLICK_NBHF:FKWH
+call_types_sound_sources,OD_CLICK_NBHF:FRAN,OD_CLICK_NBHF:FRAN
+call_types_sound_sources,OD_CLICK_NBHF:FRDO,OD_CLICK_NBHF:FRDO
+call_types_sound_sources,OD_CLICK_NBHF:GBWH,OD_CLICK_NBHF:GBWH
+call_types_sound_sources,OD_CLICK_NBHF:GEBW,OD_CLICK_NBHF:GEBW
+call_types_sound_sources,OD_CLICK_NBHF:GOBW,OD_CLICK_NBHF:GOBW
+call_types_sound_sources,OD_CLICK_NBHF:GRAM,OD_CLICK_NBHF:GRAM
+call_types_sound_sources,OD_CLICK_NBHF:GRDO,OD_CLICK_NBHF:GRDO
+call_types_sound_sources,OD_CLICK_NBHF:GSDO,OD_CLICK_NBHF:GSDO
+call_types_sound_sources,OD_CLICK_NBHF:GTBW,OD_CLICK_NBHF:GTBW
+call_types_sound_sources,OD_CLICK_NBHF:GUDO,OD_CLICK_NBHF:GUDO
+call_types_sound_sources,OD_CLICK_NBHF:HAPO,OD_CLICK_NBHF:HAPO
+call_types_sound_sources,OD_CLICK_NBHF:HEADO,OD_CLICK_NBHF:HEADO
+call_types_sound_sources,OD_CLICK_NBHF:HEBW,OD_CLICK_NBHF:HEBW
+call_types_sound_sources,OD_CLICK_NBHF:HECDO,OD_CLICK_NBHF:HECDO
+call_types_sound_sources,OD_CLICK_NBHF:HODO,OD_CLICK_NBHF:HODO
+call_types_sound_sources,OD_CLICK_NBHF:HUBW,OD_CLICK_NBHF:HUBW
+call_types_sound_sources,OD_CLICK_NBHF:INRDO,OD_CLICK_NBHF:INRDO
+call_types_sound_sources,OD_CLICK_NBHF:IOBD,OD_CLICK_NBHF:IOBD
+call_types_sound_sources,OD_CLICK_NBHF:IPHD,OD_CLICK_NBHF:IPHD
+call_types_sound_sources,OD_CLICK_NBHF:IRRDO,OD_CLICK_NBHF:IRRDO
+call_types_sound_sources,OD_CLICK_NBHF:KIWH,OD_CLICK_NBHF:KIWH
+call_types_sound_sources,OD_CLICK_NBHF:KIWHAANT,OD_CLICK_NBHF:KIWHAANT
+call_types_sound_sources,OD_CLICK_NBHF:KIWHBANT,OD_CLICK_NBHF:KIWHBANT
+call_types_sound_sources,OD_CLICK_NBHF:KIWHCANT,OD_CLICK_NBHF:KIWHCANT
+call_types_sound_sources,OD_CLICK_NBHF:KIWHOF,OD_CLICK_NBHF:KIWHOF
+call_types_sound_sources,OD_CLICK_NBHF:KIWHRE,OD_CLICK_NBHF:KIWHRE
+call_types_sound_sources,OD_CLICK_NBHF:KIWHTR,OD_CLICK_NBHF:KIWHTR
+call_types_sound_sources,OD_CLICK_NBHF:LBCD,OD_CLICK_NBHF:LBCD
+call_types_sound_sources,OD_CLICK_NBHF:LBWH,OD_CLICK_NBHF:LBWH
+call_types_sound_sources,OD_CLICK_NBHF:LFPW,OD_CLICK_NBHF:LFPW
+call_types_sound_sources,OD_CLICK_NBHF:MEPK,OD_CLICK_NBHF:MEPK
+call_types_sound_sources,OD_CLICK_NBHF:MEWH,OD_CLICK_NBHF:MEWH
+call_types_sound_sources,OD_CLICK_NBHF:MMME,OD_CLICK_NBHF:MMME
+call_types_sound_sources,OD_CLICK_NBHF:NAWH,OD_CLICK_NBHF:NAWH
+call_types_sound_sources,OD_CLICK_NBHF:NBHF,OD_CLICK_NBHF:NBHF
+call_types_sound_sources,OD_CLICK_NBHF:NBWH,OD_CLICK_NBHF:NBWH
+call_types_sound_sources,OD_CLICK_NBHF:NRWD,OD_CLICK_NBHF:NRWD
+call_types_sound_sources,OD_CLICK_NBHF:OBDO,OD_CLICK_NBHF:OBDO
+call_types_sound_sources,OD_CLICK_NBHF:PEBW,OD_CLICK_NBHF:PEBW
+call_types_sound_sources,OD_CLICK_NBHF:PEDO,OD_CLICK_NBHF:PEDO
+call_types_sound_sources,OD_CLICK_NBHF:PIWH,OD_CLICK_NBHF:PIWH
+call_types_sound_sources,OD_CLICK_NBHF:PSDO,OD_CLICK_NBHF:PSDO
+call_types_sound_sources,OD_CLICK_NBHF:PSWH,OD_CLICK_NBHF:PSWH
+call_types_sound_sources,OD_CLICK_NBHF:PWDO,OD_CLICK_NBHF:PWDO
+call_types_sound_sources,OD_CLICK_NBHF:PYBW,OD_CLICK_NBHF:PYBW
+call_types_sound_sources,OD_CLICK_NBHF:PYKW,OD_CLICK_NBHF:PYKW
+call_types_sound_sources,OD_CLICK_NBHF:RTDO,OD_CLICK_NBHF:RTDO
+call_types_sound_sources,OD_CLICK_NBHF:SADO,OD_CLICK_NBHF:SADO
+call_types_sound_sources,OD_CLICK_NBHF:SBWH,OD_CLICK_NBHF:SBWH
+call_types_sound_sources,OD_CLICK_NBHF:SFPW,OD_CLICK_NBHF:SFPW
+call_types_sound_sources,OD_CLICK_NBHF:SHBW,OD_CLICK_NBHF:SHBW
+call_types_sound_sources,OD_CLICK_NBHF:SNDO,OD_CLICK_NBHF:SNDO
+call_types_sound_sources,OD_CLICK_NBHF:SOBW,OD_CLICK_NBHF:SOBW
+call_types_sound_sources,OD_CLICK_NBHF:SPDOOF,OD_CLICK_NBHF:SPDOOF
+call_types_sound_sources,OD_CLICK_NBHF:SPDOPA,OD_CLICK_NBHF:SPDOPA
+call_types_sound_sources,OD_CLICK_NBHF:SPPO,OD_CLICK_NBHF:SPPO
+call_types_sound_sources,OD_CLICK_NBHF:SRWD,OD_CLICK_NBHF:SRWD
+call_types_sound_sources,OD_CLICK_NBHF:SSDO,OD_CLICK_NBHF:SSDO
+call_types_sound_sources,OD_CLICK_NBHF:STBWH,OD_CLICK_NBHF:STBWH
+call_types_sound_sources,OD_CLICK_NBHF:STDO,OD_CLICK_NBHF:STDO
+call_types_sound_sources,OD_CLICK_NBHF:STTWH,OD_CLICK_NBHF:STTWH
+call_types_sound_sources,OD_CLICK_NBHF:STWH,OD_CLICK_NBHF:STWH
+call_types_sound_sources,OD_CLICK_NBHF:TMSD,OD_CLICK_NBHF:TMSD
+call_types_sound_sources,OD_CLICK_NBHF:TRBW,OD_CLICK_NBHF:TRBW
+call_types_sound_sources,OD_CLICK_NBHF:TUDO,OD_CLICK_NBHF:TUDO
+call_types_sound_sources,OD_CLICK_NBHF:UBWA,OD_CLICK_NBHF:UBWA
+call_types_sound_sources,OD_CLICK_NBHF:UECASD,OD_CLICK_NBHF:UECASD
+call_types_sound_sources,OD_CLICK_NBHF:UNBD,OD_CLICK_NBHF:UNBD
+call_types_sound_sources,OD_CLICK_NBHF:UNBF,OD_CLICK_NBHF:UNBF
+call_types_sound_sources,OD_CLICK_NBHF:UNBW,OD_CLICK_NBHF:UNBW
+call_types_sound_sources,OD_CLICK_NBHF:UNCW,OD_CLICK_NBHF:UNCW
+call_types_sound_sources,OD_CLICK_NBHF:UNDO,OD_CLICK_NBHF:UNDO
+call_types_sound_sources,OD_CLICK_NBHF:UNDS,OD_CLICK_NBHF:UNDS
+call_types_sound_sources,OD_CLICK_NBHF:UNKO,OD_CLICK_NBHF:UNKO
+call_types_sound_sources,OD_CLICK_NBHF:UNLAG,OD_CLICK_NBHF:UNLAG
+call_types_sound_sources,OD_CLICK_NBHF:UNLD,OD_CLICK_NBHF:UNLD
+call_types_sound_sources,OD_CLICK_NBHF:UNMD,OD_CLICK_NBHF:UNMD
+call_types_sound_sources,OD_CLICK_NBHF:UNME,OD_CLICK_NBHF:UNME
+call_types_sound_sources,OD_CLICK_NBHF:UNPO,OD_CLICK_NBHF:UNPO
+call_types_sound_sources,OD_CLICK_NBHF:UNRB,OD_CLICK_NBHF:UNRB
+call_types_sound_sources,OD_CLICK_NBHF:UNSB,OD_CLICK_NBHF:UNSB
+call_types_sound_sources,OD_CLICK_NBHF:UNSBW,OD_CLICK_NBHF:UNSBW
+call_types_sound_sources,OD_CLICK_NBHF:UNSC,OD_CLICK_NBHF:UNSC
+call_types_sound_sources,OD_CLICK_NBHF:UNSPDO,OD_CLICK_NBHF:UNSPDO
+call_types_sound_sources,OD_CLICK_NBHF:VAQU,OD_CLICK_NBHF:VAQU
+call_types_sound_sources,OD_CLICK_NBHF:WBDO,OD_CLICK_NBHF:WBDO
+call_types_sound_sources,OD_CLICK_NBHF:WBSDO,OD_CLICK_NBHF:WBSDO
+call_types_sound_sources,OD_CLICK_NBHF:WSDO,OD_CLICK_NBHF:WSDO
+call_types_sound_sources,OD_LF_TONE:AHDO,OD_LF_TONE:AHDO
+call_types_sound_sources,OD_LF_TONE:ANBW,OD_LF_TONE:ANBW
+call_types_sound_sources,OD_LF_TONE:ARBW,OD_LF_TONE:ARBW
+call_types_sound_sources,OD_LF_TONE:ARDO,OD_LF_TONE:ARDO
+call_types_sound_sources,OD_LF_TONE:ASDO,OD_LF_TONE:ASDO
+call_types_sound_sources,OD_LF_TONE:AUSDO,OD_LF_TONE:AUSDO
+call_types_sound_sources,OD_LF_TONE:BBWH,OD_LF_TONE:BBWH
+call_types_sound_sources,OD_LF_TONE:BELU,OD_LF_TONE:BELU
+call_types_sound_sources,OD_LF_TONE:BLBW,OD_LF_TONE:BLBW
+call_types_sound_sources,OD_LF_TONE:BLDO,OD_LF_TONE:BLDO
+call_types_sound_sources,OD_LF_TONE:BODO,OD_LF_TONE:BODO
+call_types_sound_sources,OD_LF_TONE:BODOCOCA,OD_LF_TONE:BODOCOCA
+call_types_sound_sources,OD_LF_TONE:BODOOFCA,OD_LF_TONE:BODOOFCA
+call_types_sound_sources,OD_LF_TONE:BOGR,OD_LF_TONE:BOGR
+call_types_sound_sources,OD_LF_TONE:BOSP,OD_LF_TONE:BOSP
+call_types_sound_sources,OD_LF_TONE:BRDO,OD_LF_TONE:BRDO
+call_types_sound_sources,OD_LF_TONE:BUPO,OD_LF_TONE:BUPO
+call_types_sound_sources,OD_LF_TONE:BW29,OD_LF_TONE:BW29
+call_types_sound_sources,OD_LF_TONE:BW39V,OD_LF_TONE:BW39V
+call_types_sound_sources,OD_LF_TONE:BW41,OD_LF_TONE:BW41
+call_types_sound_sources,OD_LF_TONE:BW43,OD_LF_TONE:BW43
+call_types_sound_sources,OD_LF_TONE:BW53,OD_LF_TONE:BW53
+call_types_sound_sources,OD_LF_TONE:BW58,OD_LF_TONE:BW58
+call_types_sound_sources,OD_LF_TONE:BW70,OD_LF_TONE:BW70
+call_types_sound_sources,OD_LF_TONE:BWB,OD_LF_TONE:BWB
+call_types_sound_sources,OD_LF_TONE:BWC,OD_LF_TONE:BWC
+call_types_sound_sources,OD_LF_TONE:BWG,OD_LF_TONE:BWG
+call_types_sound_sources,OD_LF_TONE:CASP,OD_LF_TONE:CASP
+call_types_sound_sources,OD_LF_TONE:CLDO,OD_LF_TONE:CLDO
+call_types_sound_sources,OD_LF_TONE:CODO,OD_LF_TONE:CODO
+call_types_sound_sources,OD_LF_TONE:CUBW,OD_LF_TONE:CUBW
+call_types_sound_sources,OD_LF_TONE:DAPO,OD_LF_TONE:DAPO
+call_types_sound_sources,OD_LF_TONE:DEBW,OD_LF_TONE:DEBW
+call_types_sound_sources,OD_LF_TONE:DESP,OD_LF_TONE:DESP
+call_types_sound_sources,OD_LF_TONE:DSDO,OD_LF_TONE:DSDO
+call_types_sound_sources,OD_LF_TONE:DSWH,OD_LF_TONE:DSWH
+call_types_sound_sources,OD_LF_TONE:DUDO,OD_LF_TONE:DUDO
+call_types_sound_sources,OD_LF_TONE:ESDO,OD_LF_TONE:ESDO
+call_types_sound_sources,OD_LF_TONE:FIPO,OD_LF_TONE:FIPO
+call_types_sound_sources,OD_LF_TONE:FIPOEA,OD_LF_TONE:FIPOEA
+call_types_sound_sources,OD_LF_TONE:FIPOIP,OD_LF_TONE:FIPOIP
+call_types_sound_sources,OD_LF_TONE:FIPOYA,OD_LF_TONE:FIPOYA
+call_types_sound_sources,OD_LF_TONE:FKWH,OD_LF_TONE:FKWH
+call_types_sound_sources,OD_LF_TONE:FRAN,OD_LF_TONE:FRAN
+call_types_sound_sources,OD_LF_TONE:FRDO,OD_LF_TONE:FRDO
+call_types_sound_sources,OD_LF_TONE:GBWH,OD_LF_TONE:GBWH
+call_types_sound_sources,OD_LF_TONE:GEBW,OD_LF_TONE:GEBW
+call_types_sound_sources,OD_LF_TONE:GOBW,OD_LF_TONE:GOBW
+call_types_sound_sources,OD_LF_TONE:GRAM,OD_LF_TONE:GRAM
+call_types_sound_sources,OD_LF_TONE:GRDO,OD_LF_TONE:GRDO
+call_types_sound_sources,OD_LF_TONE:GSDO,OD_LF_TONE:GSDO
+call_types_sound_sources,OD_LF_TONE:GTBW,OD_LF_TONE:GTBW
+call_types_sound_sources,OD_LF_TONE:GUDO,OD_LF_TONE:GUDO
+call_types_sound_sources,OD_LF_TONE:HAPO,OD_LF_TONE:HAPO
+call_types_sound_sources,OD_LF_TONE:HEADO,OD_LF_TONE:HEADO
+call_types_sound_sources,OD_LF_TONE:HEBW,OD_LF_TONE:HEBW
+call_types_sound_sources,OD_LF_TONE:HECDO,OD_LF_TONE:HECDO
+call_types_sound_sources,OD_LF_TONE:HODO,OD_LF_TONE:HODO
+call_types_sound_sources,OD_LF_TONE:HUBW,OD_LF_TONE:HUBW
+call_types_sound_sources,OD_LF_TONE:INRDO,OD_LF_TONE:INRDO
+call_types_sound_sources,OD_LF_TONE:IOBD,OD_LF_TONE:IOBD
+call_types_sound_sources,OD_LF_TONE:IPHD,OD_LF_TONE:IPHD
+call_types_sound_sources,OD_LF_TONE:IRRDO,OD_LF_TONE:IRRDO
+call_types_sound_sources,OD_LF_TONE:KIWH,OD_LF_TONE:KIWH
+call_types_sound_sources,OD_LF_TONE:KIWHAANT,OD_LF_TONE:KIWHAANT
+call_types_sound_sources,OD_LF_TONE:KIWHBANT,OD_LF_TONE:KIWHBANT
+call_types_sound_sources,OD_LF_TONE:KIWHCANT,OD_LF_TONE:KIWHCANT
+call_types_sound_sources,OD_LF_TONE:KIWHOF,OD_LF_TONE:KIWHOF
+call_types_sound_sources,OD_LF_TONE:KIWHRE,OD_LF_TONE:KIWHRE
+call_types_sound_sources,OD_LF_TONE:KIWHTR,OD_LF_TONE:KIWHTR
+call_types_sound_sources,OD_LF_TONE:LBCD,OD_LF_TONE:LBCD
+call_types_sound_sources,OD_LF_TONE:LBWH,OD_LF_TONE:LBWH
+call_types_sound_sources,OD_LF_TONE:LFPW,OD_LF_TONE:LFPW
+call_types_sound_sources,OD_LF_TONE:MEPK,OD_LF_TONE:MEPK
+call_types_sound_sources,OD_LF_TONE:MEWH,OD_LF_TONE:MEWH
+call_types_sound_sources,OD_LF_TONE:MMME,OD_LF_TONE:MMME
+call_types_sound_sources,OD_LF_TONE:NAWH,OD_LF_TONE:NAWH
+call_types_sound_sources,OD_LF_TONE:NBWH,OD_LF_TONE:NBWH
+call_types_sound_sources,OD_LF_TONE:NRWD,OD_LF_TONE:NRWD
+call_types_sound_sources,OD_LF_TONE:OBDO,OD_LF_TONE:OBDO
+call_types_sound_sources,OD_LF_TONE:PEBW,OD_LF_TONE:PEBW
+call_types_sound_sources,OD_LF_TONE:PEDO,OD_LF_TONE:PEDO
+call_types_sound_sources,OD_LF_TONE:PIWH,OD_LF_TONE:PIWH
+call_types_sound_sources,OD_LF_TONE:PSDO,OD_LF_TONE:PSDO
+call_types_sound_sources,OD_LF_TONE:PSWH,OD_LF_TONE:PSWH
+call_types_sound_sources,OD_LF_TONE:PWDO,OD_LF_TONE:PWDO
+call_types_sound_sources,OD_LF_TONE:PYBW,OD_LF_TONE:PYBW
+call_types_sound_sources,OD_LF_TONE:PYKW,OD_LF_TONE:PYKW
+call_types_sound_sources,OD_LF_TONE:RTDO,OD_LF_TONE:RTDO
+call_types_sound_sources,OD_LF_TONE:SADO,OD_LF_TONE:SADO
+call_types_sound_sources,OD_LF_TONE:SBWH,OD_LF_TONE:SBWH
+call_types_sound_sources,OD_LF_TONE:SFPW,OD_LF_TONE:SFPW
+call_types_sound_sources,OD_LF_TONE:SHBW,OD_LF_TONE:SHBW
+call_types_sound_sources,OD_LF_TONE:SNDO,OD_LF_TONE:SNDO
+call_types_sound_sources,OD_LF_TONE:SOBW,OD_LF_TONE:SOBW
+call_types_sound_sources,OD_LF_TONE:SPDOOF,OD_LF_TONE:SPDOOF
+call_types_sound_sources,OD_LF_TONE:SPDOPA,OD_LF_TONE:SPDOPA
+call_types_sound_sources,OD_LF_TONE:SPPO,OD_LF_TONE:SPPO
+call_types_sound_sources,OD_LF_TONE:SRWD,OD_LF_TONE:SRWD
+call_types_sound_sources,OD_LF_TONE:SSDO,OD_LF_TONE:SSDO
+call_types_sound_sources,OD_LF_TONE:STBWH,OD_LF_TONE:STBWH
+call_types_sound_sources,OD_LF_TONE:STDO,OD_LF_TONE:STDO
+call_types_sound_sources,OD_LF_TONE:STTWH,OD_LF_TONE:STTWH
+call_types_sound_sources,OD_LF_TONE:STWH,OD_LF_TONE:STWH
+call_types_sound_sources,OD_LF_TONE:TMSD,OD_LF_TONE:TMSD
+call_types_sound_sources,OD_LF_TONE:TRBW,OD_LF_TONE:TRBW
+call_types_sound_sources,OD_LF_TONE:TUDO,OD_LF_TONE:TUDO
+call_types_sound_sources,OD_LF_TONE:UBWA,OD_LF_TONE:UBWA
+call_types_sound_sources,OD_LF_TONE:UECASD,OD_LF_TONE:UECASD
+call_types_sound_sources,OD_LF_TONE:UNBD,OD_LF_TONE:UNBD
+call_types_sound_sources,OD_LF_TONE:UNBF,OD_LF_TONE:UNBF
+call_types_sound_sources,OD_LF_TONE:UNBW,OD_LF_TONE:UNBW
+call_types_sound_sources,OD_LF_TONE:UNCW,OD_LF_TONE:UNCW
+call_types_sound_sources,OD_LF_TONE:UNDO,OD_LF_TONE:UNDO
+call_types_sound_sources,OD_LF_TONE:UNDS,OD_LF_TONE:UNDS
+call_types_sound_sources,OD_LF_TONE:UNKO,OD_LF_TONE:UNKO
+call_types_sound_sources,OD_LF_TONE:UNLAG,OD_LF_TONE:UNLAG
+call_types_sound_sources,OD_LF_TONE:UNLD,OD_LF_TONE:UNLD
+call_types_sound_sources,OD_LF_TONE:UNMD,OD_LF_TONE:UNMD
+call_types_sound_sources,OD_LF_TONE:UNME,OD_LF_TONE:UNME
+call_types_sound_sources,OD_LF_TONE:UNPO,OD_LF_TONE:UNPO
+call_types_sound_sources,OD_LF_TONE:UNRB,OD_LF_TONE:UNRB
+call_types_sound_sources,OD_LF_TONE:UNSB,OD_LF_TONE:UNSB
+call_types_sound_sources,OD_LF_TONE:UNSBW,OD_LF_TONE:UNSBW
+call_types_sound_sources,OD_LF_TONE:UNSC,OD_LF_TONE:UNSC
+call_types_sound_sources,OD_LF_TONE:UNSPDO,OD_LF_TONE:UNSPDO
+call_types_sound_sources,OD_LF_TONE:VAQU,OD_LF_TONE:VAQU
+call_types_sound_sources,OD_LF_TONE:WBDO,OD_LF_TONE:WBDO
+call_types_sound_sources,OD_LF_TONE:WBSDO,OD_LF_TONE:WBSDO
+call_types_sound_sources,OD_LF_TONE:WSDO,OD_LF_TONE:WSDO
+call_types_sound_sources,OD_MIX:AHDO,OD_MIX:AHDO
+call_types_sound_sources,OD_MIX:ANBW,OD_MIX:ANBW
+call_types_sound_sources,OD_MIX:ARBW,OD_MIX:ARBW
+call_types_sound_sources,OD_MIX:ARDO,OD_MIX:ARDO
+call_types_sound_sources,OD_MIX:ASDO,OD_MIX:ASDO
+call_types_sound_sources,OD_MIX:AUSDO,OD_MIX:AUSDO
+call_types_sound_sources,OD_MIX:BBWH,OD_MIX:BBWH
+call_types_sound_sources,OD_MIX:BELU,OD_MIX:BELU
+call_types_sound_sources,OD_MIX:BLBW,OD_MIX:BLBW
+call_types_sound_sources,OD_MIX:BLDO,OD_MIX:BLDO
+call_types_sound_sources,OD_MIX:BODO,OD_MIX:BODO
+call_types_sound_sources,OD_MIX:BODOCOCA,OD_MIX:BODOCOCA
+call_types_sound_sources,OD_MIX:BODOOFCA,OD_MIX:BODOOFCA
+call_types_sound_sources,OD_MIX:BOGR,OD_MIX:BOGR
+call_types_sound_sources,OD_MIX:BOSP,OD_MIX:BOSP
+call_types_sound_sources,OD_MIX:BRDO,OD_MIX:BRDO
+call_types_sound_sources,OD_MIX:BUPO,OD_MIX:BUPO
+call_types_sound_sources,OD_MIX:BW29,OD_MIX:BW29
+call_types_sound_sources,OD_MIX:BW39V,OD_MIX:BW39V
+call_types_sound_sources,OD_MIX:BW41,OD_MIX:BW41
+call_types_sound_sources,OD_MIX:BW43,OD_MIX:BW43
+call_types_sound_sources,OD_MIX:BW53,OD_MIX:BW53
+call_types_sound_sources,OD_MIX:BW58,OD_MIX:BW58
+call_types_sound_sources,OD_MIX:BW70,OD_MIX:BW70
+call_types_sound_sources,OD_MIX:BWB,OD_MIX:BWB
+call_types_sound_sources,OD_MIX:BWC,OD_MIX:BWC
+call_types_sound_sources,OD_MIX:BWG,OD_MIX:BWG
+call_types_sound_sources,OD_MIX:CASP,OD_MIX:CASP
+call_types_sound_sources,OD_MIX:CLDO,OD_MIX:CLDO
+call_types_sound_sources,OD_MIX:CODO,OD_MIX:CODO
+call_types_sound_sources,OD_MIX:CUBW,OD_MIX:CUBW
+call_types_sound_sources,OD_MIX:DAPO,OD_MIX:DAPO
+call_types_sound_sources,OD_MIX:DEBW,OD_MIX:DEBW
+call_types_sound_sources,OD_MIX:DESP,OD_MIX:DESP
+call_types_sound_sources,OD_MIX:DSDO,OD_MIX:DSDO
+call_types_sound_sources,OD_MIX:DSWH,OD_MIX:DSWH
+call_types_sound_sources,OD_MIX:DUDO,OD_MIX:DUDO
+call_types_sound_sources,OD_MIX:ESDO,OD_MIX:ESDO
+call_types_sound_sources,OD_MIX:FIPO,OD_MIX:FIPO
+call_types_sound_sources,OD_MIX:FIPOEA,OD_MIX:FIPOEA
+call_types_sound_sources,OD_MIX:FIPOIP,OD_MIX:FIPOIP
+call_types_sound_sources,OD_MIX:FIPOYA,OD_MIX:FIPOYA
+call_types_sound_sources,OD_MIX:FKWH,OD_MIX:FKWH
+call_types_sound_sources,OD_MIX:FRAN,OD_MIX:FRAN
+call_types_sound_sources,OD_MIX:FRDO,OD_MIX:FRDO
+call_types_sound_sources,OD_MIX:GBWH,OD_MIX:GBWH
+call_types_sound_sources,OD_MIX:GEBW,OD_MIX:GEBW
+call_types_sound_sources,OD_MIX:GOBW,OD_MIX:GOBW
+call_types_sound_sources,OD_MIX:GRAM,OD_MIX:GRAM
+call_types_sound_sources,OD_MIX:GRDO,OD_MIX:GRDO
+call_types_sound_sources,OD_MIX:GSDO,OD_MIX:GSDO
+call_types_sound_sources,OD_MIX:GTBW,OD_MIX:GTBW
+call_types_sound_sources,OD_MIX:GUDO,OD_MIX:GUDO
+call_types_sound_sources,OD_MIX:HAPO,OD_MIX:HAPO
+call_types_sound_sources,OD_MIX:HEADO,OD_MIX:HEADO
+call_types_sound_sources,OD_MIX:HEBW,OD_MIX:HEBW
+call_types_sound_sources,OD_MIX:HECDO,OD_MIX:HECDO
+call_types_sound_sources,OD_MIX:HODO,OD_MIX:HODO
+call_types_sound_sources,OD_MIX:HUBW,OD_MIX:HUBW
+call_types_sound_sources,OD_MIX:INRDO,OD_MIX:INRDO
+call_types_sound_sources,OD_MIX:IOBD,OD_MIX:IOBD
+call_types_sound_sources,OD_MIX:IPHD,OD_MIX:IPHD
+call_types_sound_sources,OD_MIX:IRRDO,OD_MIX:IRRDO
+call_types_sound_sources,OD_MIX:KIWH,OD_MIX:KIWH
+call_types_sound_sources,OD_MIX:KIWHAANT,OD_MIX:KIWHAANT
+call_types_sound_sources,OD_MIX:KIWHBANT,OD_MIX:KIWHBANT
+call_types_sound_sources,OD_MIX:KIWHCANT,OD_MIX:KIWHCANT
+call_types_sound_sources,OD_MIX:KIWHOF,OD_MIX:KIWHOF
+call_types_sound_sources,OD_MIX:KIWHRE,OD_MIX:KIWHRE
+call_types_sound_sources,OD_MIX:KIWHTR,OD_MIX:KIWHTR
+call_types_sound_sources,OD_MIX:LBCD,OD_MIX:LBCD
+call_types_sound_sources,OD_MIX:LBWH,OD_MIX:LBWH
+call_types_sound_sources,OD_MIX:LFPW,OD_MIX:LFPW
+call_types_sound_sources,OD_MIX:MEPK,OD_MIX:MEPK
+call_types_sound_sources,OD_MIX:MEWH,OD_MIX:MEWH
+call_types_sound_sources,OD_MIX:MMME,OD_MIX:MMME
+call_types_sound_sources,OD_MIX:NAWH,OD_MIX:NAWH
+call_types_sound_sources,OD_MIX:NBWH,OD_MIX:NBWH
+call_types_sound_sources,OD_MIX:NRWD,OD_MIX:NRWD
+call_types_sound_sources,OD_MIX:OBDO,OD_MIX:OBDO
+call_types_sound_sources,OD_MIX:PEBW,OD_MIX:PEBW
+call_types_sound_sources,OD_MIX:PEDO,OD_MIX:PEDO
+call_types_sound_sources,OD_MIX:PIWH,OD_MIX:PIWH
+call_types_sound_sources,OD_MIX:PSDO,OD_MIX:PSDO
+call_types_sound_sources,OD_MIX:PSWH,OD_MIX:PSWH
+call_types_sound_sources,OD_MIX:PWDO,OD_MIX:PWDO
+call_types_sound_sources,OD_MIX:PYBW,OD_MIX:PYBW
+call_types_sound_sources,OD_MIX:PYKW,OD_MIX:PYKW
+call_types_sound_sources,OD_MIX:RTDO,OD_MIX:RTDO
+call_types_sound_sources,OD_MIX:SADO,OD_MIX:SADO
+call_types_sound_sources,OD_MIX:SBWH,OD_MIX:SBWH
+call_types_sound_sources,OD_MIX:SFPW,OD_MIX:SFPW
+call_types_sound_sources,OD_MIX:SHBW,OD_MIX:SHBW
+call_types_sound_sources,OD_MIX:SNDO,OD_MIX:SNDO
+call_types_sound_sources,OD_MIX:SOBW,OD_MIX:SOBW
+call_types_sound_sources,OD_MIX:SPDOOF,OD_MIX:SPDOOF
+call_types_sound_sources,OD_MIX:SPDOPA,OD_MIX:SPDOPA
+call_types_sound_sources,OD_MIX:SPPO,OD_MIX:SPPO
+call_types_sound_sources,OD_MIX:SRWD,OD_MIX:SRWD
+call_types_sound_sources,OD_MIX:SSDO,OD_MIX:SSDO
+call_types_sound_sources,OD_MIX:STBWH,OD_MIX:STBWH
+call_types_sound_sources,OD_MIX:STDO,OD_MIX:STDO
+call_types_sound_sources,OD_MIX:STTWH,OD_MIX:STTWH
+call_types_sound_sources,OD_MIX:STWH,OD_MIX:STWH
+call_types_sound_sources,OD_MIX:TMSD,OD_MIX:TMSD
+call_types_sound_sources,OD_MIX:TRBW,OD_MIX:TRBW
+call_types_sound_sources,OD_MIX:TUDO,OD_MIX:TUDO
+call_types_sound_sources,OD_MIX:UBWA,OD_MIX:UBWA
+call_types_sound_sources,OD_MIX:UECASD,OD_MIX:UECASD
+call_types_sound_sources,OD_MIX:UNBD,OD_MIX:UNBD
+call_types_sound_sources,OD_MIX:UNBF,OD_MIX:UNBF
+call_types_sound_sources,OD_MIX:UNBW,OD_MIX:UNBW
+call_types_sound_sources,OD_MIX:UNCW,OD_MIX:UNCW
+call_types_sound_sources,OD_MIX:UNDO,OD_MIX:UNDO
+call_types_sound_sources,OD_MIX:UNDS,OD_MIX:UNDS
+call_types_sound_sources,OD_MIX:UNKO,OD_MIX:UNKO
+call_types_sound_sources,OD_MIX:UNLAG,OD_MIX:UNLAG
+call_types_sound_sources,OD_MIX:UNLD,OD_MIX:UNLD
+call_types_sound_sources,OD_MIX:UNMD,OD_MIX:UNMD
+call_types_sound_sources,OD_MIX:UNME,OD_MIX:UNME
+call_types_sound_sources,OD_MIX:UNPO,OD_MIX:UNPO
+call_types_sound_sources,OD_MIX:UNRB,OD_MIX:UNRB
+call_types_sound_sources,OD_MIX:UNSB,OD_MIX:UNSB
+call_types_sound_sources,OD_MIX:UNSBW,OD_MIX:UNSBW
+call_types_sound_sources,OD_MIX:UNSC,OD_MIX:UNSC
+call_types_sound_sources,OD_MIX:UNSPDO,OD_MIX:UNSPDO
+call_types_sound_sources,OD_MIX:VAQU,OD_MIX:VAQU
+call_types_sound_sources,OD_MIX:WBDO,OD_MIX:WBDO
+call_types_sound_sources,OD_MIX:WBSDO,OD_MIX:WBSDO
+call_types_sound_sources,OD_MIX:WSDO,OD_MIX:WSDO
+call_types_sound_sources,OD_PULSE:AHDO,OD_PULSE:AHDO
+call_types_sound_sources,OD_PULSE:ANBW,OD_PULSE:ANBW
+call_types_sound_sources,OD_PULSE:ARBW,OD_PULSE:ARBW
+call_types_sound_sources,OD_PULSE:ARDO,OD_PULSE:ARDO
+call_types_sound_sources,OD_PULSE:ASDO,OD_PULSE:ASDO
+call_types_sound_sources,OD_PULSE:AUSDO,OD_PULSE:AUSDO
+call_types_sound_sources,OD_PULSE:BBWH,OD_PULSE:BBWH
+call_types_sound_sources,OD_PULSE:BELU,OD_PULSE:BELU
+call_types_sound_sources,OD_PULSE:BLBW,OD_PULSE:BLBW
+call_types_sound_sources,OD_PULSE:BLDO,OD_PULSE:BLDO
+call_types_sound_sources,OD_PULSE:BODO,OD_PULSE:BODO
+call_types_sound_sources,OD_PULSE:BODOCOCA,OD_PULSE:BODOCOCA
+call_types_sound_sources,OD_PULSE:BODOOFCA,OD_PULSE:BODOOFCA
+call_types_sound_sources,OD_PULSE:BOGR,OD_PULSE:BOGR
+call_types_sound_sources,OD_PULSE:BOSP,OD_PULSE:BOSP
+call_types_sound_sources,OD_PULSE:BRDO,OD_PULSE:BRDO
+call_types_sound_sources,OD_PULSE:BUPO,OD_PULSE:BUPO
+call_types_sound_sources,OD_PULSE:BW29,OD_PULSE:BW29
+call_types_sound_sources,OD_PULSE:BW39V,OD_PULSE:BW39V
+call_types_sound_sources,OD_PULSE:BW41,OD_PULSE:BW41
+call_types_sound_sources,OD_PULSE:BW43,OD_PULSE:BW43
+call_types_sound_sources,OD_PULSE:BW53,OD_PULSE:BW53
+call_types_sound_sources,OD_PULSE:BW58,OD_PULSE:BW58
+call_types_sound_sources,OD_PULSE:BW70,OD_PULSE:BW70
+call_types_sound_sources,OD_PULSE:BWB,OD_PULSE:BWB
+call_types_sound_sources,OD_PULSE:BWC,OD_PULSE:BWC
+call_types_sound_sources,OD_PULSE:BWG,OD_PULSE:BWG
+call_types_sound_sources,OD_PULSE:CASP,OD_PULSE:CASP
+call_types_sound_sources,OD_PULSE:CLDO,OD_PULSE:CLDO
+call_types_sound_sources,OD_PULSE:CODO,OD_PULSE:CODO
+call_types_sound_sources,OD_PULSE:CUBW,OD_PULSE:CUBW
+call_types_sound_sources,OD_PULSE:DAPO,OD_PULSE:DAPO
+call_types_sound_sources,OD_PULSE:DEBW,OD_PULSE:DEBW
+call_types_sound_sources,OD_PULSE:DESP,OD_PULSE:DESP
+call_types_sound_sources,OD_PULSE:DSDO,OD_PULSE:DSDO
+call_types_sound_sources,OD_PULSE:DSWH,OD_PULSE:DSWH
+call_types_sound_sources,OD_PULSE:DUDO,OD_PULSE:DUDO
+call_types_sound_sources,OD_PULSE:ESDO,OD_PULSE:ESDO
+call_types_sound_sources,OD_PULSE:FIPO,OD_PULSE:FIPO
+call_types_sound_sources,OD_PULSE:FIPOEA,OD_PULSE:FIPOEA
+call_types_sound_sources,OD_PULSE:FIPOIP,OD_PULSE:FIPOIP
+call_types_sound_sources,OD_PULSE:FIPOYA,OD_PULSE:FIPOYA
+call_types_sound_sources,OD_PULSE:FKWH,OD_PULSE:FKWH
+call_types_sound_sources,OD_PULSE:FRAN,OD_PULSE:FRAN
+call_types_sound_sources,OD_PULSE:FRDO,OD_PULSE:FRDO
+call_types_sound_sources,OD_PULSE:GBWH,OD_PULSE:GBWH
+call_types_sound_sources,OD_PULSE:GEBW,OD_PULSE:GEBW
+call_types_sound_sources,OD_PULSE:GOBW,OD_PULSE:GOBW
+call_types_sound_sources,OD_PULSE:GRAM,OD_PULSE:GRAM
+call_types_sound_sources,OD_PULSE:GRDO,OD_PULSE:GRDO
+call_types_sound_sources,OD_PULSE:GSDO,OD_PULSE:GSDO
+call_types_sound_sources,OD_PULSE:GTBW,OD_PULSE:GTBW
+call_types_sound_sources,OD_PULSE:GUDO,OD_PULSE:GUDO
+call_types_sound_sources,OD_PULSE:HAPO,OD_PULSE:HAPO
+call_types_sound_sources,OD_PULSE:HEADO,OD_PULSE:HEADO
+call_types_sound_sources,OD_PULSE:HEBW,OD_PULSE:HEBW
+call_types_sound_sources,OD_PULSE:HECDO,OD_PULSE:HECDO
+call_types_sound_sources,OD_PULSE:HODO,OD_PULSE:HODO
+call_types_sound_sources,OD_PULSE:HUBW,OD_PULSE:HUBW
+call_types_sound_sources,OD_PULSE:INRDO,OD_PULSE:INRDO
+call_types_sound_sources,OD_PULSE:IOBD,OD_PULSE:IOBD
+call_types_sound_sources,OD_PULSE:IPHD,OD_PULSE:IPHD
+call_types_sound_sources,OD_PULSE:IRRDO,OD_PULSE:IRRDO
+call_types_sound_sources,OD_PULSE:KIWH,OD_PULSE:KIWH
+call_types_sound_sources,OD_PULSE:KIWHAANT,OD_PULSE:KIWHAANT
+call_types_sound_sources,OD_PULSE:KIWHBANT,OD_PULSE:KIWHBANT
+call_types_sound_sources,OD_PULSE:KIWHCANT,OD_PULSE:KIWHCANT
+call_types_sound_sources,OD_PULSE:KIWHOF,OD_PULSE:KIWHOF
+call_types_sound_sources,OD_PULSE:KIWHRE,OD_PULSE:KIWHRE
+call_types_sound_sources,OD_PULSE:KIWHTR,OD_PULSE:KIWHTR
+call_types_sound_sources,OD_PULSE:LBCD,OD_PULSE:LBCD
+call_types_sound_sources,OD_PULSE:LBWH,OD_PULSE:LBWH
+call_types_sound_sources,OD_PULSE:LFPW,OD_PULSE:LFPW
+call_types_sound_sources,OD_PULSE:MEPK,OD_PULSE:MEPK
+call_types_sound_sources,OD_PULSE:MEWH,OD_PULSE:MEWH
+call_types_sound_sources,OD_PULSE:MMME,OD_PULSE:MMME
+call_types_sound_sources,OD_PULSE:NAWH,OD_PULSE:NAWH
+call_types_sound_sources,OD_PULSE:NBWH,OD_PULSE:NBWH
+call_types_sound_sources,OD_PULSE:NRWD,OD_PULSE:NRWD
+call_types_sound_sources,OD_PULSE:OBDO,OD_PULSE:OBDO
+call_types_sound_sources,OD_PULSE:PEBW,OD_PULSE:PEBW
+call_types_sound_sources,OD_PULSE:PEDO,OD_PULSE:PEDO
+call_types_sound_sources,OD_PULSE:PIWH,OD_PULSE:PIWH
+call_types_sound_sources,OD_PULSE:PSDO,OD_PULSE:PSDO
+call_types_sound_sources,OD_PULSE:PSWH,OD_PULSE:PSWH
+call_types_sound_sources,OD_PULSE:PWDO,OD_PULSE:PWDO
+call_types_sound_sources,OD_PULSE:PYBW,OD_PULSE:PYBW
+call_types_sound_sources,OD_PULSE:PYKW,OD_PULSE:PYKW
+call_types_sound_sources,OD_PULSE:RTDO,OD_PULSE:RTDO
+call_types_sound_sources,OD_PULSE:SADO,OD_PULSE:SADO
+call_types_sound_sources,OD_PULSE:SBWH,OD_PULSE:SBWH
+call_types_sound_sources,OD_PULSE:SFPW,OD_PULSE:SFPW
+call_types_sound_sources,OD_PULSE:SHBW,OD_PULSE:SHBW
+call_types_sound_sources,OD_PULSE:SNDO,OD_PULSE:SNDO
+call_types_sound_sources,OD_PULSE:SOBW,OD_PULSE:SOBW
+call_types_sound_sources,OD_PULSE:SPDOOF,OD_PULSE:SPDOOF
+call_types_sound_sources,OD_PULSE:SPDOPA,OD_PULSE:SPDOPA
+call_types_sound_sources,OD_PULSE:SPPO,OD_PULSE:SPPO
+call_types_sound_sources,OD_PULSE:SRWD,OD_PULSE:SRWD
+call_types_sound_sources,OD_PULSE:SSDO,OD_PULSE:SSDO
+call_types_sound_sources,OD_PULSE:STBWH,OD_PULSE:STBWH
+call_types_sound_sources,OD_PULSE:STDO,OD_PULSE:STDO
+call_types_sound_sources,OD_PULSE:STTWH,OD_PULSE:STTWH
+call_types_sound_sources,OD_PULSE:STWH,OD_PULSE:STWH
+call_types_sound_sources,OD_PULSE:TMSD,OD_PULSE:TMSD
+call_types_sound_sources,OD_PULSE:TRBW,OD_PULSE:TRBW
+call_types_sound_sources,OD_PULSE:TUDO,OD_PULSE:TUDO
+call_types_sound_sources,OD_PULSE:UBWA,OD_PULSE:UBWA
+call_types_sound_sources,OD_PULSE:UECASD,OD_PULSE:UECASD
+call_types_sound_sources,OD_PULSE:UNBD,OD_PULSE:UNBD
+call_types_sound_sources,OD_PULSE:UNBF,OD_PULSE:UNBF
+call_types_sound_sources,OD_PULSE:UNBW,OD_PULSE:UNBW
+call_types_sound_sources,OD_PULSE:UNCW,OD_PULSE:UNCW
+call_types_sound_sources,OD_PULSE:UNDO,OD_PULSE:UNDO
+call_types_sound_sources,OD_PULSE:UNDS,OD_PULSE:UNDS
+call_types_sound_sources,OD_PULSE:UNKO,OD_PULSE:UNKO
+call_types_sound_sources,OD_PULSE:UNLAG,OD_PULSE:UNLAG
+call_types_sound_sources,OD_PULSE:UNLD,OD_PULSE:UNLD
+call_types_sound_sources,OD_PULSE:UNMD,OD_PULSE:UNMD
+call_types_sound_sources,OD_PULSE:UNME,OD_PULSE:UNME
+call_types_sound_sources,OD_PULSE:UNPO,OD_PULSE:UNPO
+call_types_sound_sources,OD_PULSE:UNRB,OD_PULSE:UNRB
+call_types_sound_sources,OD_PULSE:UNSB,OD_PULSE:UNSB
+call_types_sound_sources,OD_PULSE:UNSBW,OD_PULSE:UNSBW
+call_types_sound_sources,OD_PULSE:UNSC,OD_PULSE:UNSC
+call_types_sound_sources,OD_PULSE:UNSPDO,OD_PULSE:UNSPDO
+call_types_sound_sources,OD_PULSE:VAQU,OD_PULSE:VAQU
+call_types_sound_sources,OD_PULSE:WBDO,OD_PULSE:WBDO
+call_types_sound_sources,OD_PULSE:WBSDO,OD_PULSE:WBSDO
+call_types_sound_sources,OD_PULSE:WSDO,OD_PULSE:WSDO
+call_types_sound_sources,OD_WHIS_HF:AHDO,OD_WHIS_HF:AHDO
+call_types_sound_sources,OD_WHIS_HF:ANBW,OD_WHIS_HF:ANBW
+call_types_sound_sources,OD_WHIS_HF:ARBW,OD_WHIS_HF:ARBW
+call_types_sound_sources,OD_WHIS_HF:ARDO,OD_WHIS_HF:ARDO
+call_types_sound_sources,OD_WHIS_HF:ASDO,OD_WHIS_HF:ASDO
+call_types_sound_sources,OD_WHIS_HF:AUSDO,OD_WHIS_HF:AUSDO
+call_types_sound_sources,OD_WHIS_HF:BBWH,OD_WHIS_HF:BBWH
+call_types_sound_sources,OD_WHIS_HF:BELU,OD_WHIS_HF:BELU
+call_types_sound_sources,OD_WHIS_HF:BLBW,OD_WHIS_HF:BLBW
+call_types_sound_sources,OD_WHIS_HF:BLDO,OD_WHIS_HF:BLDO
+call_types_sound_sources,OD_WHIS_HF:BODO,OD_WHIS_HF:BODO
+call_types_sound_sources,OD_WHIS_HF:BODOCOCA,OD_WHIS_HF:BODOCOCA
+call_types_sound_sources,OD_WHIS_HF:BODOOFCA,OD_WHIS_HF:BODOOFCA
+call_types_sound_sources,OD_WHIS_HF:BOGR,OD_WHIS_HF:BOGR
+call_types_sound_sources,OD_WHIS_HF:BOSP,OD_WHIS_HF:BOSP
+call_types_sound_sources,OD_WHIS_HF:BRDO,OD_WHIS_HF:BRDO
+call_types_sound_sources,OD_WHIS_HF:BUPO,OD_WHIS_HF:BUPO
+call_types_sound_sources,OD_WHIS_HF:BW29,OD_WHIS_HF:BW29
+call_types_sound_sources,OD_WHIS_HF:BW39V,OD_WHIS_HF:BW39V
+call_types_sound_sources,OD_WHIS_HF:BW41,OD_WHIS_HF:BW41
+call_types_sound_sources,OD_WHIS_HF:BW43,OD_WHIS_HF:BW43
+call_types_sound_sources,OD_WHIS_HF:BW53,OD_WHIS_HF:BW53
+call_types_sound_sources,OD_WHIS_HF:BW58,OD_WHIS_HF:BW58
+call_types_sound_sources,OD_WHIS_HF:BW70,OD_WHIS_HF:BW70
+call_types_sound_sources,OD_WHIS_HF:BWB,OD_WHIS_HF:BWB
+call_types_sound_sources,OD_WHIS_HF:BWC,OD_WHIS_HF:BWC
+call_types_sound_sources,OD_WHIS_HF:BWG,OD_WHIS_HF:BWG
+call_types_sound_sources,OD_WHIS_HF:CASP,OD_WHIS_HF:CASP
+call_types_sound_sources,OD_WHIS_HF:CLDO,OD_WHIS_HF:CLDO
+call_types_sound_sources,OD_WHIS_HF:CODO,OD_WHIS_HF:CODO
+call_types_sound_sources,OD_WHIS_HF:CUBW,OD_WHIS_HF:CUBW
+call_types_sound_sources,OD_WHIS_HF:DAPO,OD_WHIS_HF:DAPO
+call_types_sound_sources,OD_WHIS_HF:DEBW,OD_WHIS_HF:DEBW
+call_types_sound_sources,OD_WHIS_HF:DESP,OD_WHIS_HF:DESP
+call_types_sound_sources,OD_WHIS_HF:DSDO,OD_WHIS_HF:DSDO
+call_types_sound_sources,OD_WHIS_HF:DSWH,OD_WHIS_HF:DSWH
+call_types_sound_sources,OD_WHIS_HF:DUDO,OD_WHIS_HF:DUDO
+call_types_sound_sources,OD_WHIS_HF:ESDO,OD_WHIS_HF:ESDO
+call_types_sound_sources,OD_WHIS_HF:FIPO,OD_WHIS_HF:FIPO
+call_types_sound_sources,OD_WHIS_HF:FIPOEA,OD_WHIS_HF:FIPOEA
+call_types_sound_sources,OD_WHIS_HF:FIPOIP,OD_WHIS_HF:FIPOIP
+call_types_sound_sources,OD_WHIS_HF:FIPOYA,OD_WHIS_HF:FIPOYA
+call_types_sound_sources,OD_WHIS_HF:FKWH,OD_WHIS_HF:FKWH
+call_types_sound_sources,OD_WHIS_HF:FRAN,OD_WHIS_HF:FRAN
+call_types_sound_sources,OD_WHIS_HF:FRDO,OD_WHIS_HF:FRDO
+call_types_sound_sources,OD_WHIS_HF:GBWH,OD_WHIS_HF:GBWH
+call_types_sound_sources,OD_WHIS_HF:GEBW,OD_WHIS_HF:GEBW
+call_types_sound_sources,OD_WHIS_HF:GOBW,OD_WHIS_HF:GOBW
+call_types_sound_sources,OD_WHIS_HF:GRAM,OD_WHIS_HF:GRAM
+call_types_sound_sources,OD_WHIS_HF:GRDO,OD_WHIS_HF:GRDO
+call_types_sound_sources,OD_WHIS_HF:GSDO,OD_WHIS_HF:GSDO
+call_types_sound_sources,OD_WHIS_HF:GTBW,OD_WHIS_HF:GTBW
+call_types_sound_sources,OD_WHIS_HF:GUDO,OD_WHIS_HF:GUDO
+call_types_sound_sources,OD_WHIS_HF:HEADO,OD_WHIS_HF:HEADO
+call_types_sound_sources,OD_WHIS_HF:HEBW,OD_WHIS_HF:HEBW
+call_types_sound_sources,OD_WHIS_HF:HECDO,OD_WHIS_HF:HECDO
+call_types_sound_sources,OD_WHIS_HF:HODO,OD_WHIS_HF:HODO
+call_types_sound_sources,OD_WHIS_HF:HUBW,OD_WHIS_HF:HUBW
+call_types_sound_sources,OD_WHIS_HF:INRDO,OD_WHIS_HF:INRDO
+call_types_sound_sources,OD_WHIS_HF:IOBD,OD_WHIS_HF:IOBD
+call_types_sound_sources,OD_WHIS_HF:IPHD,OD_WHIS_HF:IPHD
+call_types_sound_sources,OD_WHIS_HF:IRRDO,OD_WHIS_HF:IRRDO
+call_types_sound_sources,OD_WHIS_HF:KIWH,OD_WHIS_HF:KIWH
+call_types_sound_sources,OD_WHIS_HF:KIWHAANT,OD_WHIS_HF:KIWHAANT
+call_types_sound_sources,OD_WHIS_HF:KIWHBANT,OD_WHIS_HF:KIWHBANT
+call_types_sound_sources,OD_WHIS_HF:KIWHCANT,OD_WHIS_HF:KIWHCANT
+call_types_sound_sources,OD_WHIS_HF:KIWHOF,OD_WHIS_HF:KIWHOF
+call_types_sound_sources,OD_WHIS_HF:KIWHRE,OD_WHIS_HF:KIWHRE
+call_types_sound_sources,OD_WHIS_HF:KIWHTR,OD_WHIS_HF:KIWHTR
+call_types_sound_sources,OD_WHIS_HF:LBCD,OD_WHIS_HF:LBCD
+call_types_sound_sources,OD_WHIS_HF:LBWH,OD_WHIS_HF:LBWH
+call_types_sound_sources,OD_WHIS_HF:LFPW,OD_WHIS_HF:LFPW
+call_types_sound_sources,OD_WHIS_HF:MEPK,OD_WHIS_HF:MEPK
+call_types_sound_sources,OD_WHIS_HF:MEWH,OD_WHIS_HF:MEWH
+call_types_sound_sources,OD_WHIS_HF:MMME,OD_WHIS_HF:MMME
+call_types_sound_sources,OD_WHIS_HF:NAWH,OD_WHIS_HF:NAWH
+call_types_sound_sources,OD_WHIS_HF:NBWH,OD_WHIS_HF:NBWH
+call_types_sound_sources,OD_WHIS_HF:NRWD,OD_WHIS_HF:NRWD
+call_types_sound_sources,OD_WHIS_HF:OBDO,OD_WHIS_HF:OBDO
+call_types_sound_sources,OD_WHIS_HF:PEBW,OD_WHIS_HF:PEBW
+call_types_sound_sources,OD_WHIS_HF:PEDO,OD_WHIS_HF:PEDO
+call_types_sound_sources,OD_WHIS_HF:PIWH,OD_WHIS_HF:PIWH
+call_types_sound_sources,OD_WHIS_HF:PSDO,OD_WHIS_HF:PSDO
+call_types_sound_sources,OD_WHIS_HF:PSWH,OD_WHIS_HF:PSWH
+call_types_sound_sources,OD_WHIS_HF:PWDO,OD_WHIS_HF:PWDO
+call_types_sound_sources,OD_WHIS_HF:PYBW,OD_WHIS_HF:PYBW
+call_types_sound_sources,OD_WHIS_HF:PYKW,OD_WHIS_HF:PYKW
+call_types_sound_sources,OD_WHIS_HF:RTDO,OD_WHIS_HF:RTDO
+call_types_sound_sources,OD_WHIS_HF:SADO,OD_WHIS_HF:SADO
+call_types_sound_sources,OD_WHIS_HF:SBWH,OD_WHIS_HF:SBWH
+call_types_sound_sources,OD_WHIS_HF:SFPW,OD_WHIS_HF:SFPW
+call_types_sound_sources,OD_WHIS_HF:SHBW,OD_WHIS_HF:SHBW
+call_types_sound_sources,OD_WHIS_HF:SNDO,OD_WHIS_HF:SNDO
+call_types_sound_sources,OD_WHIS_HF:SOBW,OD_WHIS_HF:SOBW
+call_types_sound_sources,OD_WHIS_HF:SPDOOF,OD_WHIS_HF:SPDOOF
+call_types_sound_sources,OD_WHIS_HF:SPDOPA,OD_WHIS_HF:SPDOPA
+call_types_sound_sources,OD_WHIS_HF:SPPO,OD_WHIS_HF:SPPO
+call_types_sound_sources,OD_WHIS_HF:SRWD,OD_WHIS_HF:SRWD
+call_types_sound_sources,OD_WHIS_HF:SSDO,OD_WHIS_HF:SSDO
+call_types_sound_sources,OD_WHIS_HF:STBWH,OD_WHIS_HF:STBWH
+call_types_sound_sources,OD_WHIS_HF:STDO,OD_WHIS_HF:STDO
+call_types_sound_sources,OD_WHIS_HF:STTWH,OD_WHIS_HF:STTWH
+call_types_sound_sources,OD_WHIS_HF:STWH,OD_WHIS_HF:STWH
+call_types_sound_sources,OD_WHIS_HF:TMSD,OD_WHIS_HF:TMSD
+call_types_sound_sources,OD_WHIS_HF:TRBW,OD_WHIS_HF:TRBW
+call_types_sound_sources,OD_WHIS_HF:TUDO,OD_WHIS_HF:TUDO
+call_types_sound_sources,OD_WHIS_HF:UBWA,OD_WHIS_HF:UBWA
+call_types_sound_sources,OD_WHIS_HF:UECASD,OD_WHIS_HF:UECASD
+call_types_sound_sources,OD_WHIS_HF:UNBD,OD_WHIS_HF:UNBD
+call_types_sound_sources,OD_WHIS_HF:UNBF,OD_WHIS_HF:UNBF
+call_types_sound_sources,OD_WHIS_HF:UNBW,OD_WHIS_HF:UNBW
+call_types_sound_sources,OD_WHIS_HF:UNCW,OD_WHIS_HF:UNCW
+call_types_sound_sources,OD_WHIS_HF:UNDO,OD_WHIS_HF:UNDO
+call_types_sound_sources,OD_WHIS_HF:UNDS,OD_WHIS_HF:UNDS
+call_types_sound_sources,OD_WHIS_HF:UNLAG,OD_WHIS_HF:UNLAG
+call_types_sound_sources,OD_WHIS_HF:UNLD,OD_WHIS_HF:UNLD
+call_types_sound_sources,OD_WHIS_HF:UNMD,OD_WHIS_HF:UNMD
+call_types_sound_sources,OD_WHIS_HF:UNME,OD_WHIS_HF:UNME
+call_types_sound_sources,OD_WHIS_HF:UNPO,OD_WHIS_HF:UNPO
+call_types_sound_sources,OD_WHIS_HF:UNRB,OD_WHIS_HF:UNRB
+call_types_sound_sources,OD_WHIS_HF:UNSB,OD_WHIS_HF:UNSB
+call_types_sound_sources,OD_WHIS_HF:UNSBW,OD_WHIS_HF:UNSBW
+call_types_sound_sources,OD_WHIS_HF:UNSC,OD_WHIS_HF:UNSC
+call_types_sound_sources,OD_WHIS_HF:UNSPDO,OD_WHIS_HF:UNSPDO
+call_types_sound_sources,OD_WHIS_HF:VAQU,OD_WHIS_HF:VAQU
+call_types_sound_sources,OD_WHIS_HF:WBDO,OD_WHIS_HF:WBDO
+call_types_sound_sources,OD_WHIS_HF:WBSDO,OD_WHIS_HF:WBSDO
+call_types_sound_sources,OD_WHIS_HF:WSDO,OD_WHIS_HF:WSDO
+call_types_sound_sources,OD_WHIS_MIX:AHDO,OD_WHIS_MIX:AHDO
+call_types_sound_sources,OD_WHIS_MIX:ANBW,OD_WHIS_MIX:ANBW
+call_types_sound_sources,OD_WHIS_MIX:ARBW,OD_WHIS_MIX:ARBW
+call_types_sound_sources,OD_WHIS_MIX:ARDO,OD_WHIS_MIX:ARDO
+call_types_sound_sources,OD_WHIS_MIX:ASDO,OD_WHIS_MIX:ASDO
+call_types_sound_sources,OD_WHIS_MIX:AUSDO,OD_WHIS_MIX:AUSDO
+call_types_sound_sources,OD_WHIS_MIX:BBWH,OD_WHIS_MIX:BBWH
+call_types_sound_sources,OD_WHIS_MIX:BELU,OD_WHIS_MIX:BELU
+call_types_sound_sources,OD_WHIS_MIX:BLBW,OD_WHIS_MIX:BLBW
+call_types_sound_sources,OD_WHIS_MIX:BLDO,OD_WHIS_MIX:BLDO
+call_types_sound_sources,OD_WHIS_MIX:BODO,OD_WHIS_MIX:BODO
+call_types_sound_sources,OD_WHIS_MIX:BODOCOCA,OD_WHIS_MIX:BODOCOCA
+call_types_sound_sources,OD_WHIS_MIX:BODOOFCA,OD_WHIS_MIX:BODOOFCA
+call_types_sound_sources,OD_WHIS_MIX:BOGR,OD_WHIS_MIX:BOGR
+call_types_sound_sources,OD_WHIS_MIX:BOSP,OD_WHIS_MIX:BOSP
+call_types_sound_sources,OD_WHIS_MIX:BRDO,OD_WHIS_MIX:BRDO
+call_types_sound_sources,OD_WHIS_MIX:BUPO,OD_WHIS_MIX:BUPO
+call_types_sound_sources,OD_WHIS_MIX:BW29,OD_WHIS_MIX:BW29
+call_types_sound_sources,OD_WHIS_MIX:BW39V,OD_WHIS_MIX:BW39V
+call_types_sound_sources,OD_WHIS_MIX:BW41,OD_WHIS_MIX:BW41
+call_types_sound_sources,OD_WHIS_MIX:BW43,OD_WHIS_MIX:BW43
+call_types_sound_sources,OD_WHIS_MIX:BW53,OD_WHIS_MIX:BW53
+call_types_sound_sources,OD_WHIS_MIX:BW58,OD_WHIS_MIX:BW58
+call_types_sound_sources,OD_WHIS_MIX:BW70,OD_WHIS_MIX:BW70
+call_types_sound_sources,OD_WHIS_MIX:BWB,OD_WHIS_MIX:BWB
+call_types_sound_sources,OD_WHIS_MIX:BWC,OD_WHIS_MIX:BWC
+call_types_sound_sources,OD_WHIS_MIX:BWG,OD_WHIS_MIX:BWG
+call_types_sound_sources,OD_WHIS_MIX:CASP,OD_WHIS_MIX:CASP
+call_types_sound_sources,OD_WHIS_MIX:CLDO,OD_WHIS_MIX:CLDO
+call_types_sound_sources,OD_WHIS_MIX:CODO,OD_WHIS_MIX:CODO
+call_types_sound_sources,OD_WHIS_MIX:CUBW,OD_WHIS_MIX:CUBW
+call_types_sound_sources,OD_WHIS_MIX:DAPO,OD_WHIS_MIX:DAPO
+call_types_sound_sources,OD_WHIS_MIX:DEBW,OD_WHIS_MIX:DEBW
+call_types_sound_sources,OD_WHIS_MIX:DESP,OD_WHIS_MIX:DESP
+call_types_sound_sources,OD_WHIS_MIX:DSDO,OD_WHIS_MIX:DSDO
+call_types_sound_sources,OD_WHIS_MIX:DSWH,OD_WHIS_MIX:DSWH
+call_types_sound_sources,OD_WHIS_MIX:DUDO,OD_WHIS_MIX:DUDO
+call_types_sound_sources,OD_WHIS_MIX:ESDO,OD_WHIS_MIX:ESDO
+call_types_sound_sources,OD_WHIS_MIX:FIPO,OD_WHIS_MIX:FIPO
+call_types_sound_sources,OD_WHIS_MIX:FIPOEA,OD_WHIS_MIX:FIPOEA
+call_types_sound_sources,OD_WHIS_MIX:FIPOIP,OD_WHIS_MIX:FIPOIP
+call_types_sound_sources,OD_WHIS_MIX:FIPOYA,OD_WHIS_MIX:FIPOYA
+call_types_sound_sources,OD_WHIS_MIX:FKWH,OD_WHIS_MIX:FKWH
+call_types_sound_sources,OD_WHIS_MIX:FRAN,OD_WHIS_MIX:FRAN
+call_types_sound_sources,OD_WHIS_MIX:FRDO,OD_WHIS_MIX:FRDO
+call_types_sound_sources,OD_WHIS_MIX:GBWH,OD_WHIS_MIX:GBWH
+call_types_sound_sources,OD_WHIS_MIX:GEBW,OD_WHIS_MIX:GEBW
+call_types_sound_sources,OD_WHIS_MIX:GOBW,OD_WHIS_MIX:GOBW
+call_types_sound_sources,OD_WHIS_MIX:GRAM,OD_WHIS_MIX:GRAM
+call_types_sound_sources,OD_WHIS_MIX:GRDO,OD_WHIS_MIX:GRDO
+call_types_sound_sources,OD_WHIS_MIX:GSDO,OD_WHIS_MIX:GSDO
+call_types_sound_sources,OD_WHIS_MIX:GTBW,OD_WHIS_MIX:GTBW
+call_types_sound_sources,OD_WHIS_MIX:GUDO,OD_WHIS_MIX:GUDO
+call_types_sound_sources,OD_WHIS_MIX:HEADO,OD_WHIS_MIX:HEADO
+call_types_sound_sources,OD_WHIS_MIX:HEBW,OD_WHIS_MIX:HEBW
+call_types_sound_sources,OD_WHIS_MIX:HECDO,OD_WHIS_MIX:HECDO
+call_types_sound_sources,OD_WHIS_MIX:HODO,OD_WHIS_MIX:HODO
+call_types_sound_sources,OD_WHIS_MIX:HUBW,OD_WHIS_MIX:HUBW
+call_types_sound_sources,OD_WHIS_MIX:INRDO,OD_WHIS_MIX:INRDO
+call_types_sound_sources,OD_WHIS_MIX:IOBD,OD_WHIS_MIX:IOBD
+call_types_sound_sources,OD_WHIS_MIX:IPHD,OD_WHIS_MIX:IPHD
+call_types_sound_sources,OD_WHIS_MIX:IRRDO,OD_WHIS_MIX:IRRDO
+call_types_sound_sources,OD_WHIS_MIX:KIWH,OD_WHIS_MIX:KIWH
+call_types_sound_sources,OD_WHIS_MIX:KIWHAANT,OD_WHIS_MIX:KIWHAANT
+call_types_sound_sources,OD_WHIS_MIX:KIWHBANT,OD_WHIS_MIX:KIWHBANT
+call_types_sound_sources,OD_WHIS_MIX:KIWHCANT,OD_WHIS_MIX:KIWHCANT
+call_types_sound_sources,OD_WHIS_MIX:KIWHOF,OD_WHIS_MIX:KIWHOF
+call_types_sound_sources,OD_WHIS_MIX:KIWHRE,OD_WHIS_MIX:KIWHRE
+call_types_sound_sources,OD_WHIS_MIX:KIWHTR,OD_WHIS_MIX:KIWHTR
+call_types_sound_sources,OD_WHIS_MIX:LBCD,OD_WHIS_MIX:LBCD
+call_types_sound_sources,OD_WHIS_MIX:LBWH,OD_WHIS_MIX:LBWH
+call_types_sound_sources,OD_WHIS_MIX:LFPW,OD_WHIS_MIX:LFPW
+call_types_sound_sources,OD_WHIS_MIX:MEPK,OD_WHIS_MIX:MEPK
+call_types_sound_sources,OD_WHIS_MIX:MEWH,OD_WHIS_MIX:MEWH
+call_types_sound_sources,OD_WHIS_MIX:MMME,OD_WHIS_MIX:MMME
+call_types_sound_sources,OD_WHIS_MIX:NAWH,OD_WHIS_MIX:NAWH
+call_types_sound_sources,OD_WHIS_MIX:NBWH,OD_WHIS_MIX:NBWH
+call_types_sound_sources,OD_WHIS_MIX:NRWD,OD_WHIS_MIX:NRWD
+call_types_sound_sources,OD_WHIS_MIX:OBDO,OD_WHIS_MIX:OBDO
+call_types_sound_sources,OD_WHIS_MIX:PEBW,OD_WHIS_MIX:PEBW
+call_types_sound_sources,OD_WHIS_MIX:PEDO,OD_WHIS_MIX:PEDO
+call_types_sound_sources,OD_WHIS_MIX:PIWH,OD_WHIS_MIX:PIWH
+call_types_sound_sources,OD_WHIS_MIX:PSDO,OD_WHIS_MIX:PSDO
+call_types_sound_sources,OD_WHIS_MIX:PSWH,OD_WHIS_MIX:PSWH
+call_types_sound_sources,OD_WHIS_MIX:PWDO,OD_WHIS_MIX:PWDO
+call_types_sound_sources,OD_WHIS_MIX:PYBW,OD_WHIS_MIX:PYBW
+call_types_sound_sources,OD_WHIS_MIX:PYKW,OD_WHIS_MIX:PYKW
+call_types_sound_sources,OD_WHIS_MIX:RTDO,OD_WHIS_MIX:RTDO
+call_types_sound_sources,OD_WHIS_MIX:SADO,OD_WHIS_MIX:SADO
+call_types_sound_sources,OD_WHIS_MIX:SBWH,OD_WHIS_MIX:SBWH
+call_types_sound_sources,OD_WHIS_MIX:SFPW,OD_WHIS_MIX:SFPW
+call_types_sound_sources,OD_WHIS_MIX:SHBW,OD_WHIS_MIX:SHBW
+call_types_sound_sources,OD_WHIS_MIX:SNDO,OD_WHIS_MIX:SNDO
+call_types_sound_sources,OD_WHIS_MIX:SOBW,OD_WHIS_MIX:SOBW
+call_types_sound_sources,OD_WHIS_MIX:SPDOOF,OD_WHIS_MIX:SPDOOF
+call_types_sound_sources,OD_WHIS_MIX:SPDOPA,OD_WHIS_MIX:SPDOPA
+call_types_sound_sources,OD_WHIS_MIX:SPPO,OD_WHIS_MIX:SPPO
+call_types_sound_sources,OD_WHIS_MIX:SRWD,OD_WHIS_MIX:SRWD
+call_types_sound_sources,OD_WHIS_MIX:SSDO,OD_WHIS_MIX:SSDO
+call_types_sound_sources,OD_WHIS_MIX:STBWH,OD_WHIS_MIX:STBWH
+call_types_sound_sources,OD_WHIS_MIX:STDO,OD_WHIS_MIX:STDO
+call_types_sound_sources,OD_WHIS_MIX:STTWH,OD_WHIS_MIX:STTWH
+call_types_sound_sources,OD_WHIS_MIX:STWH,OD_WHIS_MIX:STWH
+call_types_sound_sources,OD_WHIS_MIX:TMSD,OD_WHIS_MIX:TMSD
+call_types_sound_sources,OD_WHIS_MIX:TRBW,OD_WHIS_MIX:TRBW
+call_types_sound_sources,OD_WHIS_MIX:TUDO,OD_WHIS_MIX:TUDO
+call_types_sound_sources,OD_WHIS_MIX:UBWA,OD_WHIS_MIX:UBWA
+call_types_sound_sources,OD_WHIS_MIX:UECASD,OD_WHIS_MIX:UECASD
+call_types_sound_sources,OD_WHIS_MIX:UNBD,OD_WHIS_MIX:UNBD
+call_types_sound_sources,OD_WHIS_MIX:UNBF,OD_WHIS_MIX:UNBF
+call_types_sound_sources,OD_WHIS_MIX:UNBW,OD_WHIS_MIX:UNBW
+call_types_sound_sources,OD_WHIS_MIX:UNCW,OD_WHIS_MIX:UNCW
+call_types_sound_sources,OD_WHIS_MIX:UNDO,OD_WHIS_MIX:UNDO
+call_types_sound_sources,OD_WHIS_MIX:UNDS,OD_WHIS_MIX:UNDS
+call_types_sound_sources,OD_WHIS_MIX:UNLAG,OD_WHIS_MIX:UNLAG
+call_types_sound_sources,OD_WHIS_MIX:UNLD,OD_WHIS_MIX:UNLD
+call_types_sound_sources,OD_WHIS_MIX:UNMD,OD_WHIS_MIX:UNMD
+call_types_sound_sources,OD_WHIS_MIX:UNME,OD_WHIS_MIX:UNME
+call_types_sound_sources,OD_WHIS_MIX:UNPO,OD_WHIS_MIX:UNPO
+call_types_sound_sources,OD_WHIS_MIX:UNRB,OD_WHIS_MIX:UNRB
+call_types_sound_sources,OD_WHIS_MIX:UNSB,OD_WHIS_MIX:UNSB
+call_types_sound_sources,OD_WHIS_MIX:UNSBW,OD_WHIS_MIX:UNSBW
+call_types_sound_sources,OD_WHIS_MIX:UNSC,OD_WHIS_MIX:UNSC
+call_types_sound_sources,OD_WHIS_MIX:UNSPDO,OD_WHIS_MIX:UNSPDO
+call_types_sound_sources,OD_WHIS_MIX:VAQU,OD_WHIS_MIX:VAQU
+call_types_sound_sources,OD_WHIS_MIX:WBDO,OD_WHIS_MIX:WBDO
+call_types_sound_sources,OD_WHIS_MIX:WBSDO,OD_WHIS_MIX:WBSDO
+call_types_sound_sources,OD_WHIS_MIX:WSDO,OD_WHIS_MIX:WSDO
+call_types_sound_sources,OD_WHIS_SIG:AHDO,OD_WHIS_SIG:AHDO
+call_types_sound_sources,OD_WHIS_SIG:ANBW,OD_WHIS_SIG:ANBW
+call_types_sound_sources,OD_WHIS_SIG:ARBW,OD_WHIS_SIG:ARBW
+call_types_sound_sources,OD_WHIS_SIG:ARDO,OD_WHIS_SIG:ARDO
+call_types_sound_sources,OD_WHIS_SIG:ASDO,OD_WHIS_SIG:ASDO
+call_types_sound_sources,OD_WHIS_SIG:AUSDO,OD_WHIS_SIG:AUSDO
+call_types_sound_sources,OD_WHIS_SIG:BBWH,OD_WHIS_SIG:BBWH
+call_types_sound_sources,OD_WHIS_SIG:BELU,OD_WHIS_SIG:BELU
+call_types_sound_sources,OD_WHIS_SIG:BLBW,OD_WHIS_SIG:BLBW
+call_types_sound_sources,OD_WHIS_SIG:BLDO,OD_WHIS_SIG:BLDO
+call_types_sound_sources,OD_WHIS_SIG:BODO,OD_WHIS_SIG:BODO
+call_types_sound_sources,OD_WHIS_SIG:BODOCOCA,OD_WHIS_SIG:BODOCOCA
+call_types_sound_sources,OD_WHIS_SIG:BODOOFCA,OD_WHIS_SIG:BODOOFCA
+call_types_sound_sources,OD_WHIS_SIG:BOGR,OD_WHIS_SIG:BOGR
+call_types_sound_sources,OD_WHIS_SIG:BOSP,OD_WHIS_SIG:BOSP
+call_types_sound_sources,OD_WHIS_SIG:BRDO,OD_WHIS_SIG:BRDO
+call_types_sound_sources,OD_WHIS_SIG:BUPO,OD_WHIS_SIG:BUPO
+call_types_sound_sources,OD_WHIS_SIG:BW29,OD_WHIS_SIG:BW29
+call_types_sound_sources,OD_WHIS_SIG:BW39V,OD_WHIS_SIG:BW39V
+call_types_sound_sources,OD_WHIS_SIG:BW41,OD_WHIS_SIG:BW41
+call_types_sound_sources,OD_WHIS_SIG:BW43,OD_WHIS_SIG:BW43
+call_types_sound_sources,OD_WHIS_SIG:BW53,OD_WHIS_SIG:BW53
+call_types_sound_sources,OD_WHIS_SIG:BW58,OD_WHIS_SIG:BW58
+call_types_sound_sources,OD_WHIS_SIG:BW70,OD_WHIS_SIG:BW70
+call_types_sound_sources,OD_WHIS_SIG:BWB,OD_WHIS_SIG:BWB
+call_types_sound_sources,OD_WHIS_SIG:BWC,OD_WHIS_SIG:BWC
+call_types_sound_sources,OD_WHIS_SIG:BWG,OD_WHIS_SIG:BWG
+call_types_sound_sources,OD_WHIS_SIG:CASP,OD_WHIS_SIG:CASP
+call_types_sound_sources,OD_WHIS_SIG:CLDO,OD_WHIS_SIG:CLDO
+call_types_sound_sources,OD_WHIS_SIG:CODO,OD_WHIS_SIG:CODO
+call_types_sound_sources,OD_WHIS_SIG:CUBW,OD_WHIS_SIG:CUBW
+call_types_sound_sources,OD_WHIS_SIG:DAPO,OD_WHIS_SIG:DAPO
+call_types_sound_sources,OD_WHIS_SIG:DEBW,OD_WHIS_SIG:DEBW
+call_types_sound_sources,OD_WHIS_SIG:DESP,OD_WHIS_SIG:DESP
+call_types_sound_sources,OD_WHIS_SIG:DSDO,OD_WHIS_SIG:DSDO
+call_types_sound_sources,OD_WHIS_SIG:DSWH,OD_WHIS_SIG:DSWH
+call_types_sound_sources,OD_WHIS_SIG:DUDO,OD_WHIS_SIG:DUDO
+call_types_sound_sources,OD_WHIS_SIG:ESDO,OD_WHIS_SIG:ESDO
+call_types_sound_sources,OD_WHIS_SIG:FIPO,OD_WHIS_SIG:FIPO
+call_types_sound_sources,OD_WHIS_SIG:FIPOEA,OD_WHIS_SIG:FIPOEA
+call_types_sound_sources,OD_WHIS_SIG:FIPOIP,OD_WHIS_SIG:FIPOIP
+call_types_sound_sources,OD_WHIS_SIG:FIPOYA,OD_WHIS_SIG:FIPOYA
+call_types_sound_sources,OD_WHIS_SIG:FKWH,OD_WHIS_SIG:FKWH
+call_types_sound_sources,OD_WHIS_SIG:FRAN,OD_WHIS_SIG:FRAN
+call_types_sound_sources,OD_WHIS_SIG:FRDO,OD_WHIS_SIG:FRDO
+call_types_sound_sources,OD_WHIS_SIG:GBWH,OD_WHIS_SIG:GBWH
+call_types_sound_sources,OD_WHIS_SIG:GEBW,OD_WHIS_SIG:GEBW
+call_types_sound_sources,OD_WHIS_SIG:GOBW,OD_WHIS_SIG:GOBW
+call_types_sound_sources,OD_WHIS_SIG:GRAM,OD_WHIS_SIG:GRAM
+call_types_sound_sources,OD_WHIS_SIG:GRDO,OD_WHIS_SIG:GRDO
+call_types_sound_sources,OD_WHIS_SIG:GSDO,OD_WHIS_SIG:GSDO
+call_types_sound_sources,OD_WHIS_SIG:GTBW,OD_WHIS_SIG:GTBW
+call_types_sound_sources,OD_WHIS_SIG:GUDO,OD_WHIS_SIG:GUDO
+call_types_sound_sources,OD_WHIS_SIG:HEADO,OD_WHIS_SIG:HEADO
+call_types_sound_sources,OD_WHIS_SIG:HEBW,OD_WHIS_SIG:HEBW
+call_types_sound_sources,OD_WHIS_SIG:HECDO,OD_WHIS_SIG:HECDO
+call_types_sound_sources,OD_WHIS_SIG:HODO,OD_WHIS_SIG:HODO
+call_types_sound_sources,OD_WHIS_SIG:HUBW,OD_WHIS_SIG:HUBW
+call_types_sound_sources,OD_WHIS_SIG:INRDO,OD_WHIS_SIG:INRDO
+call_types_sound_sources,OD_WHIS_SIG:IOBD,OD_WHIS_SIG:IOBD
+call_types_sound_sources,OD_WHIS_SIG:IPHD,OD_WHIS_SIG:IPHD
+call_types_sound_sources,OD_WHIS_SIG:IRRDO,OD_WHIS_SIG:IRRDO
+call_types_sound_sources,OD_WHIS_SIG:KIWH,OD_WHIS_SIG:KIWH
+call_types_sound_sources,OD_WHIS_SIG:KIWHAANT,OD_WHIS_SIG:KIWHAANT
+call_types_sound_sources,OD_WHIS_SIG:KIWHBANT,OD_WHIS_SIG:KIWHBANT
+call_types_sound_sources,OD_WHIS_SIG:KIWHCANT,OD_WHIS_SIG:KIWHCANT
+call_types_sound_sources,OD_WHIS_SIG:KIWHOF,OD_WHIS_SIG:KIWHOF
+call_types_sound_sources,OD_WHIS_SIG:KIWHRE,OD_WHIS_SIG:KIWHRE
+call_types_sound_sources,OD_WHIS_SIG:KIWHTR,OD_WHIS_SIG:KIWHTR
+call_types_sound_sources,OD_WHIS_SIG:LBCD,OD_WHIS_SIG:LBCD
+call_types_sound_sources,OD_WHIS_SIG:LBWH,OD_WHIS_SIG:LBWH
+call_types_sound_sources,OD_WHIS_SIG:LFPW,OD_WHIS_SIG:LFPW
+call_types_sound_sources,OD_WHIS_SIG:MEPK,OD_WHIS_SIG:MEPK
+call_types_sound_sources,OD_WHIS_SIG:MEWH,OD_WHIS_SIG:MEWH
+call_types_sound_sources,OD_WHIS_SIG:MMME,OD_WHIS_SIG:MMME
+call_types_sound_sources,OD_WHIS_SIG:NAWH,OD_WHIS_SIG:NAWH
+call_types_sound_sources,OD_WHIS_SIG:NBWH,OD_WHIS_SIG:NBWH
+call_types_sound_sources,OD_WHIS_SIG:NRWD,OD_WHIS_SIG:NRWD
+call_types_sound_sources,OD_WHIS_SIG:OBDO,OD_WHIS_SIG:OBDO
+call_types_sound_sources,OD_WHIS_SIG:PEBW,OD_WHIS_SIG:PEBW
+call_types_sound_sources,OD_WHIS_SIG:PEDO,OD_WHIS_SIG:PEDO
+call_types_sound_sources,OD_WHIS_SIG:PIWH,OD_WHIS_SIG:PIWH
+call_types_sound_sources,OD_WHIS_SIG:PSDO,OD_WHIS_SIG:PSDO
+call_types_sound_sources,OD_WHIS_SIG:PSWH,OD_WHIS_SIG:PSWH
+call_types_sound_sources,OD_WHIS_SIG:PWDO,OD_WHIS_SIG:PWDO
+call_types_sound_sources,OD_WHIS_SIG:PYBW,OD_WHIS_SIG:PYBW
+call_types_sound_sources,OD_WHIS_SIG:PYKW,OD_WHIS_SIG:PYKW
+call_types_sound_sources,OD_WHIS_SIG:RTDO,OD_WHIS_SIG:RTDO
+call_types_sound_sources,OD_WHIS_SIG:SADO,OD_WHIS_SIG:SADO
+call_types_sound_sources,OD_WHIS_SIG:SBWH,OD_WHIS_SIG:SBWH
+call_types_sound_sources,OD_WHIS_SIG:SFPW,OD_WHIS_SIG:SFPW
+call_types_sound_sources,OD_WHIS_SIG:SHBW,OD_WHIS_SIG:SHBW
+call_types_sound_sources,OD_WHIS_SIG:SNDO,OD_WHIS_SIG:SNDO
+call_types_sound_sources,OD_WHIS_SIG:SOBW,OD_WHIS_SIG:SOBW
+call_types_sound_sources,OD_WHIS_SIG:SPDOOF,OD_WHIS_SIG:SPDOOF
+call_types_sound_sources,OD_WHIS_SIG:SPDOPA,OD_WHIS_SIG:SPDOPA
+call_types_sound_sources,OD_WHIS_SIG:SPPO,OD_WHIS_SIG:SPPO
+call_types_sound_sources,OD_WHIS_SIG:SRWD,OD_WHIS_SIG:SRWD
+call_types_sound_sources,OD_WHIS_SIG:SSDO,OD_WHIS_SIG:SSDO
+call_types_sound_sources,OD_WHIS_SIG:STBWH,OD_WHIS_SIG:STBWH
+call_types_sound_sources,OD_WHIS_SIG:STDO,OD_WHIS_SIG:STDO
+call_types_sound_sources,OD_WHIS_SIG:STTWH,OD_WHIS_SIG:STTWH
+call_types_sound_sources,OD_WHIS_SIG:STWH,OD_WHIS_SIG:STWH
+call_types_sound_sources,OD_WHIS_SIG:TMSD,OD_WHIS_SIG:TMSD
+call_types_sound_sources,OD_WHIS_SIG:TRBW,OD_WHIS_SIG:TRBW
+call_types_sound_sources,OD_WHIS_SIG:TUDO,OD_WHIS_SIG:TUDO
+call_types_sound_sources,OD_WHIS_SIG:UBWA,OD_WHIS_SIG:UBWA
+call_types_sound_sources,OD_WHIS_SIG:UECASD,OD_WHIS_SIG:UECASD
+call_types_sound_sources,OD_WHIS_SIG:UNBD,OD_WHIS_SIG:UNBD
+call_types_sound_sources,OD_WHIS_SIG:UNBF,OD_WHIS_SIG:UNBF
+call_types_sound_sources,OD_WHIS_SIG:UNBW,OD_WHIS_SIG:UNBW
+call_types_sound_sources,OD_WHIS_SIG:UNCW,OD_WHIS_SIG:UNCW
+call_types_sound_sources,OD_WHIS_SIG:UNDO,OD_WHIS_SIG:UNDO
+call_types_sound_sources,OD_WHIS_SIG:UNDS,OD_WHIS_SIG:UNDS
+call_types_sound_sources,OD_WHIS_SIG:UNLAG,OD_WHIS_SIG:UNLAG
+call_types_sound_sources,OD_WHIS_SIG:UNLD,OD_WHIS_SIG:UNLD
+call_types_sound_sources,OD_WHIS_SIG:UNMD,OD_WHIS_SIG:UNMD
+call_types_sound_sources,OD_WHIS_SIG:UNME,OD_WHIS_SIG:UNME
+call_types_sound_sources,OD_WHIS_SIG:UNPO,OD_WHIS_SIG:UNPO
+call_types_sound_sources,OD_WHIS_SIG:UNRB,OD_WHIS_SIG:UNRB
+call_types_sound_sources,OD_WHIS_SIG:UNSB,OD_WHIS_SIG:UNSB
+call_types_sound_sources,OD_WHIS_SIG:UNSBW,OD_WHIS_SIG:UNSBW
+call_types_sound_sources,OD_WHIS_SIG:UNSC,OD_WHIS_SIG:UNSC
+call_types_sound_sources,OD_WHIS_SIG:UNSPDO,OD_WHIS_SIG:UNSPDO
+call_types_sound_sources,OD_WHIS_SIG:VAQU,OD_WHIS_SIG:VAQU
+call_types_sound_sources,OD_WHIS_SIG:WBDO,OD_WHIS_SIG:WBDO
+call_types_sound_sources,OD_WHIS_SIG:WBSDO,OD_WHIS_SIG:WBSDO
+call_types_sound_sources,OD_WHIS_SIG:WSDO,OD_WHIS_SIG:WSDO
+call_types_sound_sources,OD_WHIS:AHDO,OD_WHIS:AHDO
+call_types_sound_sources,OD_WHIS:ANBW,OD_WHIS:ANBW
+call_types_sound_sources,OD_WHIS:ARBW,OD_WHIS:ARBW
+call_types_sound_sources,OD_WHIS:ARDO,OD_WHIS:ARDO
+call_types_sound_sources,OD_WHIS:ASDO,OD_WHIS:ASDO
+call_types_sound_sources,OD_WHIS:AUSDO,OD_WHIS:AUSDO
+call_types_sound_sources,OD_WHIS:BBWH,OD_WHIS:BBWH
+call_types_sound_sources,OD_WHIS:BELU,OD_WHIS:BELU
+call_types_sound_sources,OD_WHIS:BLBW,OD_WHIS:BLBW
+call_types_sound_sources,OD_WHIS:BLDO,OD_WHIS:BLDO
+call_types_sound_sources,OD_WHIS:BODO,OD_WHIS:BODO
+call_types_sound_sources,OD_WHIS:BODOCOCA,OD_WHIS:BODOCOCA
+call_types_sound_sources,OD_WHIS:BODOOFCA,OD_WHIS:BODOOFCA
+call_types_sound_sources,OD_WHIS:BOGR,OD_WHIS:BOGR
+call_types_sound_sources,OD_WHIS:BOSP,OD_WHIS:BOSP
+call_types_sound_sources,OD_WHIS:BRDO,OD_WHIS:BRDO
+call_types_sound_sources,OD_WHIS:BUPO,OD_WHIS:BUPO
+call_types_sound_sources,OD_WHIS:BW29,OD_WHIS:BW29
+call_types_sound_sources,OD_WHIS:BW39V,OD_WHIS:BW39V
+call_types_sound_sources,OD_WHIS:BW41,OD_WHIS:BW41
+call_types_sound_sources,OD_WHIS:BW43,OD_WHIS:BW43
+call_types_sound_sources,OD_WHIS:BW53,OD_WHIS:BW53
+call_types_sound_sources,OD_WHIS:BW58,OD_WHIS:BW58
+call_types_sound_sources,OD_WHIS:BW70,OD_WHIS:BW70
+call_types_sound_sources,OD_WHIS:BWB,OD_WHIS:BWB
+call_types_sound_sources,OD_WHIS:BWC,OD_WHIS:BWC
+call_types_sound_sources,OD_WHIS:BWG,OD_WHIS:BWG
+call_types_sound_sources,OD_WHIS:CASP,OD_WHIS:CASP
+call_types_sound_sources,OD_WHIS:CLDO,OD_WHIS:CLDO
+call_types_sound_sources,OD_WHIS:CODO,OD_WHIS:CODO
+call_types_sound_sources,OD_WHIS:CUBW,OD_WHIS:CUBW
+call_types_sound_sources,OD_WHIS:DAPO,OD_WHIS:DAPO
+call_types_sound_sources,OD_WHIS:DEBW,OD_WHIS:DEBW
+call_types_sound_sources,OD_WHIS:DESP,OD_WHIS:DESP
+call_types_sound_sources,OD_WHIS:DSDO,OD_WHIS:DSDO
+call_types_sound_sources,OD_WHIS:DSWH,OD_WHIS:DSWH
+call_types_sound_sources,OD_WHIS:DUDO,OD_WHIS:DUDO
+call_types_sound_sources,OD_WHIS:ESDO,OD_WHIS:ESDO
+call_types_sound_sources,OD_WHIS:FIPO,OD_WHIS:FIPO
+call_types_sound_sources,OD_WHIS:FIPOEA,OD_WHIS:FIPOEA
+call_types_sound_sources,OD_WHIS:FIPOIP,OD_WHIS:FIPOIP
+call_types_sound_sources,OD_WHIS:FIPOYA,OD_WHIS:FIPOYA
+call_types_sound_sources,OD_WHIS:FKWH,OD_WHIS:FKWH
+call_types_sound_sources,OD_WHIS:FRAN,OD_WHIS:FRAN
+call_types_sound_sources,OD_WHIS:FRDO,OD_WHIS:FRDO
+call_types_sound_sources,OD_WHIS:GBWH,OD_WHIS:GBWH
+call_types_sound_sources,OD_WHIS:GEBW,OD_WHIS:GEBW
+call_types_sound_sources,OD_WHIS:GOBW,OD_WHIS:GOBW
+call_types_sound_sources,OD_WHIS:GRAM,OD_WHIS:GRAM
+call_types_sound_sources,OD_WHIS:GRDO,OD_WHIS:GRDO
+call_types_sound_sources,OD_WHIS:GSDO,OD_WHIS:GSDO
+call_types_sound_sources,OD_WHIS:GTBW,OD_WHIS:GTBW
+call_types_sound_sources,OD_WHIS:GUDO,OD_WHIS:GUDO
+call_types_sound_sources,OD_WHIS:HEADO,OD_WHIS:HEADO
+call_types_sound_sources,OD_WHIS:HEBW,OD_WHIS:HEBW
+call_types_sound_sources,OD_WHIS:HECDO,OD_WHIS:HECDO
+call_types_sound_sources,OD_WHIS:HODO,OD_WHIS:HODO
+call_types_sound_sources,OD_WHIS:HUBW,OD_WHIS:HUBW
+call_types_sound_sources,OD_WHIS:INRDO,OD_WHIS:INRDO
+call_types_sound_sources,OD_WHIS:IOBD,OD_WHIS:IOBD
+call_types_sound_sources,OD_WHIS:IPHD,OD_WHIS:IPHD
+call_types_sound_sources,OD_WHIS:IRRDO,OD_WHIS:IRRDO
+call_types_sound_sources,OD_WHIS:KIWH,OD_WHIS:KIWH
+call_types_sound_sources,OD_WHIS:KIWHAANT,OD_WHIS:KIWHAANT
+call_types_sound_sources,OD_WHIS:KIWHBANT,OD_WHIS:KIWHBANT
+call_types_sound_sources,OD_WHIS:KIWHCANT,OD_WHIS:KIWHCANT
+call_types_sound_sources,OD_WHIS:KIWHOF,OD_WHIS:KIWHOF
+call_types_sound_sources,OD_WHIS:KIWHRE,OD_WHIS:KIWHRE
+call_types_sound_sources,OD_WHIS:KIWHTR,OD_WHIS:KIWHTR
+call_types_sound_sources,OD_WHIS:LBCD,OD_WHIS:LBCD
+call_types_sound_sources,OD_WHIS:LBWH,OD_WHIS:LBWH
+call_types_sound_sources,OD_WHIS:LFPW,OD_WHIS:LFPW
+call_types_sound_sources,OD_WHIS:MEPK,OD_WHIS:MEPK
+call_types_sound_sources,OD_WHIS:MEWH,OD_WHIS:MEWH
+call_types_sound_sources,OD_WHIS:MMME,OD_WHIS:MMME
+call_types_sound_sources,OD_WHIS:NAWH,OD_WHIS:NAWH
+call_types_sound_sources,OD_WHIS:NBWH,OD_WHIS:NBWH
+call_types_sound_sources,OD_WHIS:NRWD,OD_WHIS:NRWD
+call_types_sound_sources,OD_WHIS:OBDO,OD_WHIS:OBDO
+call_types_sound_sources,OD_WHIS:PEBW,OD_WHIS:PEBW
+call_types_sound_sources,OD_WHIS:PEDO,OD_WHIS:PEDO
+call_types_sound_sources,OD_WHIS:PIWH,OD_WHIS:PIWH
+call_types_sound_sources,OD_WHIS:PSDO,OD_WHIS:PSDO
+call_types_sound_sources,OD_WHIS:PSWH,OD_WHIS:PSWH
+call_types_sound_sources,OD_WHIS:PWDO,OD_WHIS:PWDO
+call_types_sound_sources,OD_WHIS:PYBW,OD_WHIS:PYBW
+call_types_sound_sources,OD_WHIS:PYKW,OD_WHIS:PYKW
+call_types_sound_sources,OD_WHIS:RTDO,OD_WHIS:RTDO
+call_types_sound_sources,OD_WHIS:SADO,OD_WHIS:SADO
+call_types_sound_sources,OD_WHIS:SBWH,OD_WHIS:SBWH
+call_types_sound_sources,OD_WHIS:SFPW,OD_WHIS:SFPW
+call_types_sound_sources,OD_WHIS:SHBW,OD_WHIS:SHBW
+call_types_sound_sources,OD_WHIS:SNDO,OD_WHIS:SNDO
+call_types_sound_sources,OD_WHIS:SOBW,OD_WHIS:SOBW
+call_types_sound_sources,OD_WHIS:SPDOOF,OD_WHIS:SPDOOF
+call_types_sound_sources,OD_WHIS:SPDOPA,OD_WHIS:SPDOPA
+call_types_sound_sources,OD_WHIS:SPPO,OD_WHIS:SPPO
+call_types_sound_sources,OD_WHIS:SRWD,OD_WHIS:SRWD
+call_types_sound_sources,OD_WHIS:SSDO,OD_WHIS:SSDO
+call_types_sound_sources,OD_WHIS:STBWH,OD_WHIS:STBWH
+call_types_sound_sources,OD_WHIS:STDO,OD_WHIS:STDO
+call_types_sound_sources,OD_WHIS:STTWH,OD_WHIS:STTWH
+call_types_sound_sources,OD_WHIS:STWH,OD_WHIS:STWH
+call_types_sound_sources,OD_WHIS:TMSD,OD_WHIS:TMSD
+call_types_sound_sources,OD_WHIS:TRBW,OD_WHIS:TRBW
+call_types_sound_sources,OD_WHIS:TUDO,OD_WHIS:TUDO
+call_types_sound_sources,OD_WHIS:UBWA,OD_WHIS:UBWA
+call_types_sound_sources,OD_WHIS:UECASD,OD_WHIS:UECASD
+call_types_sound_sources,OD_WHIS:UNBD,OD_WHIS:UNBD
+call_types_sound_sources,OD_WHIS:UNBF,OD_WHIS:UNBF
+call_types_sound_sources,OD_WHIS:UNBW,OD_WHIS:UNBW
+call_types_sound_sources,OD_WHIS:UNCW,OD_WHIS:UNCW
+call_types_sound_sources,OD_WHIS:UNDO,OD_WHIS:UNDO
+call_types_sound_sources,OD_WHIS:UNDS,OD_WHIS:UNDS
+call_types_sound_sources,OD_WHIS:UNLAG,OD_WHIS:UNLAG
+call_types_sound_sources,OD_WHIS:UNLD,OD_WHIS:UNLD
+call_types_sound_sources,OD_WHIS:UNMD,OD_WHIS:UNMD
+call_types_sound_sources,OD_WHIS:UNME,OD_WHIS:UNME
+call_types_sound_sources,OD_WHIS:UNPO,OD_WHIS:UNPO
+call_types_sound_sources,OD_WHIS:UNRB,OD_WHIS:UNRB
+call_types_sound_sources,OD_WHIS:UNSB,OD_WHIS:UNSB
+call_types_sound_sources,OD_WHIS:UNSBW,OD_WHIS:UNSBW
+call_types_sound_sources,OD_WHIS:UNSC,OD_WHIS:UNSC
+call_types_sound_sources,OD_WHIS:UNSPDO,OD_WHIS:UNSPDO
+call_types_sound_sources,OD_WHIS:VAQU,OD_WHIS:VAQU
+call_types_sound_sources,OD_WHIS:WBDO,OD_WHIS:WBDO
+call_types_sound_sources,OD_WHIS:WBSDO,OD_WHIS:WBSDO
+call_types_sound_sources,OD_WHIS:WSDO,OD_WHIS:WSDO
+call_types_sound_sources,PWDO_CLICKA:PWDO,PWDO_CLICKA:PWDO
+call_types_sound_sources,PWDO_CLICKB:PWDO,PWDO_CLICKB:PWDO
+call_types_sound_sources,RCWH_DS:RCWH,RCWH_DS:RCWH
+call_types_sound_sources,RCWH_MOAN:RCWH,RCWH_MOAN:RCWH
+call_types_sound_sources,RW_CTW:NPRW,RW_CTW:NPRW
+call_types_sound_sources,RW_CTW:RIWH,RW_CTW:RIWH
+call_types_sound_sources,RW_CTW:SRWH,RW_CTW:SRWH
+call_types_sound_sources,RW_DC:NPRW,RW_DC:NPRW
+call_types_sound_sources,RW_DC:RIWH,RW_DC:RIWH
+call_types_sound_sources,RW_DC:SRWH,RW_DC:SRWH
+call_types_sound_sources,RW_MIX:NPRW,RW_MIX:NPRW
+call_types_sound_sources,RW_MIX:RIWH,RW_MIX:RIWH
+call_types_sound_sources,RW_MIX:SRWH,RW_MIX:SRWH
+call_types_sound_sources,RW_MOAN:NPRW,RW_MOAN:NPRW
+call_types_sound_sources,RW_MOAN:RIWH,RW_MOAN:RIWH
+call_types_sound_sources,RW_MOAN:SRWH,RW_MOAN:SRWH
+call_types_sound_sources,RW_SCREAM:NPRW,RW_SCREAM:NPRW
+call_types_sound_sources,RW_SCREAM:RIWH,RW_SCREAM:RIWH
+call_types_sound_sources,RW_SCREAM:SRWH,RW_SCREAM:SRWH
+call_types_sound_sources,RW_UPCALL:NPRW,RW_UPCALL:NPRW
+call_types_sound_sources,RW_UPCALL:RIWH,RW_UPCALL:RIWH
+call_types_sound_sources,RW_UPCALL:SRWH,RW_UPCALL:SRWH
+call_types_sound_sources,SEWH_DS39HZ:SEWH,SEWH_DS39HZ:SEWH
+call_types_sound_sources,SEWH_DS80HZ:SEWH,SEWH_DS80HZ:SEWH
+call_types_sound_sources,SPWH_CODA:SPWH,SPWH_CODA:SPWH
+call_types_sound_sources,SPWH_CREAK:SPWH,SPWH_CREAK:SPWH
+call_types_sound_sources,SPWH_FORG:SPWH,SPWH_FORG:SPWH
+call_types_sound_sources,SPWH_MIX:SPWH,SPWH_MIX:SPWH
+call_types_sound_sources,SPWH_SLCC:SPWH,SPWH_SLCC:SPWH
+call_types_sound_sources,SPWH_SOCBZ:SPWH,SPWH_SOCBZ:SPWH
+call_types_sound_sources,SPWH_SQUEAL:SPWH,SPWH_SQUEAL:SPWH
+call_types_sound_sources,SPWH_TRUMPET:SPWH,SPWH_TRUMPET:SPWH
+call_types_sound_sources,SPWH_USC:SPWH,SPWH_USC:SPWH
+call_types_sound_sources,WALR_MIX:WALR,WALR_MIX:WALR
+demographics,ADULT_FEMALE_OR_JUV,Adult female/juvenile
+demographics,ADULT_MALE,Adult male
+demographics,MID-SIZED_INDIVIDUAL,Mid-sized individual
+demographics,MIXED_GROUP,Mixed group
+demographics,SOCIAL_GROUP,Social group
+detection_quality_types,INVALID,Invalid
+detection_quality_types,PARTIALLY_VALID,Partially Valid
+detection_quality_types,UNVERIFIED,Unverified
+detection_quality_types,VALID,Valid
+detection_result_types,DETECTED,Detected
+detection_result_types,NOT_AVAILABLE,Not Available
+detection_result_types,NOT_DETECTED,Not Detected
+detection_result_types,POSSIBLY_DETECTED,Possibly Detected
+detectors,BANTER,BANTER Machine Learning Classifier
+detectors,BEAKED_CNN,Alba Convolutional Neural Network Detector and Classifier
+detectors,BELU_ML,Beluga Machine Learning Detector
+detectors,CORNELL_CUSTOM,Cornell Custom Automatic Detector
+detectors,CORNELL_MATCHED_FILTER,Cornell Custom Matched-Filter Detector
+detectors,DFO_BEAKED,DFO Beaked Whale Detector (BWD)
+detectors,EXPLOSION,Explosion Detector
+detectors,FISHSOUND,FishSound Finder Detector
+detectors,FPOD_ODONTOCETE,FPOD Odontocete Detector
+detectors,GOOGLE_MULTI_ML,Google Multi-Species Machine Learning Model
+detectors,GPL,Helble Generalized Power Law Detector
+detectors,HADD_CNN,Haddock Convolutional Neural Network Detector
+detectors,HADD_KURTOSIS,Haddock Kurtosis Detector
+detectors,HUWH_CNN,Humpback Whale Convolutional Neural Network Detector
+detectors,ISRAT_COD,ISRAT Cod Detector
+detectors,JASCO_AA,JASCO AA
+detectors,JASCO_CONTOUR_CLICK,JASCO Contour and Click Detectors
+detectors,JASCO_OTHER,JASCO Automatic and Manual
+detectors,JASCO_PAMLAB,JASCO PAMlab
+detectors,LFDCS,Low-Frequency Detection and Classification System (LFDCS) Baleen Whale Detector and Classifier
+detectors,MANTA_SOUNDSCAPE,MANTA Soundscape Software
+detectors,MANUAL,Manual detection
+detectors,MATLAB_ISHMAEL_RCWH,Rice's Whale Detector
+detectors,MATLAB_RCWH_AI,Rice's Whale AI Detector
+detectors,MATLAB_SOUNDSCAPE,MATLAB Soundscape Detector
+detectors,MIWH_DNN,Ketos Minke Whale Detector
+detectors,PAMGUARD_CLICK,PAMGuard Odontocete Detector
+detectors,PAMGUARD_ENERGY_SUM,PAMGuard's Ishmael Energy Sum Detector
+detectors,PAMGUARD_LIKELIHOOD_DETECTOR,PAMGuard's Likelihood Detector
+detectors,PAMGUARD_MATCHED_FILTER,PAMGuard's Ishmael Matched-Filter Detector
+detectors,PAMGUARD_RIWH_EDGE,PAMGuard Right Whale Edge Detector
+detectors,PAMGUARD_SPECTROGRAM_CORR,PAMGuard's Ishmael Spectrogram Correlation
+detectors,PAMGUARD_WHISTLE_MOAN,PAMGuard Whistle and Moan Detector
+detectors,PAMGUIDE_SOUNDSCAPE,Pamguide Soundscape Detector
+detectors,PIDR_KURTOSIS,Pile Driving Detector
+detectors,PYPAM,PyPam Soundscape Software
+detectors,SOUNDTRAP_CLICK,SoundTrap Click Detector
+detectors,TRITON_CLICK,Triton Click Detector
+detectors,TRITON_SPICE,SPICE Odontocete Detector
+detectors,TRITON_SPWH,Triton/MATLAB Sperm Whale Click Detector
+detectors,TRITON_VESSEL,Vessel Detector
+detectors,XBAT_MIWH,XBAT Minke Whale Detector
+device_types,ACOUSTIC_RELEASE,Acoustic Release
+device_types,ACOUSTIC_TAG,Acoustic Tag
+device_types,ACTIVE_RECEIVER,Active Receiver
+device_types,BATTERY_PACK,Battery Pack
+device_types,BOTTOM_MOUNTED_MOORING,Bottom Mounted Mooring
+device_types,CTD,Conductivity Temperature Depth Sensor
+device_types,DEPTH_SENSOR,Depth Sensor
+device_types,DRIFTING_BUOY,Drifting Buoy
+device_types,ELECTRIC_GLIDER,Electric Glider
+device_types,FULL_STATIONARY_ARRAY,Full Stationary Array
+device_types,HYDROPHONE_DROP,Drop Hydrophone
+device_types,HYDROPHONE_INDIVIDUAL,Individual Hydrophone
+device_types,LINEAR_TOWED_ARRAY,Linear Towed Array
+device_types,MODULAR_TOWED_ARRAY,Modular Towed Array
+device_types,MOORED_SURFACE_BUOY,Moored Surface Buoy
+device_types,RECORDING_DEVICE,Recording Device
+device_types,SATELLITE_TRACKER,Satellite Tracker
+device_types,TEMPERATURE_SENSOR,Temperature Sensor
+device_types,VOLUMETRIC_TOWED_ARRAY,Volumetric (tetrahedral) towed array
+device_types,WAVE_GLIDER,Wave Glider
+localization_depth_methods,"3D_SIMPLEX","3D Simplex"
+localization_depth_methods,"3D_TDOA",Time Difference of Arrival in 3D
+localization_depth_methods,AUTOMATED_DRTD,Automatic Direct Reflected Time Difference of Arrival
+localization_depth_methods,MANUAL_DRTD,Manual Direct Reflected Time Difference of Arrival
+localization_depth_methods,WHALEDO,Where's Whaledo
+localization_methods,"2D_SIMPLEX","2D Simplex"
+localization_methods,"2D_TDOA",Time Difference of Arrival
+localization_methods,"3D_SIMPLEX","3D Simplex"
+localization_methods,"3D_TDOA",Time Difference of Arrival in 3D
+localization_methods,BEAMFORMING,Beamforming
+localization_methods,DMON_REAL-TIME,DMON Real-Time Tracking
+localization_methods,GM_PHD_SA,GM-PHD-SA
+localization_methods,ISHMAEL_MANUAL_TDOA_1,Ishmael Manual Time Difference of Arrival (with one hydrophone pair)
+localization_methods,ISHMAEL_MANUAL_TDOA_2,Ishmael Manual Time Difference of Arrival (with two hydrophone pairs)
+localization_methods,LEAST_SQUARES,Least Squares
+localization_methods,MCMC,MCMC
+localization_methods,PAMGUARD_AUTOMATED_TMA,PAMGuard Automated Target Motion Analysis
+localization_methods,PAMGUARD_MANUAL_TMA,PAMGuard Manual Target Motion Analysis
+localization_methods,SHIP_POSITION,Ship Position
+localization_methods,SONOBUOY_REAL-TIME,Sonobuoy Real-Time Tracking
+localization_methods,VISUAL_OBS,Visual Observational Data
+localization_methods,WHALEDO,Where's Whaledo
+organizations,AFSC,NOAA Alaska Fisheries Science Center
+organizations,BOEM,Bureau of Ocean Energy Management
+organizations,BOSL,Benioff Ocean Science Laboratory
+organizations,BWCG,Blue Wave Consulting Group
+organizations,CASTELLOTE,Manuel Castellote
+organizations,CINMS,Channel Islands National Marine Sanctuary
+organizations,COA,College of the Atlantic
+organizations,CORNELL,Cornell University
+organizations,CROWE,Leah Crowe
+organizations,CWI,Canadian Whale Institute
+organizations,DALHOUSIE,Dalhousie University
+organizations,DEHAAN,Dick DeHaan
+organizations,DFOCA,Fisheries and Oceans Canada
+organizations,DUKE,Duke University
+organizations,FFWCC,Florida Fish and Wildlife Conservation Commission
+organizations,FGBNMS,NOAA Flower Garden Banks National Marine Sanctuary
+organizations,FKNMS,NOAA Florida Keys National Marine Sanctuary
+organizations,FUGRO,Fugro
+organizations,GARFO,NOAA Greater Atlantic Regional Fisheries Office
+organizations,GRNMS,NOAA Gray's Reef National Marine Sanctuary
+organizations,HDR,"HDR, Inc."
+organizations,HIHWNMS,NOAA Hawaiian Islands Humpback Whale National Marine Sanctuary
+organizations,JASCO,JASCO Applied Sciences
+organizations,JCUCSE,James Cook University College of Science and Engineering
+organizations,MADMF,Massachusetts Division of Marine Fisheries
+organizations,MEDMR,Maine Department of Marine Resources
+organizations,MELLINGER,David Mellinger
+organizations,MOORS-MURPHY,Hilary Moors-Murphy
+organizations,NAVFAC,Naval Facilities Engineering Systems Command
+organizations,NAVY,U.S. Navy
+organizations,NCCOS,NOAA National Centers for Coastal Ocean Science
+organizations,NEAQ,New England Aquarium
+organizations,NEFSC,NOAA Northeast Fisheries Science Center
+organizations,NEWC,New England Whale Center
+organizations,NJDEP,New Jersey Department of Environmental Protection
+organizations,NOS,NOAA National Ocean Service
+organizations,NTNU,Norwegian University of Science and Technology
+organizations,NYDEC,New York State Department of Environmental Conservation
+organizations,OAP,"NOAA Science & Technology, Ocean Acoustics Program"
+organizations,ONMS,NOAA Office of National Marine Sanctuaries
+organizations,ORSTED,Orsted
+organizations,OSU,Oregon State University
+organizations,PARKS,Susan Parks
+organizations,PARKSAU,Parks Australia
+organizations,PIFSC,NOAA Pacific Islands Fisheries Science Center
+organizations,PMEL,NOAA Pacific Marine Environmental Laboratory
+organizations,PORTER,Lindsay Porter (Hong Kong)
+organizations,RUTGERS,Rutgers University
+organizations,RUTGERS-SBU,Rutgers University and Stony Brook University
+organizations,SBNMS,NOAA Stellwagen Bank National Marine Sanctuary
+organizations,SBU,Stony Brook University
+organizations,SCHARER,Michelle Schärer
+organizations,SCRIPPS,"University of California San Diego, Scripps Institution of Oceanography"
+organizations,SEA,"SEA, Ltd."
+organizations,SEAMMR,Southeast Asia Marine Mammal Research (Hong Kong)
+organizations,SEFSC,NOAA Southeast Fisheries Science Center
+organizations,SIROVIC,Ana Širović
+organizations,SKIO,University of Georgia Skidaway Institute of Oceanography
+organizations,SKIO-USC,Skidaway Institute of Oceanography and University of South Carolina
+organizations,SMAST,"School for Marine Science & Technology, UMass Dartmouth"
+organizations,STAFFORD,Kate Stafford
+organizations,STANFORD,Stanford University
+organizations,SWFSC,NOAA Southwest Fisheries Science Center
+organizations,SYRACUSE,Syracuse University
+organizations,TAMG,Texas A&M University at Galveston
+organizations,TMMC,The Marine Mammal Center
+organizations,TNC,The Nature Conservancy
+organizations,UAF,University of Alaska Fairbanks
+organizations,UDEC,University of Concepción
+organizations,UMASSDART,University of Massachusetts Dartmouth
+organizations,UMD,University of Maryland
+organizations,UME,University of Maine
+organizations,UNB,University of New Brunswick
+organizations,UNH,University of New Hampshire
+organizations,UPR,University of Puerto Rico
+organizations,USC,University of South Carolina
+organizations,UTGAL,"University of Texas, Galveston"
+organizations,UVIC,University of Victoria
+organizations,UWASH,University of Washington
+organizations,WCS,Wildlife Conservation Society
+organizations,WHOI,Woods Hole Oceanographic Institution
+platform_types,BOTTOM_MOUNTED_MOORING,Bottom Mounted Mooring
+platform_types,DRIFTING_BUOY,Drifting Buoy
+platform_types,ELECTRIC_GLIDER,Electric Glider
+platform_types,MOORED_SURFACE_BUOY,Moored Surface Buoy
+platform_types,TOWED_ARRAY,Towed Array
+platform_types,WAVE_GLIDER,Wave Glider
+recording_quality_types,COMPROMISED,Compromised
+recording_quality_types,GOOD,Good
+recording_quality_types,UNUSABLE,Unusable
+recording_quality_types,UNVERIFIED,Unverified
+sound_sources,ABDU,American Black Duck
+sound_sources,AC-J,Subsonic Aircraft
+sound_sources,AC-P,Propeller Aircraft
+sound_sources,AC-S,Supersonic Aircraft
+sound_sources,AC-T,Turboprop Aircraft
+sound_sources,AHDO,Atlantic Humpback Dolphin
+sound_sources,AMAL,American Alligator
+sound_sources,ANBW,Andrew's Beaked Whale
+sound_sources,ANSH,Angel Shark
+sound_sources,ARBW,Arnoux's Beaked Whale
+sound_sources,ARDO,Amazon River Dolphin (Boto)
+sound_sources,ARTE,Arctic Tern
+sound_sources,ASDO,Atlantic Spotted Dolphin
+sound_sources,ATBR,Atlantic Brant
+sound_sources,ATCO,Atlantic Cod
+sound_sources,ATPU,Atlantic (Common) Puffin
+sound_sources,AUSDO,Australian Snubfin Dolphin
+sound_sources,AUSH,Audubon’s Shearwater
+sound_sources,BASH,Basking Shark
+sound_sources,BBPL,Black-Bellied Plover
+sound_sources,BBWH,Baird's Beaked Whale
+sound_sources,BCPE,Black-Capped Petrel
+sound_sources,BELU,Beluga Whale
+sound_sources,BESE,Bearded Seal
+sound_sources,BFTU,Bluefin Tuna
+sound_sources,BHGU,Common Black-Headed Gull
+sound_sources,BLBW,Blainville's Beaked Whale
+sound_sources,BLDO,Black Dolphin
+sound_sources,BLDR,Black Drum
+sound_sources,BLFI,Bluefish
+sound_sources,BLGR,Black Grouper
+sound_sources,BLGU,Black Guillemot
+sound_sources,BLKI,Black-Legged Kittiwake
+sound_sources,BLSC,Black Scoter
+sound_sources,BLSH,Blue Shark
+sound_sources,BLTE,Black Tern
+sound_sources,BLWH,Blue Whale
+sound_sources,BODO,Bottlenose Dolphin
+sound_sources,BODOCOCA,Bottlenose Dolphin (Coastal CA)
+sound_sources,BODOOFCA,Bottlenose Dolphin (Offshore CA)
+sound_sources,BOGR,Unid Bottlenose/Risso's Dolphin
+sound_sources,BOGU,Bonaparte’s Gull
+sound_sources,BOSP,Unid Bottlenose/Spotted Dolphin
+sound_sources,BOWH,Bowhead Whale
+sound_sources,BRDO,Baiji River Dolphin
+sound_sources,BRNO,Brown Noddy
+sound_sources,BRPE,Brown Pelican
+sound_sources,BRTE,Bridled Tern
+sound_sources,BRWH,Bryde's Whale (Includes Eden's Whale)
+sound_sources,BSBA,Black Sea Bass
+sound_sources,BSTP,Band-Rumped Storm-Petrel
+sound_sources,BT-H,Heavy Boat Traffic
+sound_sources,BT-L,Light Boat Traffic
+sound_sources,BT-M,Moderate Boat Traffic
+sound_sources,BTDR,Dragger Boat
+sound_sources,BTFT,Factory Trainer Boat
+sound_sources,BTOT,Other Boat
+sound_sources,BUFF,Bufflehead
+sound_sources,BUPO,Burmeister's Porpoise
+sound_sources,BW29,Unid Beaked Whale (BW29)
+sound_sources,BW39V,BW39V
+sound_sources,BW41,Unid Beaked Whale (BW41)
+sound_sources,BW43,Unid Beaked Whale (BW43)
+sound_sources,BW53,Unid Beaked Whale (BW53)
+sound_sources,BW58,Unid Beaked Whale (BW58)
+sound_sources,BW70,Unid Beaked Whale (BW70)
+sound_sources,BWB,Beaked Whale Baja (BWB)
+sound_sources,BWC,Cross Seamount Beaked Whale (BWC)
+sound_sources,BWG,Gulf Of Mexico Beaked Whale (BWG)
+sound_sources,CABL,Cable/Pipe Laying
+sound_sources,CAGO,Canada Goose
+sound_sources,CASP,Central American Spinner Dolphin
+sound_sources,CATE,Caspian Tern
+sound_sources,CDRA,Chilean Devil Ray
+sound_sources,CG-B,"Coast Guard, Buoy Tender"
+sound_sources,CG-C,"Coast Guard, Cutter"
+sound_sources,CG-S,"Coast Guard, Security Patrol Boat"
+sound_sources,CG-U,"Coast Guard, Utility Boat"
+sound_sources,CLDO,Clymene Dolphin
+sound_sources,CNRA,Cow-Nosed Ray
+sound_sources,CODO,Commerson's Dolphin
+sound_sources,COEI,Common Eider
+sound_sources,COLO,Common Loon
+sound_sources,COMU,Common Murre
+sound_sources,COSH,Cory’s Shearwater
+sound_sources,COTE,Common Tern
+sound_sources,CRSE,Crabeater Seal
+sound_sources,CRSH,Cruise Ship
+sound_sources,CSLI,California Sea Lion
+sound_sources,CUBW,Cuvier's Beaked Whale
+sound_sources,DAPO,Dall's Porpoise
+sound_sources,DCCO,Double-Crested Cormorant
+sound_sources,DEBW,Deraniyagala's Beaked Whale
+sound_sources,DESP,Unid Common Dolphin
+sound_sources,DIVE,Diver(S)
+sound_sources,DOVE,Dovekie
+sound_sources,DOWI,Dowitcher Sp.
+sound_sources,DR-D,"Dredge, Dumping"
+sound_sources,DR-T,"Dredge, In Transit"
+sound_sources,DR-U,"Dredge, Unspecified"
+sound_sources,DR-W,"Dredge, In Operation"
+sound_sources,DSDO,Dwarf Spinner Dolphin
+sound_sources,DSWH,Dwarf Sperm Whale
+sound_sources,DU-GA,Garbage Dumping
+sound_sources,DU-T,Toxic Waste Dumping
+sound_sources,DUDO,Dusky Dolphin
+sound_sources,DUSH,Dusky Shark
+sound_sources,ECHO,Echosounder
+sound_sources,ESDO,Eastern Spinner Dolphin
+sound_sources,EXPL,Explosion
+sound_sources,FE-H,"Ferry, High-Speed"
+sound_sources,FE-S,"Ferry, Standard Type"
+sound_sources,FE-U,"Ferry, Unspecified"
+sound_sources,FIPO,Finless Porpoise
+sound_sources,FIPOEA,Finless Porpoise (East Asian)
+sound_sources,FIPOIP,Finless Porpoise (Indo-Pacific)
+sound_sources,FIPOYA,Finless Porpoise (Yangtze)
+sound_sources,FIWH,Fin Whale
+sound_sources,FKWH,False Killer Whale
+sound_sources,FLFI,Flying Fish
+sound_sources,FOTE,Forster’s Tern
+sound_sources,FRAN,Franciscana
+sound_sources,FRDO,Fraser's Dolphin
+sound_sources,FV-C,"Fishing Vessel, Lobster/Crab/Other Pot/Trap Fishery"
+sound_sources,FV-D,"Fishing Vessel, Drift-Netter"
+sound_sources,FV-F,"Fishing Vessel, Unspecified/Unknown Fixed Gear"
+sound_sources,FV-G,"Fishing Vessel, Gill-Netter"
+sound_sources,FV-H,"Fishing Vessel, Party (""Head"") Boat"
+sound_sources,FV-L,"Fishing Vessel, Long-Liner"
+sound_sources,FV-P,"Fishing Vessel, Purse-Seiner"
+sound_sources,FV-S,"Fishing Vessel, Shrimper"
+sound_sources,FV-T,"Fishing Vessel, Trawler/Dragger"
+sound_sources,FV-U,"Fishing Vessel, Unspecified Type"
+sound_sources,FV-W,"Fishing Vessel, Whale-Watching"
+sound_sources,FV-Z,"Fishing Vessel, Factory Trawler"
+sound_sources,GBBG,Great Black-Backed Gull
+sound_sources,GBWH,Gray's Beaked Whale
+sound_sources,GEBW,Gervais' Beaked Whale
+sound_sources,GHSH,Great Hammerhead Shark
+sound_sources,GLGU,Glaucous Gull
+sound_sources,GOBW,Goose-Beaked Whale
+sound_sources,GRAM,Risso's Dolphin
+sound_sources,GRCO,Great Cormorant
+sound_sources,GRDO,Ganges River Dolphin
+sound_sources,GRSC,Greater Scaup
+sound_sources,GRSE,Gray Seal
+sound_sources,GRSH,Great Shearwater
+sound_sources,GRSK,Great Skua
+sound_sources,GRTU,Green Turtle
+sound_sources,GRUI,Unid Fishing Gear
+sound_sources,GRWH,Gray Whale
+sound_sources,GSDO,Gray's Spinner Dolphin
+sound_sources,GTBW,Ginkgo-Toothed Beaked Whale
+sound_sources,GUDO,Guiana Dolphin (Costero)
+sound_sources,HADD,Haddock
+sound_sources,HAPO,Harbor Porpoise
+sound_sources,HASE,Harbor Seal
+sound_sources,HATU,Hawksbill Turtle
+sound_sources,HEADO,Heaviside's Dolphin
+sound_sources,HEBW,Hector's Beaked Whale
+sound_sources,HECDO,Hector's Dolphin
+sound_sources,HELO,Helicopter
+sound_sources,HERG,Herring Gull
+sound_sources,HGSE,Unid Harp/Gray Seal
+sound_sources,HHSH,Hammerhead Shark
+sound_sources,HODO,Hourglass Dolphin
+sound_sources,HOGR,Horned Grebe
+sound_sources,HOSE,Hooded Seal
+sound_sources,HPSE,Harp Seal
+sound_sources,HSTU,Hardshell Turtle
+sound_sources,HUBW,Hubbs' Beaked Whale
+sound_sources,HUWH,Humpback Whale
+sound_sources,ICGU,Iceland Gull
+sound_sources,INRDO,Indus River Dolphin
+sound_sources,IOBD,Indian Ocean Bottlenose Dolphin
+sound_sources,IPHD,Indo-Pacific Humpback Dolphin
+sound_sources,IRRDO,Irrawaddy Dolphin
+sound_sources,JELL,Unid Jellyfish
+sound_sources,JETS,"Personal Watercraft (""Jet-Ski"")"
+sound_sources,KAYK,"Kayak, Canoe, Rowboat"
+sound_sources,KIWH,Killer Whale
+sound_sources,KIWHAANT,Killer Whale (Type A Antarctic)
+sound_sources,KIWHBANT,Killer Whale (Type B Antarctic)
+sound_sources,KIWHCANT,Killer Whale (Type C Antarctic)
+sound_sources,KIWHOF,Killer Whale (Offshore)
+sound_sources,KIWHRE,Killer Whale (Resident)
+sound_sources,KIWHTR,Killer Whale (Transient)
+sound_sources,LABO,Large Boat (41-250 Meters)
+sound_sources,LAGU,Laughing Gull
+sound_sources,LBBG,Lesser Black-Backed Gull
+sound_sources,LBCD,Long-Beaked Common Dolphin
+sound_sources,LBWH,Longman's Beaked Whale
+sound_sources,LE-V,Law Enforcement/Security Patrol Vessel (Including Uscg)
+sound_sources,LESE,Leopard Seal
+sound_sources,LESP,Leach’s Storm-Petrel
+sound_sources,LETE,Least Tern
+sound_sources,LETU,Leatherback Turtle
+sound_sources,LFPW,Pilot Whale (Long-Finned)
+sound_sources,LIGU,Little Gull
+sound_sources,LMJE,Lion's-Mane Jellyfish
+sound_sources,LMSH,Long-Finned Mako Shark
+sound_sources,LOTU,Loggerhead Turtle
+sound_sources,LTDU,Long-Tailed Duck
+sound_sources,LTJA,Long-Tailed Jaeger
+sound_sources,MABO,Masked Booby
+sound_sources,MAGW,Marbled Godwit
+sound_sources,MAHI,Mahi-Mahi/Dolphin-Fish
+sound_sources,MALL,Mallard
+sound_sources,MANA,Manatee
+sound_sources,MARA,Manta Ray
+sound_sources,MASH,Manx Shearwater
+sound_sources,MEBO,Medium Boat (7.1-40 Meters)
+sound_sources,MEPK,Unid Melon-Headed/Pygmy Killer Whale
+sound_sources,METT,Meteorological Tower
+sound_sources,MEWH,Melon-Headed Whale
+sound_sources,MIWH,Minke Whale (Common)
+sound_sources,MIWHAN,Minke Whale (Antarctic)
+sound_sources,MKSH,Mako Shark
+sound_sources,MMME,Unid True's/Gervais' Beaked Whale
+sound_sources,MOBU,Unid Mobulid Ray
+sound_sources,MULT,Multiple Activities
+sound_sources,MV-B,Tug And Barge
+sound_sources,MV-C,Container Ship
+sound_sources,MV-L,"Merchant Vessel, Large"
+sound_sources,MV-O,Tanker
+sound_sources,MV-S,"Merchant Vessel, Small"
+sound_sources,MV-T,Tug Alone
+sound_sources,MV-U,"Merchant Vessel, Unspecified"
+sound_sources,MY-L,"Motor Yacht, Large"
+sound_sources,MY-S,"Motor Yacht, Small (But Larger Than Recv)"
+sound_sources,NAGR,Nassau Grouper
+sound_sources,NAWH,Narwhal
+sound_sources,NBHF,Unid. Narrow Band High Frequency Call
+sound_sources,NBWH,Northern Bottlenose Whale
+sound_sources,NOFU,Northern Fulmar
+sound_sources,NOGA,Northern Gannet
+sound_sources,NPRW,North Pacific Right Whale
+sound_sources,NRWD,Northern Right Whale Dolphin
+sound_sources,NSCO,North Sea Cod
+sound_sources,NV-L,"Naval Vessel, Large"
+sound_sources,NV-S,"Naval Vessel, Small"
+sound_sources,NV-U,Submarine
+sound_sources,OBDO,Offshore Bottlenose Dolphin
+sound_sources,OCSU,Ocean Sunfish/Sharp-Tailed Mola
+sound_sources,OI-D,Drilling Rig
+sound_sources,OI-L,Drill Ship
+sound_sources,OI-P,Production Platform
+sound_sources,OI-S,Seismic (Exploration/Air-Guns)
+sound_sources,OMWH,Omura's Whale
+sound_sources,ORTU,Olive Ridley Sea Turtle
+sound_sources,OTBI,Unid Billfish
+sound_sources,OTHE,Other
+sound_sources,OW-B,"Oceanographic, Weather, Or Other Data Buoy"
+sound_sources,PACO,Pacific Cod
+sound_sources,PAJA,Parasitic Jaeger
+sound_sources,PEBW,Perrin's Beaked Whale
+sound_sources,PEDO,Peale's Dolphin
+sound_sources,PEEP,Unid Shorebird
+sound_sources,PIBO,Pilot Boat
+sound_sources,PIDR,Pile Driving
+sound_sources,PINN,Unid Pinniped
+sound_sources,PIWH,Unid Pilot Whale
+sound_sources,PLBA,Playback
+sound_sources,PMOW,Portuguese Man Of War
+sound_sources,POBE,Polar Bear
+sound_sources,POJA,Pomarine Jaeger
+sound_sources,PRWH,Pygmy Right Whale
+sound_sources,PSDO,Pantropical Spotted Dolphin
+sound_sources,PSWH,Pygmy Sperm Whale
+sound_sources,PWDO,Pacific White-Sided Dolphin
+sound_sources,PYBW,Pygmy Beaked Whale
+sound_sources,PYKW,Pygmy Killer Whale
+sound_sources,RAIN,Rain
+sound_sources,RAZO,Razorbill
+sound_sources,RBGU,Ring-Billed Gull
+sound_sources,RBME,Red-Breasted Merganser
+sound_sources,RBTR,Red-Billed Tropicbird
+sound_sources,RCWH,Rice's Whale
+sound_sources,RECV,"Recreational Vessel, Motorboat"
+sound_sources,REGR,Red Grouper
+sound_sources,REHI,Red Hind
+sound_sources,REKN,Red Knot
+sound_sources,REPH,Red Phalarope
+sound_sources,RIBSE,Ribbon Seal
+sound_sources,RISE,Ringed Seal
+sound_sources,RITU,Kemp's Ridley Turtle
+sound_sources,RIWH,North Atlantic Right Whale
+sound_sources,RNPH,Red-Necked Phalarope
+sound_sources,ROSE,Ross Seal
+sound_sources,ROST,Roseate Tern
+sound_sources,ROYT,Royal Tern
+sound_sources,RTDO,Rough-Toothed Dolphin
+sound_sources,RTLO,Red-Throated Loon
+sound_sources,RUTS,Ruddy Turnstone
+sound_sources,RV-G,"Research Vessel, Geophysical/Seismic Profiling (With The Airgun
+Arrays Deployed, Otherwise Use Rv-L)"
+sound_sources,RV-L,"Research Vessel, Large"
+sound_sources,RV-S,"Research Vessel, Small"
+sound_sources,RV-U,"Research Vessel, Unspecified"
+sound_sources,RV-W,"Wave Glider, Auv, Or Other Autonomous Sampler"
+sound_sources,RWBL,Red-Winged Blackbird
+sound_sources,SADO,Short-Beaked Common Dolphin
+sound_sources,SAGU,Sabine’s Gull
+sound_sources,SATE,Sandwich Tern
+sound_sources,SBWH,Southern Bottlenose Whale
+sound_sources,SCEE,Striped Cusk Eel
+sound_sources,SCFI,Fish School
+sound_sources,SCRA,School Of Rays
+sound_sources,SDOG,Spiny Dogfish
+sound_sources,SEWH,Sei Whale
+sound_sources,SFPW,Pilot Whale (Short-Finned)
+sound_sources,SHBW,Shepherd's Beaked Whale
+sound_sources,SIPE,Silver Perch
+sound_sources,SMBO,Small Boat (<7 Meters)
+sound_sources,SMSH,Short-Finned Mako Shark
+sound_sources,SNDO,Spinner Dolphin
+sound_sources,SNSH,Snapping Shrimp
+sound_sources,SOBW,Sowerby's Beaked Whale
+sound_sources,SONO,Sonobuoy Deployed
+sound_sources,SONR,Sonar (In Use)
+sound_sources,SOSH,Sooty Shearwater
+sound_sources,SOTE,Sooty Tern
+sound_sources,SPDOOF,Spotted Dolphin (Offshore)
+sound_sources,SPDOPA,Coastal Spotted Dolphin (Pantropical Spotted Dolphin)
+sound_sources,SPFV,Sport-Fishing Vessel
+sound_sources,SPPL,Semipalmated Plover
+sound_sources,SPPO,Spectacled Porpoise
+sound_sources,SPSE,Large Spotted Seal
+sound_sources,SPSK,South Polar Skua
+sound_sources,SPWH,Sperm Whale
+sound_sources,SRWD,Southern Right Whale Dolphin
+sound_sources,SRWH,Southern Right Whale
+sound_sources,SSDO,Southwestern Spinner Dolphin
+sound_sources,STBWH,Stejneger's Beaked Whale
+sound_sources,STDO,Striped Dolphin
+sound_sources,STTWH,Strap-Toothed Beaked Whale
+sound_sources,STWH,Spade-Toothed Beaked Whale
+sound_sources,SUSC,Surf Scoter
+sound_sources,SV-L,"Sailing Vessel, Large (>50 Feet)"
+sound_sources,SV-S,"Sailing Vessel, Small (<50 Feet)"
+sound_sources,SV-U,"Sailing Vessel, Unspecified"
+sound_sources,SWFI,Swordfish
+sound_sources,SWIM,Swimmer(s)
+sound_sources,TBMU,Thick-Billed Murre
+sound_sources,THLI,Thunder/Lightning
+sound_sources,THSH,Thresher Shark
+sound_sources,TISH,Tiger Shark
+sound_sources,TMSD,Tres Marias Spinner Dolphin
+sound_sources,TOAD,Toadfish Sp.
+sound_sources,TRBW,True's Beaked Whale
+sound_sources,TUDO,Tucuxi Dolphin
+sound_sources,TUNS,Unid Tuna
+sound_sources,UBWA,Unnamed Beaked Whale
+sound_sources,UECASD,Unid Eastern/Central American Spinner Dolphin
+sound_sources,UNAL,Unid Alcid
+sound_sources,UNAN,Unid Anthropogenic
+sound_sources,UNBA,Unid Baleen Whale
+sound_sources,UNBD,Unid Beaked Dolphin
+sound_sources,UNBF,Unid Blackfish Species
+sound_sources,UNBI,Unid Bird
+sound_sources,UNBS,Unid Bryde's/Sei Whale
+sound_sources,UNBW,Unid Beaked Whale
+sound_sources,UNCE,Unid Cetacean
+sound_sources,UNCO,Unid Cormorant
+sound_sources,UNCT,Unid Crested Tern
+sound_sources,UNCW,Unid Common/White-Sided Dolphin
+sound_sources,UNDO,Unid Dolphin
+sound_sources,UNDS,Unid Delphinus/Stenella Species
+sound_sources,UNDU,Unid Duck
+sound_sources,UNEN,Unid Environmental
+sound_sources,UNFI,Unid Fish
+sound_sources,UNFS,Unid Fin/Sei Whale
+sound_sources,UNGO,Unid Goose
+sound_sources,UNGU,Unid Gull
+sound_sources,UNID,Unid Animal
+sound_sources,UNJA,Unid Jaeger
+sound_sources,UNK,Unknown
+sound_sources,UNKO,Unid Pygmy/Dwarf Sperm Whale
+sound_sources,UNLA,Unid Large Alcid
+sound_sources,UNLAG,Unid Lagenorhynchus
+sound_sources,UNLD,Unid Large Dolphin
+sound_sources,UNLG,Unid Larus Gull
+sound_sources,UNLO,Unid Loon
+sound_sources,UNLS,Unid Large Shearwater
+sound_sources,UNLW,Unid Large Whale
+sound_sources,UNMD,Unid Medium Delphinid
+sound_sources,UNME,Unid Mesoplodon
+sound_sources,UNMER,Unid Merganser
+sound_sources,UNMM,Unid Marine Mammal
+sound_sources,UNMU,Unid Murre
+sound_sources,UNMW,Unid Medium Whale
+sound_sources,UNOFI,Unid/Other Fish
+sound_sources,UNPD,Unid Porpoise/Dolphin
+sound_sources,UNPH,Unid Phalarope
+sound_sources,UNPL,Unid Plover
+sound_sources,UNPO,Unid Porpoise
+sound_sources,UNRA,Unid/Other Ray
+sound_sources,UNRB,Unid Risso's/Bottlenose Dolphin
+sound_sources,UNRO,Unid Rorqual
+sound_sources,UNSA,Unid Small Alcid
+sound_sources,UNSB,Unid Small Blackfish
+sound_sources,UNSBW,Unid Small Beaked Whale
+sound_sources,UNSC,Unid Spinner/Clymene Dolphin
+sound_sources,UNSCO,Unid Scoter/Scaup
+sound_sources,UNSE,Unid Seal
+sound_sources,UNSH,Unid/Other Shark
+sound_sources,UNSHW,Unid Shearwater
+sound_sources,UNSK,Unid Skua
+sound_sources,UNSP,Unid Storm-Petrel
+sound_sources,UNSPDO,Unid Spotted Dolphin
+sound_sources,UNSS,Unid Small Shearwater
+sound_sources,UNST,Unid Stenella Sp.
+sound_sources,UNSW,Unid Small Whale
+sound_sources,UNTE,Unid Tern
+sound_sources,UNTU,Unid Turtle
+sound_sources,UNTW,Unid Odontocete
+sound_sources,UNVE,Unid Boat/Vessel
+sound_sources,UNWH,Unid Whale (Size Unknown)
+sound_sources,VAQU,Vaquita
+sound_sources,WALR,Walrus
+sound_sources,WBDO,White-Beaked Dolphin
+sound_sources,WBSDO,Whitebelly Spinner Dolphin
+sound_sources,WESE,Weddell Seal
+sound_sources,WFSP,White-Faced Storm-Petrel
+sound_sources,WHAL,Whale-Watching Vessel
+sound_sources,WHIM,Whimbrel
+sound_sources,WHMA,White Marlin
+sound_sources,WHSH,Whale Shark
+sound_sources,WIND,Wind
+sound_sources,WISP,Wilson’s Storm-Petrel
+sound_sources,WSDO,Atlantic White-Sided Dolphin
+sound_sources,WTSH,White Shark
+sound_sources,WTTR,White-Tailed Tropicbird
+sound_sources,WWSC,White-Winged Scoter
+sound_sources,YEGR,Yellowfin Grouper
+sound_sources,YFTU,Yellowfin Tuna
+sound_sources,ZOOP,Zooplankton Patches

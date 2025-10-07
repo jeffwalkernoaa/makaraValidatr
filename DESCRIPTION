@@ -1,0 +1,34 @@
+Package: makaraValidatr
+Title: Data validation tools for Makara passive acoustics monitoring database
+Version: 0.0.0.9000
+Authors@R:
+    person("Jeff", "Walker", , "jeffrey.walker@noaa.gov", role = c("aut", "cre"))
+Description: Tools for validating data in the Makara passive acoustics monitoring database.
+    Includes functions for checking data types, ranges, and consistency. Designed for
+    validating template files prior to submission to the Makara database.
+License: Apache License (>= 2) + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends:
+    R (>= 4.1.0)
+Imports:
+    validate (>= 1.1.0),
+    readr (>= 2.0.0),
+    tibble (>= 3.0.0),
+    dplyr (>= 1.0.0),
+    purrr (>= 1.0.0),
+    tidyr (>= 1.0.0),
+    glue (>= 1.6.0),
+    jsonlite (>= 1.8.0),
+    logger (>= 0.2.0),
+    stringr (>= 1.4.0),
+    lubridate (>= 1.9.0)
+Suggests:
+    optparse (>= 1.7.0),
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown,
+    devtools,
+    usethis
+LazyData: true

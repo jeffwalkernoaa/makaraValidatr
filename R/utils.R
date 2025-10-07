@@ -1,0 +1,23 @@
+# Suppress R CMD check notes about global variables used in dplyr/tidyverse code
+utils::globalVariables(c(
+  ".",
+  "col",
+  "end_col",
+  "error",
+  "expression",
+  "fails",
+  "items",
+  "label",
+  "max_col",
+  "name",
+  "reference_table",
+  "required",
+  "required_condition",
+  "row",
+  "table",
+  "type",
+  "unique_by",
+  "values",
+  "violating",
+  "where"
+))

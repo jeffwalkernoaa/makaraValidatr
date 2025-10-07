@@ -1,0 +1,4 @@
+table,name,label,rule
+deployments,deployment_datetime_before_recovery_datetime,deployment_datetime' is not after 'recovery_datetime',"is.na(deployment_datetime) | is.na(recovery_datetime) | ymd_hms(deployment_datetime, quiet = TRUE) <= ymd_hms(recovery_datetime, quiet = TRUE)"
+recordings,recording_usable_start_datetime_after_recording_start_datetime,recording_usable_start_datetime' is not before 'recording_start_datetime',"is.na(recording_usable_start_datetime) | is.na(recording_start_datetime) | ymd_hms(recording_usable_start_datetime, quiet = TRUE) >= ymd_hms(recording_start_datetime, quiet = TRUE)"
+recordings,recording_usable_end_datetime_before_recording_end_datetime,recording_usable_end_datetime' is not after 'recording_end_datetime',"is.na(recording_usable_end_datetime) | is.na(recording_end_datetime) | ymd_hms(recording_usable_end_datetime, quiet = TRUE) <= ymd_hms(recording_end_datetime, quiet = TRUE)"
