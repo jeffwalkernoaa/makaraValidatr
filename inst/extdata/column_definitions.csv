@@ -187,7 +187,7 @@ index,table,name,type,default,min,max,unique_by,required,required_condition,requ
 6,sensor_datasets,sensor_dataset_json,json,,,,,,,,,
 7,sensor_datasets,sensor_dataset_uri,uri,,,,,,,,,
 8,sensor_datasets,sensor_dataset_comments,text,,,,,,,,,
-1,sensor_values,organization_code,,,,,,TRUE,,,,
+1,sensor_values,organization_code,code,,,,,TRUE,,,,
 2,sensor_values,deployment_code,code,,,,,TRUE,,,,
 3,sensor_values,sensor_dataset_code,code,,,,,TRUE,,,,
 4,sensor_values,sensor_value_datetime,timestamp,,,,,TRUE,,,,
