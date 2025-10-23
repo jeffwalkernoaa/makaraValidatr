@@ -201,7 +201,7 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
 #'
 #' @importFrom dplyr bind_rows
 #' @importFrom readr write_csv
-#' @importFrom logger log_info log_warn log_error
+#' @importFrom logger log_info log_warn log_error log_threshold
 #' @export
 validate_submission <- function(data_dir,
                                 tables = NULL,
@@ -214,7 +214,14 @@ validate_submission <- function(data_dir,
                                 stop_on_error = FALSE) {
   results <- list()
   overall_success <- TRUE
-
+  
+  # Turn off logger if verbose=FALSE
+  if(isFALSE(verbose)) {
+    old_thresh <- log_threshold()
+    on.exit(log_threshold(old_thresh))
+    log_threshold(level='OFF')
+  }
+  
   # Load data files
   if (is.null(columns)) {
     columns <- load_column_definitions()
