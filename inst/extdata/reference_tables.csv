@@ -1,4 +1,4 @@
-"table","code","name"
+table,code,name
 analysis_granularity_types,EVENT_CALL,Single Call Detection
 analysis_granularity_types,EVENT_ENCOUNTER,Individual or Group Detection
 analysis_granularity_types,INTERVAL,Binned Time Intervals
@@ -89,6 +89,7 @@ call_types,SPWH_SOCBZ,Sperm whale social buzz
 call_types,SPWH_SQUEAL,Sperm whale squeal
 call_types,SPWH_TRUMPET,Sperm whale trumpet
 call_types,SPWH_USC,Sperm whale usual click
+call_types,UNWH_MIX,Unid whale mixed call types
 call_types,WALR_MIX,Walrus mixed calls
 call_types_sound_sources,BESE_MIX:BESE,BESE_MIX:BESE
 call_types_sound_sources,BLWH_A:BLWH,BLWH_A:BLWH
@@ -1848,6 +1849,7 @@ call_types_sound_sources,SPWH_SOCBZ:SPWH,SPWH_SOCBZ:SPWH
 call_types_sound_sources,SPWH_SQUEAL:SPWH,SPWH_SQUEAL:SPWH
 call_types_sound_sources,SPWH_TRUMPET:SPWH,SPWH_TRUMPET:SPWH
 call_types_sound_sources,SPWH_USC:SPWH,SPWH_USC:SPWH
+call_types_sound_sources,UNWH_MIX:UNWH,UNWH_MIX:UNWH
 call_types_sound_sources,WALR_MIX:WALR,WALR_MIX:WALR
 demographics,ADULT_FEMALE_OR_JUV,Adult female/juvenile
 demographics,ADULT_MALE,Adult male
@@ -1925,15 +1927,15 @@ device_types,SATELLITE_TRACKER,Satellite Tracker
 device_types,TEMPERATURE_SENSOR,Temperature Sensor
 device_types,VOLUMETRIC_TOWED_ARRAY,Volumetric (tetrahedral) towed array
 device_types,WAVE_GLIDER,Wave Glider
-localization_depth_methods,"3D_SIMPLEX","3D Simplex"
-localization_depth_methods,"3D_TDOA",Time Difference of Arrival in 3D
+localization_depth_methods,3D_SIMPLEX,3D Simplex
+localization_depth_methods,3D_TDOA,Time Difference of Arrival in 3D
 localization_depth_methods,AUTOMATED_DRTD,Automatic Direct Reflected Time Difference of Arrival
 localization_depth_methods,MANUAL_DRTD,Manual Direct Reflected Time Difference of Arrival
 localization_depth_methods,WHALEDO,Where's Whaledo
-localization_methods,"2D_SIMPLEX","2D Simplex"
-localization_methods,"2D_TDOA",Time Difference of Arrival
-localization_methods,"3D_SIMPLEX","3D Simplex"
-localization_methods,"3D_TDOA",Time Difference of Arrival in 3D
+localization_methods,2D_SIMPLEX,2D Simplex
+localization_methods,2D_TDOA,Time Difference of Arrival
+localization_methods,3D_SIMPLEX,3D Simplex
+localization_methods,3D_TDOA,Time Difference of Arrival in 3D
 localization_methods,BEAMFORMING,Beamforming
 localization_methods,DMON_REAL-TIME,DMON Real-Time Tracking
 localization_methods,GM_PHD_SA,GM-PHD-SA
