@@ -51,6 +51,31 @@ validate_submission("/path/to/templates", output_file = "validation_results.csv"
 validate_submission("/path/to/templates", ncei = TRUE)
 ```
 
+### Using Custom Reference Tables
+
+The package includes built-in reference tables, but you can also use updated reference tables from an external file. This is useful when reference codes are updated between package releases.
+
+NOAA staff can download the latest reference tables from Google Drive at: https://drive.google.com/file/d/1JyrU5g43YdGTgJ7-XpMurGYsDGHibnOT/view?usp=drive_link
+
+Once this file is downloaded, you can load and use the custom reference tables in the validation process as shown below:
+
+```r
+library(makaraValidatr)
+
+# Use custom reference tables from a downloaded file (single step)
+validate_submission(
+  "/path/to/templates",
+  reference_tables_file = "/path/to/reference_tables.csv"
+)
+
+# Or load reference tables manually first, then pass them to the validation function
+ref_tables <- load_reference_tables(file = "/path/to/reference_tables.csv")
+validate_submission(
+  "/path/to/templates",
+  reference_tables = ref_tables
+)
+```
+
 ## Dependencies
 
 Required packages:

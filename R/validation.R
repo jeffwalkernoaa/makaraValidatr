@@ -180,7 +180,10 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
 #' @param ncei Logical, whether to apply NCEI-specific validation rules
 #' @param output_file Optional path to save detailed validation results as CSV
 #' @param columns Optional custom column definitions (overrides package data)
-#' @param reference_tables Optional custom reference tables (overrides package data)
+#' @param reference_tables_file Optional path to reference tables CSV file.
+#'   If provided, loads reference tables from this file instead of package data.
+#' @param reference_tables Optional custom reference tables (overrides package data).
+#'   If both reference_tables_file and reference_tables are provided, reference_tables takes precedence.
 #' @param manual_rules Optional custom validation rules (overrides package data)
 #' @param verbose Logical, whether to print detailed logging output
 #' @param stop_on_error Logical, whether to stop on first validation error
@@ -197,6 +200,9 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
 #'
 #' # Save detailed results to CSV
 #' validate_submission("/path/to/data", output_file = "validation_results.csv")
+#'
+#' # Use custom reference tables from a downloaded file
+#' validate_submission("/path/to/data", reference_tables_file = "reference_tables.csv")
 #' }
 #'
 #' @importFrom dplyr bind_rows
@@ -208,6 +214,7 @@ validate_submission <- function(data_dir,
                                 ncei = FALSE,
                                 output_file = NULL,
                                 columns = NULL,
+                                reference_tables_file = NULL,
                                 reference_tables = NULL,
                                 manual_rules = NULL,
                                 verbose = TRUE,
@@ -230,7 +237,12 @@ validate_submission <- function(data_dir,
     manual_rules <- load_manual_rules()
   }
   if (is.null(reference_tables)) {
-    reference_tables <- load_reference_tables()
+    if (!is.null(reference_tables_file)) {
+      log_info("Loading reference tables from: {reference_tables_file}")
+      reference_tables <- load_reference_tables(file = reference_tables_file)
+    } else {
+      reference_tables <- load_reference_tables()
+    }
   }
 
   # Determine which tables to validate

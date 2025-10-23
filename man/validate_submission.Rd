@@ -10,6 +10,7 @@ validate_submission(
   ncei = FALSE,
   output_file = NULL,
   columns = NULL,
+  reference_tables_file = NULL,
   reference_tables = NULL,
   manual_rules = NULL,
   verbose = TRUE,
@@ -28,7 +29,11 @@ validates all standard Makara tables.}
 
 \item{columns}{Optional custom column definitions (overrides package data)}
 
-\item{reference_tables}{Optional custom reference tables (overrides package data)}
+\item{reference_tables_file}{Optional path to reference tables CSV file.
+If provided, loads reference tables from this file instead of package data.}
+
+\item{reference_tables}{Optional custom reference tables (overrides package data).
+If both reference_tables_file and reference_tables are provided, reference_tables takes precedence.}
 
 \item{manual_rules}{Optional custom validation rules (overrides package data)}
 
@@ -54,6 +59,9 @@ validate_submission("/path/to/data", tables = c("deployments", "recordings"))
 
 # Save detailed results to CSV
 validate_submission("/path/to/data", output_file = "validation_results.csv")
+
+# Use custom reference tables from a downloaded file
+validate_submission("/path/to/data", reference_tables_file = "reference_tables.csv")
 }
 
 }
