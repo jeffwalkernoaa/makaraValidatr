@@ -10,7 +10,7 @@ validate_columns(data, columns)
 \item{data}{A data frame to validate}
 
 \item{columns}{A data frame with column definitions containing at least:
-\code{name}, \code{required}, and \code{required_condition} columns}
+\code{name}, \code{required}, and \code{required_unless} columns}
 }
 \value{
 A tibble with columns: row, col, values, error

@@ -1,4 +1,4 @@
-index,table,name,type,default,min,max,unique_by,required,required_condition,required_ncei,reference_table,notes
+index,table,name,type,default,min,max,unique_by,required,required_unless,required_ncei,reference_table,notes
 1,deployments,organization_code,code,,,,,TRUE,,,organizations,
 2,deployments,deployment_code,code,,,,organization_code,TRUE,,,,
 3,deployments,project_code,code,,,,,,,TRUE,,
@@ -27,17 +27,17 @@ index,table,name,type,default,min,max,unique_by,required,required_condition,requ
 1,recordings,organization_code,code,,,,,TRUE,,,,
 2,recordings,deployment_code,code,,,,,TRUE,,,,
 3,recordings,recording_code,code,,,,"organization_code,deployment_code",TRUE,,,,
-4,recordings,recording_device_codes,code_list,,,,,TRUE,,,,
-5,recordings,recording_start_datetime,timestamp,,,,,TRUE,recording_device_lost=='FALSE',,,
+4,recordings,recording_device_codes,code_list,,,,,TRUE,recording_device_lost=='TRUE',,,
+5,recordings,recording_start_datetime,timestamp,,,,,TRUE,recording_device_lost=='TRUE',,,
 6,recordings,recording_end_datetime,timestamp,,,,,,,TRUE,,
-7,recordings,recording_duration_secs,float,,0,,,TRUE,recording_device_lost=='FALSE',,,
-8,recordings,recording_interval_secs,float,,0,,,TRUE,recording_device_lost=='FALSE',,,
-9,recordings,recording_sample_rate_khz,float,,0,,,TRUE,recording_device_lost=='FALSE',,,
+7,recordings,recording_duration_secs,float,,0,,,TRUE,recording_device_lost=='TRUE',,,
+8,recordings,recording_interval_secs,float,,0,,,TRUE,recording_device_lost=='TRUE',,,
+9,recordings,recording_sample_rate_khz,float,,0,,,TRUE,recording_device_lost=='TRUE',,,
 10,recordings,recording_bit_depth,integer,,0,,,,,TRUE,,
 11,recordings,recording_channel,integer,,0,,,,,TRUE,,
-12,recordings,recording_n_channels,integer,1,0,,,TRUE,,,,
+12,recordings,recording_n_channels,integer,1,0,,,TRUE,recording_device_lost=='TRUE',,,
 13,recordings,recording_filetypes,text,,,,,,,,,
-14,recordings,recording_timezone,timezone,,,,,TRUE,,,,
+14,recordings,recording_timezone,timezone,,,,,TRUE,recording_device_lost=='TRUE',,,
 15,recordings,recording_usable_start_datetime,timestamp,,,,,,,,,
 16,recordings,recording_usable_end_datetime,timestamp,,,,,,,,,
 17,recordings,recording_usable_min_frequency_khz,float,,0,,,,,,,
@@ -100,7 +100,7 @@ index,table,name,type,default,min,max,unique_by,required,required_condition,requ
 23,detections,detection_n_animals_max,integer,,0,,,,,,,
 24,detections,detection_json,json,,,,,,,,,
 25,detections,detection_comments,text,,,,,,,,,
-26,detections,localization_method_code,code,,,,,TRUE,!is.na(location_latitude),,localization_methods,Required if submitting localization data
+26,detections,localization_method_code,code,,,,,TRUE,is.na(location_latitude),,localization_methods,Required if submitting localization data
 27,detections,localization_latitude,float,,-90,90,,,,,,
 28,detections,localization_latitude_min,float,,-90,90,,,,,,
 29,detections,localization_latitude_max,float,,-90,90,,,,,,
@@ -113,7 +113,7 @@ index,table,name,type,default,min,max,unique_by,required,required_condition,requ
 36,detections,localization_bearing,float,,-180,360,,,,,,
 37,detections,localization_bearing_min,float,,-180,360,,,,,,
 38,detections,localization_bearing_max,float,,-180,360,,,,,,
-39,detections,localization_depth_method_code,code,,,,,TRUE,!is.na(location_depth_m),,localization_depth_methods,Required if submitting localization depth
+39,detections,localization_depth_method_code,code,,,,,TRUE,is.na(location_depth_m),,localization_depth_methods,Required if submitting localization depth
 40,detections,localization_depth_n_signals,integer,,0,,,,,,,
 41,detections,localization_depth_m,float,,0,,,,,,,
 42,detections,localization_depth_m_min,float,,0,,,,,,,

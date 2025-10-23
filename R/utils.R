@@ -12,7 +12,7 @@ utils::globalVariables(c(
   "name",
   "reference_table",
   "required",
-  "required_condition",
+  "required_unless",
   "row",
   "table",
   "type",

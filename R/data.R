@@ -25,7 +25,7 @@
 #'   \item{name}{Column name}
 #'   \item{type}{Data type (e.g., code, integer, float, date, timestamp, json)}
 #'   \item{required}{Whether the column is required}
-#'   \item{required_condition}{Conditional requirement expression}
+#'   \item{required_unless}{Conditional expression to ignore required constraint}
 #'   \item{required_ncei}{Whether required for NCEI submissions}
 #'   \item{min}{Minimum value for numeric columns}
 #'   \item{max}{Maximum value for numeric columns}

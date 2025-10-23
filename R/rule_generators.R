@@ -13,16 +13,16 @@
 #' @export
 generate_required_rules <- function(columns, ncei = FALSE) {
   rules_always_required_is_complete <- columns |>
-    filter(required, is.na(required_condition)) |>
+    filter(required, is.na(required_unless)) |>
     transmute(
       rule = glue("!is.na({name})"),
-      name = glue("is_complete.{name}"),
       label = glue("'{name}' has missing values"),
+      name = glue("is_complete.{name}"),
     )
   rules_conditionally_required_is_complete <- columns |>
-    filter(required, !is.na(required_condition)) |>
+    filter(required, !is.na(required_unless)) |>
     transmute(
-      rule = glue("{required_condition} & !is.na({name})"),
+      rule = glue("{required_unless} | !is.na({name})"),
       label = glue("'{name}' has missing values"),
       name = glue("is_complete.{name}"),
     )

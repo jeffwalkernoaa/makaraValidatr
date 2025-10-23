@@ -6,7 +6,7 @@
 #'
 #' @param data A data frame to validate
 #' @param columns A data frame with column definitions containing at least:
-#'   \code{name}, \code{required}, and \code{required_condition} columns
+#'   \code{name}, \code{required}, and \code{required_unless} columns
 #'
 #' @return A tibble with columns: row, col, values, error
 #'
@@ -18,7 +18,7 @@
 validate_columns <- function(data, columns) {
   all_cols <- columns[["name"]]
   required_cols <- columns[["name"]][
-    columns$required & is.na(columns$required_condition)
+    columns$required & is.na(columns$required_unless)
   ]
   optional_cols <- setdiff(all_cols, required_cols)
 
