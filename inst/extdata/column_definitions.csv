@@ -121,7 +121,7 @@ index,table,name,type,default,min,max,unique_by,required,required_unless,require
 44,detections,localization_json,json,,,,,,,,,
 45,detections,localization_comments,text,,,,,,,,,
 1,devices,organization_code,code,,,,,TRUE,,,,
-2,devices,device_code,code,,,,"organization_code,deployment_code",TRUE,,,,
+2,devices,device_code,code,,,,organization_code,TRUE,,,,
 3,devices,device_type_code,code,,,,,TRUE,,,device_types,
 4,devices,device_manufacturer,text,,,,,,,,,
 5,devices,device_model_name,text,,,,,,,,,
