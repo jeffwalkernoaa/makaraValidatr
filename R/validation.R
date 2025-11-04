@@ -286,23 +286,33 @@ validate_submission <- function(data_dir,
   # Print summary
   log_info("=== VALIDATION SUMMARY ===")
   for (table in names(results)) {
+    failed <- results[[table]]$failed
     result <- results[[table]]$results
 
-    if (all(validate::summary(result)$fails == 0)) {
+    if (nrow(failed) == 0) {
       log_info("\u2713 {table}: PASSED")
     } else {
       log_info("\u2717 {table}: FAILED")
       overall_success <- FALSE
 
-      # Print detailed error information using validate package
+      # Print table-wide failed rules (column issues)
+      failed_table <- failed[is.na(failed$row), ] 
+      for (i in seq_len(nrow(failed_table))) {
+        info <- failed_table[i, ]
+        log_info(
+          "  - {info$error}"
+        )
+      }
+
+      # Print row-specific failed rules
       summary_result <- validate::summary(result)
       failed_rules <- summary_result[summary_result$fails > 0, ]
+
       for (i in seq_len(nrow(failed_rules))) {
-        rule_info <- failed_rules[i, ]
+        info <- failed_rules[i, ]
         log_info(
-          "  - Rule {rule_info$name} failed: {rule_info$fails} out of {rule_info$items} rows"
+          "  - Rule {info$name}: {info$fails} row(s) failed"
         )
-        log_info("    Expression: {rule_info$expression}")
       }
     }
   }
