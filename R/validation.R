@@ -8,6 +8,8 @@
 #' @param prepared_data The data frame that was validated
 #' @param rules Validator object containing the rules
 #' @param rules_data Data frame with rule definitions (name, label, expression)
+#' @param columns Data frame with column definitions for the table
+#' @param reference_tables Named list of reference table data frames
 #'
 #' @return A tibble with columns: row, col, values, error
 #'
@@ -16,7 +18,7 @@
 #' @importFrom purrr map map_chr
 #' @importFrom tidyr unnest
 #' @export
-extract_failed_rows <- function(results, prepared_data, rules, rules_data) {
+extract_failed_rows <- function(results, prepared_data, rules, rules_data, columns, reference_tables) {
 
   if (all(validate::summary(results)$fails == 0)) {
     return(NULL)
@@ -27,39 +29,66 @@ extract_failed_rows <- function(results, prepared_data, rules, rules_data) {
     filter(!error, fails > 0) |>
     mutate(
       violating = map(name, function(name) {
+        error <- rules_data$label[rules_data$name == name]
         rows <- validate::violating(prepared_data, rules[name])
-        vars <- intersect(validate::variables(rules[name]), colnames(prepared_data))
-
+        cols <- intersect(validate::variables(rules[name]), colnames(prepared_data))
+        if (length(cols) == 1 && stringr::str_ends(cols, "_valid_code_list")) {
+          col <- stringr::str_remove(cols, "_valid_code_list")
+          reference_table <- columns$reference_table[columns$name == col]
+          valid_codes <- reference_tables[[reference_table]][["code"]]
+          violating_rows <- rows |>
+            mutate(
+              col = col,
+              values = map_chr(row, function(row) {
+                prepared_data[[col]][[row]]
+              }),
+              invalid_values = map(values, function(values) {
+                if (is.na(values)) return(NA)
+                values_split <- trimws(unlist(strsplit(values, ",")))
+                invalid_values <- values_split[!values_split %in% valid_codes]
+                if (length(invalid_values) == 0) {
+                  return(NA)
+                }
+                paste(invalid_values, collapse = ",")
+              }),
+              error = glue("'{col}' contains unknown code ('{invalid_values}') for reference table '{reference_table}'")
+            ) |>
+            transmute(
+              row,
+              col,
+              values = paste0(col, "='", values, "'"),
+              error
+            )
+          return(violating_rows)
+        }
         rows |>
           mutate(
-            col = paste0(vars, collapse = ","),
+            col = paste0(cols, collapse = ","),
             values = map_chr(row, function(row) {
-              pairs <- map_chr(vars, function(var) {
-                value <- prepared_data[[var]][[row]]
-                if (is.na(value)) return(paste0(var, "=NA"))
-                paste0(var, "='", value, "'")
+              pairs <- map_chr(cols, function(col) {
+                value <- prepared_data[[col]][[row]]
+                if (is.na(value)) return(paste0(col, "=NA"))
+                paste0(col, "='", value, "'")
               })
               paste0(pairs, collapse = ", ")
-            })
+            }),
+            error = error
           ) |>
-          select(
-            row,
-            col,
-            values
-          )
+          select(row, col, values, error)
       }),
     ) |>
-    left_join(
-      select(rules_data, name, label),
-      by = "name"
-    ) |>
-    select(name, label, expression, violating) |>
+    # left_join(
+    #   select(rules_data, name, label),
+    #   by = "name"
+    # ) |>
+    # select(name, label, expression, violating) |>
+    select(violating) |> 
     unnest(violating) |>
     transmute(
       row,
       col,
       values,
-      error = label
+      error
     )
 }
 
@@ -126,7 +155,7 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
 
       # Prepare derived columns
       log_info("Preparing data...")
-      prepared_data <- prepare_data(data, columns)
+      prepared_data <- prepare_data(data, columns, reference_tables)
 
       # Generate validation rules
       log_info("Generating data validation rules...")
@@ -140,7 +169,7 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
       results <- confront(prepared_data, rules, ref = reference_tables)
 
       # Extract failed rows
-      failed_rows <- extract_failed_rows(results, prepared_data, rules, rules_data)
+      failed_rows <- extract_failed_rows(results, prepared_data, rules, rules_data, columns, reference_tables)
       if (!is.null(failed_rows) && nrow(failed_rows) > 0) {
         log_info("Data validation Found {nrow(failed_rows)} issues")
       } else {

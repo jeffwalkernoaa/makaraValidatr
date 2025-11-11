@@ -4,7 +4,14 @@
 \alias{extract_failed_rows}
 \title{Extract failed rows from validation results}
 \usage{
-extract_failed_rows(results, prepared_data, rules, rules_data)
+extract_failed_rows(
+  results,
+  prepared_data,
+  rules,
+  rules_data,
+  columns,
+  reference_tables
+)
 }
 \arguments{
 \item{results}{Validation results object from \code{validate::confront()}}
@@ -14,6 +21,10 @@ extract_failed_rows(results, prepared_data, rules, rules_data)
 \item{rules}{Validator object containing the rules}
 
 \item{rules_data}{Data frame with rule definitions (name, label, expression)}
+
+\item{columns}{Data frame with column definitions for the table}
+
+\item{reference_tables}{Named list of reference table data frames}
 }
 \value{
 A tibble with columns: row, col, values, error

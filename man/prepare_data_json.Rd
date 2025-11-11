@@ -4,12 +4,13 @@
 \alias{prepare_data_json}
 \title{Add JSON format validation columns}
 \usage{
-prepare_data_json(data, json_columns)
+prepare_data_json(data, columns = NULL)
 }
 \arguments{
 \item{data}{A data frame to process}
 
-\item{json_columns}{Character vector of column names containing JSON data}
+\item{columns}{A data frame of column definitions containing code list info
+with \code{name} column}
 }
 \value{
 Data frame with additional JSON validation columns
@@ -17,12 +18,12 @@ Data frame with additional JSON validation columns
 \description{
 For each JSON column in the data, adds a corresponding boolean column
 indicating whether the JSON is valid. The new column is named
-\code{<column_name>_is_json_format}.
+\code{<column_name>_valid_json}.
 }
 \examples{
 \dontrun{
 data <- data.frame(metadata = c('{"key": "value"}', 'invalid'))
-prepare_data_json(data, "metadata")
+prepare_data_json(data, list(name = "metadata"))
 }
 
 }

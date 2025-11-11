@@ -4,12 +4,14 @@
 \alias{prepare_data}
 \title{Prepare data for validation}
 \usage{
-prepare_data(data, columns)
+prepare_data(data, columns, reference_tables)
 }
 \arguments{
 \item{data}{A data frame to prepare}
 
 \item{columns}{A data frame with column definitions}
+
+\item{reference_tables}{A named list of reference tables for code list validation}
 }
 \value{
 Prepared data frame ready for validation

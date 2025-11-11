@@ -4,10 +4,10 @@
 \alias{is_valid_json_format}
 \title{Check if string is valid JSON format}
 \usage{
-is_valid_json_format(json_str)
+is_valid_json_format(value)
 }
 \arguments{
-\item{json_str}{Character string to validate}
+\item{value}{Character string to validate}
 }
 \value{
 Logical value: TRUE if valid JSON or empty/NA, FALSE otherwise

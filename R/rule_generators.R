@@ -67,7 +67,7 @@ generate_format_rules <- function(columns) {
         type %in% names(formats) ~ glue(
           "if (!is.na({name})) grepl(formats[[\"{type}\"]],{name})"
         ),
-        type == "json" ~ glue("{name}_is_json_format == TRUE"),
+        type == "json" ~ glue("{name}_valid_json == TRUE"),
         TRUE ~ NA_character_
       ),
       label = glue("'{name}' is not valid '{type}' format"),
@@ -252,9 +252,9 @@ generate_reference_table_rules <- function(columns) {
     filter(type == "code_list", !is.na(reference_table)) |>
     transmute(
       rule = glue(
-        "is.na({name}) | all(trimws(unique(unlist(strsplit({name}, split = ',', fixed = TRUE)))) %in% {reference_table})"
+        "is.na({name}_valid_code_list) | {name}_valid_code_list == TRUE"
       ),
-      label = glue("'{name}' has unknown codes for reference table '{reference_table}'"),
+      label = glue("'{name}' contains unknown code for reference table '{reference_table}'"),
       name = glue("ref.{name}"),
     )
 
@@ -262,7 +262,7 @@ generate_reference_table_rules <- function(columns) {
     filter(type == "code", !is.na(reference_table)) |>
     transmute(
       rule = glue(
-        "is.na({name}) | {name} %in% {reference_table}"
+        "is.na({name}) | {name} %in% {reference_table}[['code']]"
       ),
       label = glue("'{name}' has unknown code for reference table '{reference_table}'"),
       name = glue("ref.{name}"),
