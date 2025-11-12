@@ -19,5 +19,7 @@ utils::globalVariables(c(
   "unique_by",
   "values",
   "violating",
-  "where"
+  "where",
+  "rule",
+  "value"
 ))

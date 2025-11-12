@@ -8,7 +8,7 @@ validate_submission(
   data_dir,
   tables = NULL,
   ncei = FALSE,
-  output_file = NULL,
+  output_file = "validation-errors.csv",
   columns = NULL,
   reference_tables_file = NULL,
   reference_tables = NULL,
@@ -25,7 +25,7 @@ validates all standard Makara tables.}
 
 \item{ncei}{Logical, whether to apply NCEI-specific validation rules}
 
-\item{output_file}{Optional path to save detailed validation results as CSV}
+\item{output_file}{Optional filename or path to save detailed validation results as CSV}
 
 \item{columns}{Optional custom column definitions (overrides package data)}
 

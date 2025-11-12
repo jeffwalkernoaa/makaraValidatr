@@ -11,15 +11,14 @@
 #' @param columns Data frame with column definitions for the table
 #' @param reference_tables Named list of reference table data frames
 #'
-#' @return A tibble with columns: row, col, values, error
+#' @return A tibble with columns: row, col, value, rule, error
 #'
-#' @importFrom tibble as_tibble
+#' @importFrom tibble as_tibble tibble
 #' @importFrom dplyr filter mutate select transmute left_join
 #' @importFrom purrr map map_chr
 #' @importFrom tidyr unnest
 #' @export
-extract_failed_rows <- function(results, prepared_data, rules, rules_data, columns, reference_tables) {
-
+extract_data_errors <- function(results, prepared_data, rules, rules_data, columns, reference_tables) {
   if (all(validate::summary(results)$fails == 0)) {
     return(NULL)
   }
@@ -28,43 +27,70 @@ extract_failed_rows <- function(results, prepared_data, rules, rules_data, colum
     as_tibble() |>
     filter(!error, fails > 0) |>
     mutate(
-      violating = map(name, function(name) {
-        error <- rules_data$label[rules_data$name == name]
-        rows <- validate::violating(prepared_data, rules[name])
-        cols <- intersect(validate::variables(rules[name]), colnames(prepared_data))
+      rule = map(name, function (name) {
+        rule <- rules_data[rules_data$name == name, ]
+        if (nrow(rule) > 1) {
+          stop("Multiple rules found with the same name: ", name)
+        } else if (nrow(rule) == 0) {
+          stop("No rule found with name: ", name)
+        }
+        as.list(rule)
+      }),
+      violating = map(rule, function(rule) {
+        error <- rule$label
+        rows <- validate::violating(prepared_data, rules[rule$name], ref = as.list(reference_tables))
+        cols <- intersect(validate::variables(rules[rule$name]), colnames(prepared_data))
         if (length(cols) == 1 && stringr::str_ends(cols, "_valid_code_list")) {
           col <- stringr::str_remove(cols, "_valid_code_list")
           reference_table <- columns$reference_table[columns$name == col]
           valid_codes <- reference_tables[[reference_table]][["code"]]
+
           violating_rows <- rows |>
             mutate(
-              col = col,
-              values = map_chr(row, function(row) {
+              value = map_chr(row, function(row) {
                 prepared_data[[col]][[row]]
               }),
-              invalid_values = map(values, function(values) {
-                if (is.na(values)) return(NA)
-                values_split <- trimws(unlist(strsplit(values, ",")))
-                invalid_values <- values_split[!values_split %in% valid_codes]
+              invalid_values = map(value, function(value) {
+                if (is.na(value)) return(NA)
+                value_split <- trimws(unlist(strsplit(value, ",")))
+                invalid_values <- value_split[!value_split %in% valid_codes]
                 if (length(invalid_values) == 0) {
                   return(NA)
                 }
                 paste(invalid_values, collapse = ",")
               }),
-              error = glue("'{col}' contains unknown code ('{invalid_values}') for reference table '{reference_table}'")
+              col = col,
+              error = glue("'{col}' contains unknown codes ('{invalid_values}') for reference table '{reference_table}'")
             ) |>
             transmute(
               row,
               col,
-              values = paste0(col, "='", values, "'"),
+              value = glue("'{value}'"),
+              rule = rule$name,
               error
+            )
+          return(violating_rows)
+        } else if (length(cols) == 1 && stringr::str_ends(cols, "_valid_json")) {
+          col <- stringr::str_remove(cols, "_valid_json")
+          violating_rows <- rows |>
+            mutate(
+              value = map_chr(row, function(row) {
+                prepared_data[[col]][[row]]
+              })
+            ) |>
+            transmute(
+              row,
+              col = col,
+              value = glue("'{value}'"),
+              rule = rule$name,
+              error = error
             )
           return(violating_rows)
         }
         rows |>
           mutate(
             col = paste0(cols, collapse = ","),
-            values = map_chr(row, function(row) {
+            value = map_chr(row, function(row) {
               pairs <- map_chr(cols, function(col) {
                 value <- prepared_data[[col]][[row]]
                 if (is.na(value)) return(paste0(col, "=NA"))
@@ -72,23 +98,78 @@ extract_failed_rows <- function(results, prepared_data, rules, rules_data, colum
               })
               paste0(pairs, collapse = ", ")
             }),
+            rule = rule$name,
             error = error
           ) |>
-          select(row, col, values, error)
+          select(row, col, value, rule, error)
       }),
     ) |>
-    # left_join(
-    #   select(rules_data, name, label),
-    #   by = "name"
-    # ) |>
-    # select(name, label, expression, violating) |>
     select(violating) |> 
     unnest(violating) |>
     transmute(
       row,
       col,
-      values,
+      value,
+      rule,
       error
+    )
+}
+
+#' Extract errors from validation results
+#'
+#' Processes validation results to extract any errors thrown by validator
+#'
+#' @param results Validation results object from \code{validate::confront()}
+#'
+#' @return A tibble with columns: rule, error
+#'
+#' @importFrom tidyr unnest
+#' @importFrom tibble enframe
+#' @export
+extract_validation_errors <- function(results) {
+  validate::errors(results) |>
+    enframe(name = "rule", value = "error") |>
+    unnest(error)
+}
+
+#' Extract parse errors from data reading
+#'
+#' Processes readr parsing problems to create a structured tibble of parse errors
+#'
+#' @param data Data frame that was read with readr
+#' @param columns Data frame with column definitions for this table
+#'
+#' @return A tibble with columns: row, col, value, rule, error
+#'
+#' @export
+extract_parse_errors <- function(data, columns) {
+  read_problems <- readr::problems(data)
+
+  if (nrow(read_problems) == 0) {
+    return(tibble::tibble(
+      row = integer(0),
+      col = character(0),
+      value = character(0),
+      rule = character(0),
+      error = character(0)
+    ))
+  }
+
+  tibble::tibble(
+    name = colnames(data),
+    col = 1:ncol(data)
+  ) |>
+    dplyr::inner_join(read_problems, by = c("col")) |>
+    dplyr::left_join(
+      dplyr::select(columns, name, type),
+      by = "name"
+    ) |>
+    dplyr::transmute(
+      row = row,
+      col = name,
+      value = glue::glue("'{actual}'"),
+      rule = glue::glue("parse.{col}"),
+      error = glue::glue("Failed to parse as '{type}'")
     )
 }
 
@@ -111,7 +192,7 @@ extract_failed_rows <- function(results, prepared_data, rules, rules_data, colum
 #'   }
 #'
 #' @importFrom readr read_csv cols col_character problems
-#' @importFrom dplyr bind_rows select
+#' @importFrom dplyr bind_rows select arrange count
 #' @importFrom logger log_info log_error log_warn
 #' @importFrom validate validator confront
 #' @export
@@ -124,6 +205,7 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
       data_head <- read_csv(
         file_path,
         col_types = cols(.default = col_character()),
+        na = "",
         n_max = 1
       )
       col_types <- create_col_types(data_head, columns)
@@ -131,64 +213,95 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
       log_info("Loading {table} from {file_path}")
       data <- read_csv(
         file_path,
-        col_types = col_types
+        col_types = col_types,
+        na = ""
       )
 
-      read_problems <- problems(data)
-      if (nrow(read_problems) > 0) {
-        log_error(
-          "Found {nrow(read_problems)} problems while reading {file_path}"
+      file_errors <- NULL
+      if (any(data == "NA", na.rm = TRUE)) {
+        log_error("Found literal 'NA' strings in CSV file, missing values should be empty instead")
+        file_errors <- tibble(
+          row = NA_integer_,
+          col = NA_character_,
+          value = NA_character_,
+          rule = "na_string",
+          error = "literal 'NA' strings found in CSV file (missing values should be empty instead)"
         )
-        print(read_problems)
-        stop("Error reading CSV file")
+      }
+
+      parse_errors <- extract_parse_errors(data, columns)
+      if (nrow(parse_errors) > 0) {
+        log_error(
+          "Found {nrow(parse_errors)} parsing errors"
+        )
+      } else {
+        log_info("No parsing errors found")
       }
 
       log_info("Loaded {nrow(data)} rows and {ncol(data)} columns")
 
       log_info("Validating columns...")
-      failed_cols <- validate_columns(data, columns)
-      if (nrow(failed_cols) > 0) {
-        log_info("Column validation found {nrow(failed_cols)} issues")
+      column_errors <- validate_columns(data, columns)
+      if (nrow(column_errors) > 0) {
+        log_error("Found {nrow(column_errors)} column errors")
       } else {
-        log_info("No column issues found")
+        log_info("No column errors found")
       }
 
       # Prepare derived columns
-      log_info("Preparing data...")
+      log_info("Preparing data for validation...")
       prepared_data <- prepare_data(data, columns, reference_tables)
 
       # Generate validation rules
-      log_info("Generating data validation rules...")
+      log_info("Generating validation rules...")
       rules_data <- bind_rows(generate_rules(columns, ncei = ncei), manual_rules)
-      log_info("Generated {nrow(rules_data)} validation rules")
 
       rules <- validator(.data = rules_data)
 
       # Run validation using validate package
       log_info("Validating data...")
-      results <- confront(prepared_data, rules, ref = reference_tables)
+      results <- confront(prepared_data, rules, ref = as.list(reference_tables))
+
+      validation_errors <- extract_validation_errors(results)
+      if (nrow(validation_errors) > 0) { 
+        log_warn("Validation errors occurred:")
+        for (i in seq_len(nrow(validation_errors))) {
+          log_warn("    {validation_errors$error[i]} (rule: {validation_errors$rule[i]})")
+          if (i > 5) {
+            log_warn("    ...and {nrow(validation_errors) - 5} more")
+            break
+          }
+        }
+        # stop("Unexpected errors occurred during validation")
+      }
 
       # Extract failed rows
-      failed_rows <- extract_failed_rows(results, prepared_data, rules, rules_data, columns, reference_tables)
-      if (!is.null(failed_rows) && nrow(failed_rows) > 0) {
-        log_info("Data validation Found {nrow(failed_rows)} issues")
+      data_errors <- extract_data_errors(results, prepared_data, rules, rules_data, columns, reference_tables)
+      if (!is.null(data_errors) && nrow(data_errors) > 0) {
+        log_warn("Found {nrow(data_errors)} data validation errors")
       } else {
         log_info("No data validation errors found")
       }
 
       # Combine column and data validation failures
-      failed <- bind_rows(failed_cols, failed_rows)
-      if (nrow(failed) > 0) {
-        failed$table <- table
-        failed <- select(failed, table, row, col, values, error)
+      errors <- bind_rows(
+        file = file_errors,
+        column = column_errors,
+        parse = parse_errors,
+        data = data_errors,
+        .id = "type"
+      ) |> 
+        mutate(
+          type = factor(type, levels = c("file", "column", "parse", "data"))
+        ) |> 
+        arrange(type, rule, row)
+
+      if (nrow(errors) > 0) {
+        errors$table <- table
+        errors <- select(errors, table, type, row, col, value, rule, error)
       }
 
-      return(
-        list(
-          results = results,
-          failed = failed
-        )
-      )
+      errors
     },
     error = function(e) {
       log_error("Uncaught error occurred: {e$message}")
@@ -207,7 +320,7 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
 #' @param tables Character vector of table names to validate. If NULL,
 #'   validates all standard Makara tables.
 #' @param ncei Logical, whether to apply NCEI-specific validation rules
-#' @param output_file Optional path to save detailed validation results as CSV
+#' @param output_file Optional filename or path to save detailed validation results as CSV
 #' @param columns Optional custom column definitions (overrides package data)
 #' @param reference_tables_file Optional path to reference tables CSV file.
 #'   If provided, loads reference tables from this file instead of package data.
@@ -241,7 +354,7 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
 validate_submission <- function(data_dir,
                                 tables = NULL,
                                 ncei = FALSE,
-                                output_file = NULL,
+                                output_file = "validation-errors.csv",
                                 columns = NULL,
                                 reference_tables_file = NULL,
                                 reference_tables = NULL,
@@ -290,7 +403,7 @@ validate_submission <- function(data_dir,
       table_manual_rules <- manual_rules[[table]]
     }
 
-    log_info("=== Processing {table} ===")
+    log_info("=== Validating {table} ===")
     if (file.exists(file_path)) {
       results[[table]] <- validate_table(
         data_dir,
@@ -307,7 +420,7 @@ validate_submission <- function(data_dir,
         break
       }
     } else {
-      log_warn("Skipping, file not found: {file_path}")
+      log_info("Skipping, file not found: {file_path}")
     }
     log_info(" ")
   }
@@ -315,46 +428,34 @@ validate_submission <- function(data_dir,
   # Print summary
   log_info("=== VALIDATION SUMMARY ===")
   for (table in names(results)) {
-    failed <- results[[table]]$failed
-    result <- results[[table]]$results
+    errors <- results[[table]]
 
-    if (nrow(failed) == 0) {
+    if (is.null(errors) || nrow(errors) == 0) {
       log_info("\u2713 {table}: PASSED")
     } else {
       log_info("\u2717 {table}: FAILED")
-      overall_success <- FALSE
 
-      # Print table-wide failed rules (column issues)
-      failed_table <- failed[is.na(failed$row), ] 
-      for (i in seq_len(nrow(failed_table))) {
-        info <- failed_table[i, ]
+      error_counts <- count(errors, type, rule, error)
+
+      for (i in seq_len(nrow(error_counts))) {
+        error <- error_counts[i, ]
         log_info(
-          "  - {info$error}"
-        )
-      }
-
-      # Print row-specific failed rules
-      summary_result <- validate::summary(result)
-      failed_rules <- summary_result[summary_result$fails > 0, ]
-
-      for (i in seq_len(nrow(failed_rules))) {
-        info <- failed_rules[i, ]
-        log_info(
-          "  - Rule {info$name}: {info$fails} row(s) failed"
+          "  - {error$type}.{error$rule}: {error$error} (n={error$n})"
         )
       }
     }
   }
 
+  all_errors <- bind_rows(results)
   if (!is.null(output_file)) {
-    log_info("Writing detailed results to {output_file}")
-    all_failed <- bind_rows(
-      lapply(names(results), function(table) {
-        results[[table]]$failed
-      })
-    )
-    write_csv(all_failed, output_file, na = "")
+    if (output_file == basename((output_file))) {
+      output_file <- file.path(data_dir, output_file)
+    }
+    log_info(" ")
+    log_info("Writing validation errors to '{output_file}'")
+
+    write_csv(all_errors, output_file, na = "")
   }
 
-  return(overall_success)
+  return(is.null(all_errors) || nrow(all_errors) == 0)
 }

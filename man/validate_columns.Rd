@@ -13,7 +13,7 @@ validate_columns(data, columns)
 \code{name}, \code{required}, and \code{required_unless} columns}
 }
 \value{
-A tibble with columns: row, col, values, error
+A tibble with columns: row, col, value, rule, error
 }
 \description{
 Checks for required columns and unexpected columns in a data frame.

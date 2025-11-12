@@ -8,7 +8,7 @@
 #' @param columns A data frame with column definitions containing at least:
 #'   \code{name}, \code{required}, and \code{required_unless} columns
 #'
-#' @return A tibble with columns: row, col, values, error
+#' @return A tibble with columns: row, col, value, rule, error
 #'
 #' @importFrom tibble tibble
 #' @importFrom dplyr bind_rows transmute
@@ -25,7 +25,7 @@ validate_columns <- function(data, columns) {
   missing_required_cols <- tibble(
     col = setdiff(required_cols, colnames(data)),
     error = glue("Missing required column '{col}'"),
-    rule = glue("required.{col}")
+    rule = "required"
   )
   if (nrow(missing_required_cols) > 0) {
     log_error(
@@ -36,7 +36,7 @@ validate_columns <- function(data, columns) {
   unexpected_cols <- tibble(
     col = setdiff(colnames(data), all_cols),
     error = glue("Found unknown column '{col}'"),
-    rule = glue("unknown_column")
+    rule = "unknown"
   )
   if (nrow(unexpected_cols) > 0) {
     log_warn(
@@ -58,7 +58,8 @@ validate_columns <- function(data, columns) {
     transmute(
       row = NA_integer_,
       col,
-      values = NA_character_,
+      value = NA_character_,
+      rule,
       error
     )
 }
