@@ -9,7 +9,7 @@
 #' @param rules Validator object containing the rules
 #' @param rules_data Data frame with rule definitions (name, label, expression)
 #' @param columns Data frame with column definitions for the table
-#' @param reference_tables Named list of reference table data frames
+#' @param ref Named list of reference table data frames and formats
 #'
 #' @return A tibble with columns: row, col, value, rule, error
 #'
@@ -18,7 +18,7 @@
 #' @importFrom purrr map map_chr
 #' @importFrom tidyr unnest
 #' @export
-extract_data_errors <- function(results, prepared_data, rules, rules_data, columns, reference_tables) {
+extract_data_errors <- function(results, prepared_data, rules, rules_data, columns, ref) {
   if (all(validate::summary(results)$fails == 0)) {
     return(NULL)
   }
@@ -38,12 +38,12 @@ extract_data_errors <- function(results, prepared_data, rules, rules_data, colum
       }),
       violating = map(rule, function(rule) {
         error <- rule$label
-        rows <- validate::violating(prepared_data, rules[rule$name], ref = as.list(reference_tables))
+        rows <- validate::violating(prepared_data, rules[rule$name], ref = ref)
         cols <- intersect(validate::variables(rules[rule$name]), colnames(prepared_data))
         if (length(cols) == 1 && stringr::str_ends(cols, "_valid_code_list")) {
           col <- stringr::str_remove(cols, "_valid_code_list")
           reference_table <- columns$reference_table[columns$name == col]
-          valid_codes <- reference_tables[[reference_table]][["code"]]
+          valid_codes <- ref[[reference_table]][["code"]]
 
           violating_rows <- rows |>
             mutate(
@@ -169,7 +169,7 @@ extract_parse_errors <- function(data, columns) {
       col = name,
       value = glue::glue("'{actual}'"),
       rule = glue::glue("parse.{col}"),
-      error = glue::glue("Failed to parse as '{type}'")
+      error = glue::glue("'{col}' failed to parse as '{type}'")
     )
 }
 
@@ -225,10 +225,11 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
           col = NA_character_,
           value = NA_character_,
           rule = "na_string",
-          error = "literal 'NA' strings found in CSV file (missing values should be empty instead)"
+          error = "file contains literal 'NA' strings (missing values should be empty instead)"
         )
       }
 
+      log_info("Checking for parsing errors...")
       parse_errors <- extract_parse_errors(data, columns)
       if (nrow(parse_errors) > 0) {
         log_error(
@@ -260,15 +261,17 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
 
       # Run validation using validate package
       log_info("Validating data...")
-      results <- confront(prepared_data, rules, ref = as.list(reference_tables))
+      ref <- as.list(reference_tables)
+      ref[["formats"]] <- formats
+      results <- confront(prepared_data, rules, ref = ref)
 
       validation_errors <- extract_validation_errors(results)
       if (nrow(validation_errors) > 0) { 
-        log_warn("Validation errors occurred:")
+        log_warn("Validation warnings (can usually be safely ignored):")
         for (i in seq_len(nrow(validation_errors))) {
-          log_warn("    {validation_errors$error[i]} (rule: {validation_errors$rule[i]})")
+          log_warn("  - {validation_errors$error[i]} (rule={validation_errors$rule[i]})")
           if (i > 5) {
-            log_warn("    ...and {nrow(validation_errors) - 5} more")
+            log_warn("  - ...and {nrow(validation_errors) - 5} more")
             break
           }
         }
@@ -276,7 +279,7 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
       }
 
       # Extract failed rows
-      data_errors <- extract_data_errors(results, prepared_data, rules, rules_data, columns, reference_tables)
+      data_errors <- extract_data_errors(results, prepared_data, rules, rules_data, columns, ref)
       if (!is.null(data_errors) && nrow(data_errors) > 0) {
         log_warn("Found {nrow(data_errors)} data validation errors")
       } else {
@@ -440,7 +443,7 @@ validate_submission <- function(data_dir,
       for (i in seq_len(nrow(error_counts))) {
         error <- error_counts[i, ]
         log_info(
-          "  - {error$type}.{error$rule}: {error$error} (n={error$n})"
+          "  - {error$error} (n={error$n}, rule={error$type}.{error$rule})"
         )
       }
     }

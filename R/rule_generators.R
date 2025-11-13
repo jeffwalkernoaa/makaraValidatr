@@ -133,13 +133,12 @@ generate_unique_rules <- function(columns) {
 #'
 #' @importFrom dplyr filter transmute select bind_rows
 #' @importFrom glue glue
-#' @importFrom lubridate ymd_hms now
 #' @export
 generate_timestamp_rules <- function(columns) {
   rules_after_now <- columns |>
     filter(type == "timestamp") |>
     transmute(
-      rule = glue("is.na({name}) | ymd_hms({name}, quiet = TRUE) <= now()"),
+      rule = glue("is.na({name}) | lubridate::ymd_hms({name}, quiet = TRUE) <= lubridate::now()"),
       label = glue("'{name}' cannot be after current date and time"),
       name = glue("after_now.{name}"),
     )
@@ -147,7 +146,7 @@ generate_timestamp_rules <- function(columns) {
   rules_before_min <- columns |>
     filter(type == "date") |>
     transmute(
-      rule = glue("is.na({name}) | ymd_hms({name}, quiet = TRUE) >= ymd('{MIN_DATE}')"),
+      rule = glue("is.na({name}) | lubridate::ymd_hms({name}, quiet = TRUE) >= lubridate::ymd('{MIN_DATE}')"),
       label = glue("'{name}' cannot be before minimum valid date '{MIN_DATE}'"),
       name = glue("before_min.{name}"),
     )
@@ -156,7 +155,7 @@ generate_timestamp_rules <- function(columns) {
     filter(type == "timestamp", grepl("_start_datetime", name)) |>
     transmute(
       end_col = sub("_start_datetime", "_end_datetime", name),
-      rule = glue("is.na({name}) | is.na({end_col}) | ymd_hms({name}, quiet = TRUE) <= ymd_hms({end_col}, quiet = TRUE)"),
+      rule = glue("is.na({name}) | is.na({end_col}) | lubridate::ymd_hms({name}, quiet = TRUE) <= lubridate::ymd_hms({end_col}, quiet = TRUE)"),
       label = glue("'{name}' cannot be after '{end_col}'"),
       name = glue("start_after_end.{name}"),
     ) |>
@@ -182,13 +181,12 @@ generate_timestamp_rules <- function(columns) {
 #'
 #' @importFrom dplyr filter transmute select bind_rows
 #' @importFrom glue glue
-#' @importFrom lubridate ymd now
 #' @export
 generate_date_rules <- function(columns) {
   rules_after_today <- columns |>
     filter(type == "date") |>
     transmute(
-      rule = glue("is.na({name}) | ymd({name}, quiet = TRUE) <= as.Date(now())"),
+      rule = glue("is.na({name}) | lubridate::ymd({name}, quiet = TRUE) <= as.Date(lubridate::now())"),
       label = glue("'{name}' cannot be after today"),
       name = glue("after_today.{name}"),
     )
@@ -196,7 +194,7 @@ generate_date_rules <- function(columns) {
   rules_before_min_date <- columns |>
     filter(type == "date") |>
     transmute(
-      rule = glue("is.na({name}) | ymd({name}, quiet = TRUE) >= ymd('{MIN_DATE}')"),
+      rule = glue("is.na({name}) | lubridate::ymd({name}, quiet = TRUE) >= lubridate::ymd('{MIN_DATE}')"),
       label = glue("'{name}' cannot be before minimum valid date '{MIN_DATE}'"),
       name = glue("before_min.{name}"),
     )
@@ -205,7 +203,7 @@ generate_date_rules <- function(columns) {
     filter(type == "date", grepl("_start_date", name)) |>
     transmute(
       end_col = sub("_start_date", "_end_date", name),
-      rule = glue("is.na({name}) | is.na({end_col}) | ymd({name}, quiet = TRUE) <= ymd({end_col}, quiet = TRUE)"),
+      rule = glue("is.na({name}) | is.na({end_col}) | lubridate::ymd({name}, quiet = TRUE) <= lubridate::ymd({end_col}, quiet = TRUE)"),
       label = glue("'{name}' cannot be after '{end_col}'"),
       name = glue("start_after_end.{name}"),
     ) |>

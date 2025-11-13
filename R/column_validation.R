@@ -24,7 +24,7 @@ validate_columns <- function(data, columns) {
 
   missing_required_cols <- tibble(
     col = setdiff(required_cols, colnames(data)),
-    error = glue("Missing required column '{col}'"),
+    error = glue("'{col}' is required but not found"),
     rule = "required"
   )
   if (nrow(missing_required_cols) > 0) {
@@ -35,7 +35,7 @@ validate_columns <- function(data, columns) {
 
   unexpected_cols <- tibble(
     col = setdiff(colnames(data), all_cols),
-    error = glue("Found unknown column '{col}'"),
+    error = glue("'{col}' is an unknown column"),
     rule = "unknown"
   )
   if (nrow(unexpected_cols) > 0) {
