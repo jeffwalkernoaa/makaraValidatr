@@ -91,17 +91,22 @@ extract_data_errors <- function(results, prepared_data, rules, rules_data, colum
           mutate(
             col = paste0(cols, collapse = ","),
             value = map_chr(row, function(row) {
-              pairs <- map_chr(cols, function(col) {
-                value <- prepared_data[[col]][[row]]
-                if (is.na(value)) return(paste0(col, "=NA"))
-                paste0(col, "='", value, "'")
-              })
-              paste0(pairs, collapse = ", ")
+              if (length(cols) > 1) {
+                pairs <- map_chr(cols, function(col) {
+                  value <- prepared_data[[col]][[row]]
+                  if (is.na(value)) return(paste0(col, "=NA"))
+                  paste0(col, "='", value, "'")
+                })
+                return(paste0(pairs, collapse = ", "))
+              }
+              value <- prepared_data[[cols]][[row]]
+              return(paste0("'", value, "'"))
             }),
             rule = rule$name,
-            error = error
+            error = stringr::str_replace(error, 'unknown code', glue("unknown code {value}"))
           ) |>
           select(row, col, value, rule, error)
+
       }),
     ) |>
     select(violating) |> 
