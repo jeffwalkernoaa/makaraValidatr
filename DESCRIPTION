@@ -1,6 +1,6 @@
 Package: makaraValidatr
 Title: Data validation tools for Makara passive acoustics monitoring database
-Version: 0.2.0
+Version: 0.2.1
 Authors@R:
     person("Jeff", "Walker", , "jeffrey.walker@noaa.gov", role = c("aut", "cre"))
 Description: Tools for validating data in the Makara passive acoustics monitoring database.
