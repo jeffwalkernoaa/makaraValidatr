@@ -2,8 +2,8 @@ table,code,name
 analysis_granularity_types,EVENT_CALL,Single Call Detection
 analysis_granularity_types,EVENT_ENCOUNTER,Individual or Group Detection
 analysis_granularity_types,INTERVAL,Binned Time Intervals
-analysis_processing_types,POST-PROCESSED,Post-Processed
-analysis_processing_types,REAL-TIME,Real-Time
+analysis_processing_types,POST_PROCESSED,Post-Processed
+analysis_processing_types,REAL_TIME,Real-Time
 analysis_quality_types,FULLY_VALIDATED,Fully Validated
 analysis_quality_types,NOT_VALIDATED,Not Validated
 analysis_quality_types,PARTIALLY_VALIDATED,Partially Validated
@@ -1986,8 +1986,11 @@ organizations,NEAQ,New England Aquarium
 organizations,NEFSC,NOAA Northeast Fisheries Science Center
 organizations,NEWC,New England Whale Center
 organizations,NJDEP,New Jersey Department of Environmental Protection
+organizations,NMFS,National Marine Fisheries Service
 organizations,NOS,NOAA National Ocean Service
+organizations,NPS,National Park Service
 organizations,NTNU,Norwegian University of Science and Technology
+organizations,NWFSC,Northwest Fisheries Science Center
 organizations,NYDEC,New York State Department of Environmental Conservation
 organizations,OAP,"NOAA Science & Technology, Ocean Acoustics Program"
 organizations,ONMS,NOAA Office of National Marine Sanctuaries
