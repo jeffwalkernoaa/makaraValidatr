@@ -1909,22 +1909,33 @@ detectors,XBAT_MIWH,XBAT Minke Whale Detector
 device_types,ACOUSTIC_RELEASE,Acoustic Release
 device_types,ACOUSTIC_TAG,Acoustic Tag
 device_types,ACTIVE_RECEIVER,Active Receiver
+device_types,AMAR,Autonomour Multichannel Acoustic Recorder (AMAR)
+device_types,AUH,Autonomous Underwater Hydrophone (AUH)
 device_types,BATTERY_PACK,Battery Pack
 device_types,BOTTOM_MOUNTED_MOORING,Bottom Mounted Mooring
 device_types,CTD,Conductivity Temperature Depth Sensor
+device_types,DASBR,Drifting Acoustic Spar Buoy Recorder (DASBR)
 device_types,DEPTH_SENSOR,Depth Sensor
+device_types,DMON,Digital Acoustic Monitoring Instrument (DMON)
 device_types,DRIFTING_BUOY,Drifting Buoy
 device_types,ELECTRIC_GLIDER,Electric Glider
+device_types,FPOD,FPOD
 device_types,FULL_STATIONARY_ARRAY,Full Stationary Array
+device_types,HARP,High-Frequency Acoustic Recording Package (HARP)
 device_types,HYDROPHONE_DROP,Drop Hydrophone
 device_types,HYDROPHONE_INDIVIDUAL,Individual Hydrophone
 device_types,LINEAR_TOWED_ARRAY,Linear Towed Array
+device_types,MARU,Marine Autonomous Recording Unit (MARU)
 device_types,MODULAR_TOWED_ARRAY,Modular Towed Array
 device_types,MOORED_SURFACE_BUOY,Moored Surface Buoy
 device_types,PREAMP,Preamplifier
 device_types,RECORDING_DEVICE,Recording Device
 device_types,SATELLITE_TRACKER,Satellite Tracker
+device_types,SLOCUM,Slocum glider
+device_types,SONG_METER,Song Meter
+device_types,SOUNDTRAP,SoundTrap
 device_types,TEMPERATURE_SENSOR,Temperature Sensor
+device_types,VEMCO_RELEASE,VEMCO/InnovaSea Acoustic Release
 device_types,VOLUMETRIC_TOWED_ARRAY,Volumetric (tetrahedral) towed array
 device_types,WAVE_GLIDER,Wave Glider
 localization_depth_methods,3D_SIMPLEX,3D Simplex
@@ -1987,6 +1998,7 @@ organizations,NEFSC,NOAA Northeast Fisheries Science Center
 organizations,NEWC,New England Whale Center
 organizations,NJDEP,New Jersey Department of Environmental Protection
 organizations,NMFS,National Marine Fisheries Service
+organizations,NMSF,National Marine Sanctuary Foundation
 organizations,NOS,NOAA National Ocean Service
 organizations,NPS,National Park Service
 organizations,NTNU,Norwegian University of Science and Technology
@@ -1995,6 +2007,7 @@ organizations,NYDEC,New York State Department of Environmental Conservation
 organizations,OAP,"NOAA Science & Technology, Ocean Acoustics Program"
 organizations,ONMS,NOAA Office of National Marine Sanctuaries
 organizations,ORSTED,Orsted
+organizations,OSA,Ocean Science Analytics
 organizations,OSU,Oregon State University
 organizations,PARKS,Susan Parks
 organizations,PARKSAU,Parks Australia

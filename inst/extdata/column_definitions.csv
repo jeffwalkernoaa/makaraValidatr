@@ -48,9 +48,10 @@ index,table,name,type,default,min,max,unique_by,required,required_unless,require
 20,recordings,recording_device_lost,bool,FALSE,,,,,,,,
 21,recordings,recording_device_depth_m,float,,0,,,,,TRUE,,
 22,recordings,recording_redacted,bool,,,,,,,,,
-23,recordings,recording_json,json,,,,,,,,,Recording-specific calibration required for NCEI
-24,recordings,recording_uri,uri,,,,,,,,,
-25,recordings,recording_comments,text,,,,,,,,,
+23,recordings,recording_ncei_status,text,,,,,,,,,
+24,recordings,recording_json,json,,,,,,,,,Recording-specific calibration required for NCEI
+25,recordings,recording_uri,uri,,,,,,,,,
+26,recordings,recording_comments,text,,,,,,,,,
 1,analyses,deployment_organization_code,code,,,,,TRUE,,,organizations,
 2,analyses,deployment_code,code,,,,,TRUE,,,,
 3,analyses,recording_codes,code_list,,,,,TRUE,,,,
