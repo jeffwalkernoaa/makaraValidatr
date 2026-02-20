@@ -144,7 +144,7 @@ generate_timestamp_rules <- function(columns) {
     )
 
   rules_before_min <- columns |>
-    filter(type == "date") |>
+    filter(type == "timestamp") |>
     transmute(
       rule = glue("is.na({name}) | lubridate::ymd_hms({name}, quiet = TRUE) >= lubridate::ymd('{MIN_DATE}')"),
       label = glue("'{name}' cannot be before minimum valid date '{MIN_DATE}'"),
