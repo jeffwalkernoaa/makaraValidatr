@@ -272,7 +272,7 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
 
       validation_errors <- extract_validation_errors(results)
       if (nrow(validation_errors) > 0) { 
-        log_warn("Validation warnings (can usually be safely ignored):")
+        log_error("Unexpected validation errors:")
         for (i in seq_len(nrow(validation_errors))) {
           log_warn("  - {validation_errors$error[i]} (rule={validation_errors$rule[i]})")
           if (i > 5) {
@@ -280,7 +280,7 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
             break
           }
         }
-        # stop("Unexpected errors occurred during validation")
+        stop("Unexpected errors occurred during validation")
       }
 
       # Extract failed rows

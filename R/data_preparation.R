@@ -78,28 +78,34 @@ prepare_data_code_list <- function(data, columns, reference_tables = list()) {
   data
 }
 
-#' Apply default values to missing data
+#' Add missing columns and apply default values
 #'
-#' Replaces NA or empty string values with default values specified in the
-#' column definitions.
+#' Ensures all defined columns exist in the data frame (adding missing ones as
+#' NA), then replaces NA or empty string values with default values specified
+#' in the column definitions.
 #'
 #' @param data A data frame to process
 #' @param columns A data frame with column definitions containing \code{name}
 #'   and \code{default} columns
 #'
-#' @return Data frame with default values applied
+#' @return Data frame with all defined columns present and default values applied
 #'
 #' @export
 prepare_data_defaults <- function(data, columns) {
+  # Add any missing defined columns as NA so rules never hit "object not found"
+  missing_cols <- setdiff(columns$name, colnames(data))
+  for (col_name in missing_cols) {
+    data[[col_name]] <- NA
+  }
+
+  # Apply default values to NA/blank cells
   column_defaults <- columns[!is.na(columns$default), c("name", "default")]
   for (i in seq_len(nrow(column_defaults))) {
     col_name <- column_defaults$name[i]
     default_value <- column_defaults$default[i]
-    if (col_name %in% colnames(data)) {
-      data[[col_name]][
-        is.na(data[[col_name]]) | data[[col_name]] == ""
-      ] <- default_value
-    }
+    data[[col_name]][
+      is.na(data[[col_name]]) | data[[col_name]] == ""
+    ] <- default_value
   }
   data
 }

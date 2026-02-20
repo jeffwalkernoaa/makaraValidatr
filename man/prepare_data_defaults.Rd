@@ -2,7 +2,7 @@
 % Please edit documentation in R/data_preparation.R
 \name{prepare_data_defaults}
 \alias{prepare_data_defaults}
-\title{Apply default values to missing data}
+\title{Add missing columns and apply default values}
 \usage{
 prepare_data_defaults(data, columns)
 }
@@ -13,9 +13,10 @@ prepare_data_defaults(data, columns)
 and \code{default} columns}
 }
 \value{
-Data frame with default values applied
+Data frame with all defined columns present and default values applied
 }
 \description{
-Replaces NA or empty string values with default values specified in the
-column definitions.
+Ensures all defined columns exist in the data frame (adding missing ones as
+NA), then replaces NA or empty string values with default values specified
+in the column definitions.
 }
