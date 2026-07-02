@@ -332,14 +332,22 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
 #'   validates all standard Makara tables.
 #' @param ncei Logical, whether to apply NCEI-specific validation rules
 #' @param output_file Optional filename or path to save detailed validation results as CSV
-#' @param columns Optional custom column definitions (overrides package data)
+#' @param columns Optional custom column definitions (overrides remote loading
+#'   and `column_definitions_file`).
+#' @param column_definitions_file Optional path to a local column definitions
+#'   CSV file. If provided and `columns` is `NULL`, loads column definitions
+#'   from this file instead of the NOAA column definition CSV endpoint.
 #' @param reference_tables_file Optional path to a local reference tables CSV or
 #'   JSON file. If provided, loads reference tables from this file instead of
 #'   the NOAA reference table JSON endpoint.
 #' @param reference_tables Optional custom reference tables (overrides remote
 #'   loading and `reference_tables_file`). If both `reference_tables_file` and
 #'   `reference_tables` are provided, `reference_tables` takes precedence.
-#' @param manual_rules Optional custom validation rules (overrides package data)
+#' @param manual_rules_file Optional path to a local manual rules CSV file. If
+#'   provided and `manual_rules` is `NULL`, loads manual rules from this file
+#'   instead of the NOAA manual rules CSV endpoint.
+#' @param manual_rules Optional custom validation rules (overrides remote
+#'   loading and `manual_rules_file`).
 #' @param verbose Logical, whether to print detailed logging output
 #' @param stop_on_error Logical, whether to stop on first validation error
 #'
@@ -356,8 +364,14 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
 #' # Save detailed results to CSV
 #' validate_submission("/path/to/data", output_file = "validation_results.csv")
 #'
+#' # Use custom column definitions from a local CSV file
+#' validate_submission("/path/to/data", column_definitions_file = "column_definitions.csv")
+#'
 #' # Use custom reference tables from a local CSV or JSON file
 #' validate_submission("/path/to/data", reference_tables_file = "reference_tables.csv")
+#'
+#' # Use custom manual rules from a local CSV file
+#' validate_submission("/path/to/data", manual_rules_file = "manual_rules.csv")
 #' }
 #'
 #' @importFrom dplyr bind_rows
@@ -369,8 +383,10 @@ validate_submission <- function(data_dir,
                                 ncei = FALSE,
                                 output_file = "validation-errors.csv",
                                 columns = NULL,
+                                column_definitions_file = NULL,
                                 reference_tables_file = NULL,
                                 reference_tables = NULL,
+                                manual_rules_file = NULL,
                                 manual_rules = NULL,
                                 verbose = TRUE,
                                 stop_on_error = FALSE) {
@@ -386,10 +402,20 @@ validate_submission <- function(data_dir,
   
   # Load data files
   if (is.null(columns)) {
-    columns <- load_column_definitions()
+    if (!is.null(column_definitions_file)) {
+      log_info("Loading column definitions from: {column_definitions_file}")
+      columns <- load_column_definitions(file = column_definitions_file)
+    } else {
+      columns <- load_column_definitions()
+    }
   }
   if (is.null(manual_rules)) {
-    manual_rules <- load_manual_rules()
+    if (!is.null(manual_rules_file)) {
+      log_info("Loading manual rules from: {manual_rules_file}")
+      manual_rules <- load_manual_rules(file = manual_rules_file)
+    } else {
+      manual_rules <- load_manual_rules()
+    }
   }
   if (is.null(reference_tables)) {
     if (!is.null(reference_tables_file)) {

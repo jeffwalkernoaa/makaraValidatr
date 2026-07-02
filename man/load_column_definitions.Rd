@@ -2,18 +2,32 @@
 % Please edit documentation in R/data_loading.R
 \name{load_column_definitions}
 \alias{load_column_definitions}
-\title{Load column definitions from CSV file}
+\title{Load column definitions}
 \usage{
-load_column_definitions(file = NULL)
+load_column_definitions(
+  file = NULL,
+  url = COLUMN_DEFINITIONS_URL,
+  cache = TRUE,
+  cache_file = NULL
+)
 }
 \arguments{
-\item{file}{Path to column definitions CSV file. If NULL, uses package data.}
+\item{file}{Optional path to a local column definitions CSV file. If \code{NULL},
+column definitions are fetched from \code{url}.}
+
+\item{url}{URL for the column definitions CSV endpoint.}
+
+\item{cache}{Logical, whether to cache the fetched CSV and use the cache
+as a fallback if the remote endpoint cannot be reached.}
+
+\item{cache_file}{Optional path for the cached CSV file. If \code{NULL}, uses
+the package cache directory.}
 }
 \value{
 A named list of data frames, one per table, containing column
 definitions
 }
 \description{
-Loads and parses column definitions from a CSV file or uses package data.
-Returns a nested list by table name.
+Loads and parses column definitions from the NOAA column definition CSV
+endpoint or a local CSV file. Returns a nested list by table name.
 }

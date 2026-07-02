@@ -10,8 +10,10 @@ validate_submission(
   ncei = FALSE,
   output_file = "validation-errors.csv",
   columns = NULL,
+  column_definitions_file = NULL,
   reference_tables_file = NULL,
   reference_tables = NULL,
+  manual_rules_file = NULL,
   manual_rules = NULL,
   verbose = TRUE,
   stop_on_error = FALSE
@@ -27,7 +29,12 @@ validates all standard Makara tables.}
 
 \item{output_file}{Optional filename or path to save detailed validation results as CSV}
 
-\item{columns}{Optional custom column definitions (overrides package data)}
+\item{columns}{Optional custom column definitions (overrides remote loading
+and \code{column_definitions_file}).}
+
+\item{column_definitions_file}{Optional path to a local column definitions
+CSV file. If provided and \code{columns} is \code{NULL}, loads column definitions
+from this file instead of the NOAA column definition CSV endpoint.}
 
 \item{reference_tables_file}{Optional path to a local reference tables CSV or
 JSON file. If provided, loads reference tables from this file instead of
@@ -37,7 +44,12 @@ the NOAA reference table JSON endpoint.}
 loading and \code{reference_tables_file}). If both \code{reference_tables_file} and
 \code{reference_tables} are provided, \code{reference_tables} takes precedence.}
 
-\item{manual_rules}{Optional custom validation rules (overrides package data)}
+\item{manual_rules_file}{Optional path to a local manual rules CSV file. If
+provided and \code{manual_rules} is \code{NULL}, loads manual rules from this file
+instead of the NOAA manual rules CSV endpoint.}
+
+\item{manual_rules}{Optional custom validation rules (overrides remote
+loading and \code{manual_rules_file}).}
 
 \item{verbose}{Logical, whether to print detailed logging output}
 
@@ -62,8 +74,14 @@ validate_submission("/path/to/data", tables = c("deployments", "recordings"))
 # Save detailed results to CSV
 validate_submission("/path/to/data", output_file = "validation_results.csv")
 
+# Use custom column definitions from a local CSV file
+validate_submission("/path/to/data", column_definitions_file = "column_definitions.csv")
+
 # Use custom reference tables from a local CSV or JSON file
 validate_submission("/path/to/data", reference_tables_file = "reference_tables.csv")
+
+# Use custom manual rules from a local CSV file
+validate_submission("/path/to/data", manual_rules_file = "manual_rules.csv")
 }
 
 }

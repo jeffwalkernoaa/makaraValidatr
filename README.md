@@ -51,23 +51,37 @@ validate_submission("/path/to/templates", output_file = "validation_results.csv"
 validate_submission("/path/to/templates", ncei = TRUE)
 ```
 
-### Reference Tables
+### Remote Validation Metadata
 
-By default, the package fetches the latest reference tables from:
+By default, the package fetches the latest validation metadata from NOAA:
 
-https://passiveacoustics.fisheries.noaa.gov/data/reference_tables.json
+- Column definitions: https://passiveacoustics.fisheries.noaa.gov/data/makara/templates/column_definitions.csv
+- Manual rules: https://passiveacoustics.fisheries.noaa.gov/data/makara/templates/manual_rules.csv
+- Reference tables: https://passiveacoustics.fisheries.noaa.gov/data/reference_tables.json
 
-The downloaded JSON is cached in the user cache directory. If the NOAA endpoint cannot be reached later, `load_reference_tables()` warns and uses the cached JSON when available.
+The downloaded CSV and JSON files are cached in the user cache directory. If a NOAA endpoint cannot be reached later, the corresponding loader warns and uses the cached file when available.
 
-You can also use a local CSV or JSON file when you need to validate against a specific reference-table snapshot:
+You can also use local CSV or JSON files when you need to validate against specific metadata snapshots:
 
 ```r
 library(makaraValidatr)
 
-# Use custom reference tables from a local file (single step)
+# Use custom column definitions from a local CSV file
+validate_submission(
+  "/path/to/templates",
+  column_definitions_file = "/path/to/column_definitions.csv"
+)
+
+# Use custom reference tables from a local CSV or JSON file
 validate_submission(
   "/path/to/templates",
   reference_tables_file = "/path/to/reference_tables.json"
+)
+
+# Use custom manual rules from a local CSV file
+validate_submission(
+  "/path/to/templates",
+  manual_rules_file = "/path/to/manual_rules.csv"
 )
 
 # Or load reference tables manually first, then pass them to the validation function

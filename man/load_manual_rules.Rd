@@ -2,18 +2,32 @@
 % Please edit documentation in R/data_loading.R
 \name{load_manual_rules}
 \alias{load_manual_rules}
-\title{Load manual validation rules from CSV file}
+\title{Load manual validation rules}
 \usage{
-load_manual_rules(file = NULL)
+load_manual_rules(
+  file = NULL,
+  url = MANUAL_RULES_URL,
+  cache = TRUE,
+  cache_file = NULL
+)
 }
 \arguments{
-\item{file}{Path to manual rules CSV file. If NULL, uses package data.}
+\item{file}{Optional path to a local manual rules CSV file. If \code{NULL},
+manual rules are fetched from \code{url}.}
+
+\item{url}{URL for the manual rules CSV endpoint.}
+
+\item{cache}{Logical, whether to cache the fetched CSV and use the cache
+as a fallback if the remote endpoint cannot be reached.}
+
+\item{cache_file}{Optional path for the cached CSV file. If \code{NULL}, uses
+the package cache directory.}
 }
 \value{
 A named list of data frames, one per table, containing custom
 validation rules
 }
 \description{
-Loads custom validation rules from a CSV file or uses package data.
-Returns a nested list by table name.
+Loads custom validation rules from the NOAA manual rules CSV endpoint or
+a local CSV file. Returns a nested list by table name.
 }
