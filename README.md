@@ -51,21 +51,23 @@ validate_submission("/path/to/templates", output_file = "validation_results.csv"
 validate_submission("/path/to/templates", ncei = TRUE)
 ```
 
-### Using Custom Reference Tables
+### Reference Tables
 
-The package includes built-in reference tables, but you can also use updated reference tables from an external file. This is useful when reference codes are updated between package releases.
+By default, the package fetches the latest reference tables from:
 
-NOAA staff can download the latest reference tables from Google Drive at: https://drive.google.com/file/d/1JyrU5g43YdGTgJ7-XpMurGYsDGHibnOT/view?usp=drive_link
+https://passiveacoustics.fisheries.noaa.gov/data/reference_tables.json
 
-Once this file is downloaded, you can load and use the custom reference tables in the validation process as shown below:
+The downloaded JSON is cached in the user cache directory. If the NOAA endpoint cannot be reached later, `load_reference_tables()` warns and uses the cached JSON when available.
+
+You can also use a local CSV or JSON file when you need to validate against a specific reference-table snapshot:
 
 ```r
 library(makaraValidatr)
 
-# Use custom reference tables from a downloaded file (single step)
+# Use custom reference tables from a local file (single step)
 validate_submission(
   "/path/to/templates",
-  reference_tables_file = "/path/to/reference_tables.csv"
+  reference_tables_file = "/path/to/reference_tables.json"
 )
 
 # Or load reference tables manually first, then pass them to the validation function

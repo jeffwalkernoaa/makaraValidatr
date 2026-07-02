@@ -38,25 +38,6 @@
 #' @source Generated from inst/extdata/column_definitions.csv
 "column_definitions"
 
-#' Reference tables for controlled vocabularies
-#'
-#' A nested list containing reference lookup tables for validating
-#' controlled vocabulary fields in the Makara database.
-#'
-#' @format A named list with multiple elements (one per reference table).
-#'   Each element is a data frame with columns:
-#' \describe{
-#'   \item{table}{Reference table name}
-#'   \item{code}{Valid code value}
-#'   \item{name}{Human-readable name for the code}
-#' }
-#'
-#' Reference tables include: analysis_granularity_types, analysis_processing_types,
-#' analysis_quality_types, behaviors, call_types, and many others.
-#'
-#' @source Generated from inst/extdata/reference_tables.csv
-"reference_tables"
-
 #' Manual validation rules
 #'
 #' A nested list containing custom validation rules that supplement

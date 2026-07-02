@@ -2,18 +2,32 @@
 % Please edit documentation in R/data_loading.R
 \name{load_reference_tables}
 \alias{load_reference_tables}
-\title{Load reference tables from CSV file}
+\title{Load reference tables}
 \usage{
-load_reference_tables(file = NULL)
+load_reference_tables(
+  file = NULL,
+  url = REFERENCE_TABLES_URL,
+  cache = TRUE,
+  cache_file = NULL
+)
 }
 \arguments{
-\item{file}{Path to reference tables CSV file. If NULL, uses package data.}
+\item{file}{Optional path to a local reference tables CSV or JSON file.
+If \code{NULL}, reference tables are fetched from \code{url}.}
+
+\item{url}{URL for the reference tables JSON endpoint.}
+
+\item{cache}{Logical, whether to cache the fetched JSON and use the cache
+as a fallback if the remote endpoint cannot be reached.}
+
+\item{cache_file}{Optional path for the cached JSON file. If \code{NULL}, uses
+the package cache directory.}
 }
 \value{
 A named list of data frames, one per reference table, containing
 valid codes and names
 }
 \description{
-Loads reference lookup tables from a CSV file or uses package data.
-Returns a nested list by table name.
+Loads reference lookup tables from the NOAA reference table JSON endpoint,
+a local JSON file, or a local CSV file. Returns a nested list by table name.
 }

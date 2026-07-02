@@ -222,6 +222,9 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
         na = ""
       )
 
+      # remove fully empty rows
+      data <- dplyr::filter(data, !dplyr::if_all(dplyr::everything(), is.na))
+
       file_errors <- NULL
       if (any(data == "NA", na.rm = TRUE)) {
         log_error("Found literal 'NA' strings in CSV file, missing values should be empty instead")
@@ -330,10 +333,12 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
 #' @param ncei Logical, whether to apply NCEI-specific validation rules
 #' @param output_file Optional filename or path to save detailed validation results as CSV
 #' @param columns Optional custom column definitions (overrides package data)
-#' @param reference_tables_file Optional path to reference tables CSV file.
-#'   If provided, loads reference tables from this file instead of package data.
-#' @param reference_tables Optional custom reference tables (overrides package data).
-#'   If both reference_tables_file and reference_tables are provided, reference_tables takes precedence.
+#' @param reference_tables_file Optional path to a local reference tables CSV or
+#'   JSON file. If provided, loads reference tables from this file instead of
+#'   the NOAA reference table JSON endpoint.
+#' @param reference_tables Optional custom reference tables (overrides remote
+#'   loading and `reference_tables_file`). If both `reference_tables_file` and
+#'   `reference_tables` are provided, `reference_tables` takes precedence.
 #' @param manual_rules Optional custom validation rules (overrides package data)
 #' @param verbose Logical, whether to print detailed logging output
 #' @param stop_on_error Logical, whether to stop on first validation error
@@ -351,7 +356,7 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
 #' # Save detailed results to CSV
 #' validate_submission("/path/to/data", output_file = "validation_results.csv")
 #'
-#' # Use custom reference tables from a downloaded file
+#' # Use custom reference tables from a local CSV or JSON file
 #' validate_submission("/path/to/data", reference_tables_file = "reference_tables.csv")
 #' }
 #'

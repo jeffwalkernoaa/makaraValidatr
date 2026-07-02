@@ -37,6 +37,9 @@ formats <- c(
 #' @export
 MIN_DATE <- "1980-01-01"
 
+#' @noRd
+REFERENCE_TABLES_URL <- "https://passiveacoustics.fisheries.noaa.gov/data/reference_tables.json"
+
 #' @keywords internal
 .onLoad <- function(libname, pkgname) {
   # Package initialization

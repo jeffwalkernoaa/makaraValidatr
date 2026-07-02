@@ -27,20 +27,6 @@ column_definitions <- read_csv(
 usethis::use_data(column_definitions, overwrite = TRUE)
 
 
-# Reference Tables --------------------------------------------------------
-
-reference_tables <- read_csv(
-  "inst/extdata/reference_tables.csv",
-  col_types = cols(
-    .default = col_character()
-  )
-) |>
-  nest_by(table) |>
-  deframe()
-
-usethis::use_data(reference_tables, overwrite = TRUE)
-
-
 # Manual Rules ------------------------------------------------------------
 
 manual_rules <- read_csv(
