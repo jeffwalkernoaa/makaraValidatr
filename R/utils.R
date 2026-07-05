@@ -21,5 +21,7 @@ utils::globalVariables(c(
   "violating",
   "where",
   "rule",
-  "value"
+  "value",
+  "relation",
+  "org_prefix_allowed"
 ))

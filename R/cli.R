@@ -54,6 +54,12 @@ validate_submission_cli <- function(args = NULL) {
       default = NULL,
       help = "Output file to save validation results",
       metavar = "output_file"
+    ),
+    optparse::make_option(
+      c("-r", "--relations"),
+      action = "store_true",
+      default = FALSE,
+      help = "Also validate foreign-key relations between tables (requires a database connection)"
     )
   )
 
@@ -92,7 +98,8 @@ validate_submission_cli <- function(args = NULL) {
     data_dir,
     tables = tables_to_validate,
     ncei = parsed$options$ncei,
-    output_file = parsed$options$output
+    output_file = parsed$options$output,
+    relations = parsed$options$relations
   )
 
   if (success) {

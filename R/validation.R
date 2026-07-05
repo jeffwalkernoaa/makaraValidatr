@@ -301,10 +301,10 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
         parse = parse_errors,
         data = data_errors,
         .id = "type"
-      ) |> 
+      ) |>
         mutate(
-          type = factor(type, levels = c("file", "column", "parse", "data"))
-        ) |> 
+          type = factor(type, levels = c("file", "column", "parse", "data", "relation"))
+        ) |>
         arrange(type, rule, row)
 
       if (nrow(errors) > 0) {
@@ -350,6 +350,12 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
 #'   loading and `manual_rules_file`).
 #' @param verbose Logical, whether to print detailed logging output
 #' @param stop_on_error Logical, whether to stop on first validation error
+#' @param relations Logical, whether to also validate foreign-key relations
+#'   between tables (see `validate_relations()`). Requires a database
+#'   connection; defaults to `FALSE` so default behavior is unchanged.
+#' @param conn Optional DBI connection to the Makara database, used only
+#'   when `relations = TRUE`. If `NULL`, a connection is created via
+#'   `makara_db_connect()` and closed on exit.
 #'
 #' @return Logical value: TRUE if all validations passed, FALSE otherwise
 #'
@@ -372,6 +378,9 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
 #'
 #' # Use custom manual rules from a local CSV file
 #' validate_submission("/path/to/data", manual_rules_file = "manual_rules.csv")
+#'
+#' # Also validate foreign-key relations against the Makara database
+#' validate_submission("/path/to/data", relations = TRUE)
 #' }
 #'
 #' @importFrom dplyr bind_rows
@@ -389,7 +398,9 @@ validate_submission <- function(data_dir,
                                 manual_rules_file = NULL,
                                 manual_rules = NULL,
                                 verbose = TRUE,
-                                stop_on_error = FALSE) {
+                                stop_on_error = FALSE,
+                                relations = FALSE,
+                                conn = NULL) {
   results <- list()
   overall_success <- TRUE
   
@@ -460,6 +471,26 @@ validate_submission <- function(data_dir,
       }
     } else {
       log_info("Skipping, file not found: {file_path}")
+    }
+    log_info(" ")
+  }
+
+  # Validate cross-table foreign-key relations, if requested
+  if (isTRUE(relations)) {
+    log_info("=== Validating relations ===")
+    relation_errors <- validate_relations(
+      data_dir,
+      tables = tables,
+      columns = columns,
+      conn = conn,
+      verbose = verbose
+    )
+
+    if (nrow(relation_errors) > 0) {
+      for (relation_table in unique(relation_errors$table)) {
+        table_relation_errors <- relation_errors[relation_errors$table == relation_table, ]
+        results[[relation_table]] <- bind_rows(results[[relation_table]], table_relation_errors)
+      }
     }
     log_info(" ")
   }

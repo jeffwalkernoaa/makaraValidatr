@@ -16,7 +16,9 @@ validate_submission(
   manual_rules_file = NULL,
   manual_rules = NULL,
   verbose = TRUE,
-  stop_on_error = FALSE
+  stop_on_error = FALSE,
+  relations = FALSE,
+  conn = NULL
 )
 }
 \arguments{
@@ -54,6 +56,14 @@ loading and \code{manual_rules_file}).}
 \item{verbose}{Logical, whether to print detailed logging output}
 
 \item{stop_on_error}{Logical, whether to stop on first validation error}
+
+\item{relations}{Logical, whether to also validate foreign-key relations
+between tables (see \code{validate_relations()}). Requires a database
+connection; defaults to \code{FALSE} so default behavior is unchanged.}
+
+\item{conn}{Optional DBI connection to the Makara database, used only
+when \code{relations = TRUE}. If \code{NULL}, a connection is created via
+\code{makara_db_connect()} and closed on exit.}
 }
 \value{
 Logical value: TRUE if all validations passed, FALSE otherwise
@@ -82,6 +92,9 @@ validate_submission("/path/to/data", reference_tables_file = "reference_tables.c
 
 # Use custom manual rules from a local CSV file
 validate_submission("/path/to/data", manual_rules_file = "manual_rules.csv")
+
+# Also validate foreign-key relations against the Makara database
+validate_submission("/path/to/data", relations = TRUE)
 }
 
 }

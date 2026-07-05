@@ -47,10 +47,28 @@ generate_required_rules <- function(columns, ncei = FALSE) {
   )
 }
 
+#' Organization-prefixed variants of the `code`/`code_list` format patterns
+#'
+#' Allows a single optional `ORG:` prefix on a code (or on each item of a
+#' code list), for columns annotated `org_prefix_allowed = TRUE` in
+#' column_definitions (relation columns that may carry a cross-organization
+#' `ORG:CODE` prefix, per the Django FK widgets).
+#'
+#' @noRd
+.org_prefixed_formats <- function() {
+  c(
+    code = "^([A-Z0-9_-]+:)?[A-Z0-9_-]+$",
+    code_list = "^([A-Z0-9_-]+:)?[A-Z0-9_-]+([, ]+([A-Z0-9_-]+:)?[A-Z0-9_-]+)*$"
+  )
+}
+
 #' Generate validation rules for data formats
 #'
 #' Creates rules to check that fields match expected format patterns
-#' (e.g., date, timestamp, code, URL, JSON).
+#' (e.g., date, timestamp, code, URL, JSON). Columns annotated
+#' `org_prefix_allowed = TRUE` (relation columns that may carry an `ORG:`
+#' prefix) use a relaxed `code`/`code_list` pattern allowing one optional
+#' `ORG:` prefix; all other columns use the strict patterns in `formats`.
 #'
 #' @param columns Data frame with column definitions
 #'
@@ -60,10 +78,15 @@ generate_required_rules <- function(columns, ncei = FALSE) {
 #' @importFrom glue glue
 #' @export
 generate_format_rules <- function(columns) {
+  org_prefixed_formats <- .org_prefixed_formats()
+
   columns |>
     filter(type %in% c(names(formats), "json")) |>
     transmute(
       rule = case_when(
+        type %in% names(org_prefixed_formats) & org_prefix_allowed ~ glue(
+          "if (!is.na({name})) grepl(\"{org_prefixed_formats[type]}\",{name})"
+        ),
         type %in% names(formats) ~ glue(
           "if (!is.na({name})) grepl(formats[[\"{type}\"]],{name})"
         ),

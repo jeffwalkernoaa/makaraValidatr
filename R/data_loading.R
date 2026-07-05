@@ -15,7 +15,7 @@
 #'   definitions
 #'
 #' @importFrom readr read_csv cols col_character col_integer col_double col_logical
-#' @importFrom dplyr mutate across coalesce nest_by
+#' @importFrom dplyr mutate across coalesce nest_by filter pull
 #' @importFrom tibble deframe
 #' @export
 load_column_definitions <- function(file = NULL,
@@ -97,7 +97,6 @@ load_column_definitions <- function(file = NULL,
   )
 
   required_columns <- c(
-    "index",
     "table",
     "name",
     "type",
@@ -109,6 +108,8 @@ load_column_definitions <- function(file = NULL,
     "required_unless",
     "required_ncei",
     "reference_table",
+    "relation",
+    "org_prefix_allowed",
     "notes"
   )
   missing_columns <- setdiff(required_columns, names(parsed))
@@ -123,6 +124,11 @@ load_column_definitions <- function(file = NULL,
     )
   }
 
+  # PARS-only rows (no corresponding Makara table/column) carry an empty
+  # `table` value; drop them before validating table names.
+  parsed <- parsed |>
+    filter(!is.na(table) & nzchar(table))
+
   if (any(is.na(parsed$table)) || any(!nzchar(parsed$table))) {
     stop(
       "Column definitions CSV from ",
@@ -132,10 +138,14 @@ load_column_definitions <- function(file = NULL,
     )
   }
 
-  parsed |>
+  parsed <- parsed |>
     mutate(
       across(where(is.logical), \(x) coalesce(x, FALSE))
-    ) |>
+    )
+
+  .validate_relation_targets(parsed, source)
+
+  parsed |>
     nest_by(table) |>
     deframe()
 }
@@ -143,12 +153,125 @@ load_column_definitions <- function(file = NULL,
 .column_definitions_col_types <- function() {
   cols(
     .default = col_character(),
-    index = col_integer(),
     min = col_double(),
     required = col_logical(),
     required_ncei = col_logical(),
+    org_prefix_allowed = col_logical(),
     max = col_double()
   )
+}
+
+#' Validate relation annotations in column definitions
+#'
+#' Fail-fast check that every non-blank `relation` value names a table
+#' present in the parsed column definitions, that the named parent table has
+#' exactly one column with a non-blank `unique_by` (the derived key column),
+#' and that the child table carries the conventional context columns
+#' (`organization_code`, plus `deployment_code` for deployment-scoped and
+#' analyses relations).
+#'
+#' @param parsed Data frame of parsed column definitions (all tables)
+#' @param source Character, source description for error messages
+#'
+#' @return Invisibly `NULL`; called for its side effect of `stop()`ing on
+#'   invalid relation annotations
+#'
+#' @importFrom dplyr filter pull
+#' @noRd
+.validate_relation_targets <- function(parsed, source) {
+  relation_rows <- parsed |>
+    filter(!is.na(relation) & nzchar(relation))
+
+  if (nrow(relation_rows) == 0) {
+    return(invisible(NULL))
+  }
+
+  for (i in seq_len(nrow(relation_rows))) {
+    row <- relation_rows[i, ]
+    parent_table <- row$relation
+    child_table <- row$table
+    child_col <- row$name
+
+    parent_rows <- parsed |> filter(table == parent_table)
+    if (nrow(parent_rows) == 0) {
+      stop(
+        "Column definitions CSV from ",
+        source,
+        " has a relation on '",
+        child_table,
+        ".",
+        child_col,
+        "' referencing unknown table '",
+        parent_table,
+        "'.",
+        call. = FALSE
+      )
+    }
+
+    key_cols <- parent_rows |>
+      filter(!is.na(unique_by) & nzchar(unique_by)) |>
+      pull(name)
+
+    if (length(key_cols) != 1) {
+      stop(
+        "Column definitions CSV from ",
+        source,
+        " has a relation on '",
+        child_table,
+        ".",
+        child_col,
+        "' referencing table '",
+        parent_table,
+        "', which must have exactly one column with a non-blank 'unique_by' ",
+        "(found ",
+        length(key_cols),
+        ").",
+        call. = FALSE
+      )
+    }
+
+    child_rows <- parsed |> filter(table == child_table)
+    child_names <- child_rows$name
+
+    if (!"organization_code" %in% child_names) {
+      stop(
+        "Column definitions CSV from ",
+        source,
+        " has a relation on '",
+        child_table,
+        ".",
+        child_col,
+        "' but table '",
+        child_table,
+        "' is missing the conventional 'organization_code' context column.",
+        call. = FALSE
+      )
+    }
+
+    key_arity <- lengths(strsplit(parent_rows$unique_by[
+      !is.na(parent_rows$unique_by) & nzchar(parent_rows$unique_by)
+    ], ","))
+
+    needs_deployment_context <- parent_table == "analyses" || isTRUE(key_arity == 2)
+    if (needs_deployment_context && !"deployment_code" %in% child_names) {
+      stop(
+        "Column definitions CSV from ",
+        source,
+        " has a relation on '",
+        child_table,
+        ".",
+        child_col,
+        "' referencing deployment-scoped table '",
+        parent_table,
+        "' but table '",
+        child_table,
+        "' is missing the conventional 'deployment_code' context column.",
+        call. = FALSE
+      )
+    }
+  }
+
+  invisible(NULL)
 }
 
 .column_definitions_cache_file <- function() {

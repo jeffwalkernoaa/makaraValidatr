@@ -14,5 +14,8 @@ Data frame with columns: rule, name, label
 }
 \description{
 Creates rules to check that fields match expected format patterns
-(e.g., date, timestamp, code, URL, JSON).
+(e.g., date, timestamp, code, URL, JSON). Columns annotated
+\code{org_prefix_allowed = TRUE} (relation columns that may carry an \verb{ORG:}
+prefix) use a relaxed \code{code}/\code{code_list} pattern allowing one optional
+\verb{ORG:} prefix; all other columns use the strict patterns in \code{formats}.
 }

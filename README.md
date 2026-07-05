@@ -14,6 +14,7 @@ The types of checks include:
 2. Data type and format is correct for each field
 3. Data ranges are within acceptable limits
 4. Fields referring to reference tables contain only valid codes
+5. Optionally, fields referring to other Makara tables (foreign keys) resolve to a real row, either within the submission itself or in the Makara database (see [Foreign-Key Relation Validation](#foreign-key-relation-validation))
 
 Output from the validation process provides a summary of errors for each rule and table. Detailed results of all errors can also be saved to a CSV file.
 
@@ -92,6 +93,65 @@ validate_submission(
 )
 ```
 
+## Foreign-Key Relation Validation
+
+In addition to the checks above, `makaraValidatr` can validate that foreign-key
+references between tables actually resolve — for example, that a
+`deployments.csv` row's `project_code` points at a project that exists
+somewhere (either elsewhere in the submission or already in the Makara
+database). This requires a connection to the Makara PostgreSQL database, so
+it is off by default.
+
+```r
+library(makaraValidatr)
+
+# Validate a submission including foreign-key relations
+# (connects to the Makara database using DB_* environment variables)
+validate_submission("/path/to/templates", relations = TRUE)
+
+# Run relation validation on its own
+validate_relations("/path/to/templates")
+
+# Validate specific tables only
+validate_relations("/path/to/templates", tables = c("deployments", "recordings"))
+
+# Reuse an existing DBI connection instead of opening a new one
+conn <- makara_db_connect()
+validate_submission("/path/to/templates", relations = TRUE, conn = conn)
+DBI::dbDisconnect(conn)
+```
+
+From the command line, pass `-r`/`--relations`:
+
+```sh
+Rscript -e 'makaraValidatr::validate_submission_cli()' /path/to/templates --relations
+```
+
+### Database connection
+
+`makara_db_connect()` (and `validate_relations()`/`validate_submission(relations = TRUE)`
+when no `conn` is supplied) connects using the `DBI`/`RPostgres` packages and
+the same environment variables as the Django app, with these defaults:
+
+| Variable | Default |
+| --- | --- |
+| `DB_NAME` | `makara` |
+| `DB_HOST` | `localhost` |
+| `DB_PORT` | `5432` |
+| `DB_USER` | `makara` |
+| `DB_PASSWORD` | *(empty)* |
+
+Install the additional dependencies to use this feature:
+
+```r
+install.packages(c("DBI", "RPostgres"))
+```
+
+Foreign-key values may carry an owner-organization prefix (`ORG:CODE`) for
+columns where this is allowed (declared via `org_prefix_allowed` in the
+column definitions), mirroring the Makara Django admin's CSV import/export
+conventions.
+
 ## Dependencies
 
 Required packages:
@@ -106,6 +166,10 @@ Required packages:
 - logger (>= 0.2.0)
 - stringr (>= 1.4.0)
 - lubridate (>= 1.9.0)
+
+Optional (only required for foreign-key relation validation):
+- DBI
+- RPostgres
 
 ## License
 
