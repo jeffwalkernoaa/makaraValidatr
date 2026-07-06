@@ -99,14 +99,14 @@ In addition to the checks above, `makaraValidatr` can validate that foreign-key
 references between tables actually resolve — for example, that a
 `deployments.csv` row's `project_code` points at a project that exists
 somewhere (either elsewhere in the submission or already in the Makara
-database). This requires a connection to the Makara PostgreSQL database, so
-it is off by default.
+database). This requires a connection to the Makara database — either the
+BigQuery replica or the PostgreSQL database — so it is off by default.
 
 ```r
 library(makaraValidatr)
 
 # Validate a submission including foreign-key relations
-# (connects to the Makara database using DB_* environment variables)
+# (auto-selects the backend from environment variables: see below)
 validate_submission("/path/to/templates", relations = TRUE)
 
 # Run relation validation on its own
@@ -115,8 +115,10 @@ validate_relations("/path/to/templates")
 # Validate specific tables only
 validate_relations("/path/to/templates", tables = c("deployments", "recordings"))
 
-# Reuse an existing DBI connection instead of opening a new one
-conn <- makara_db_connect()
+# Reuse an existing DBI connection instead of opening a new one.
+# makara_connect() picks the backend automatically; you can also call
+# makara_bq_connect() or makara_db_connect() directly to force one.
+conn <- makara_connect()
 validate_submission("/path/to/templates", relations = TRUE, conn = conn)
 DBI::dbDisconnect(conn)
 ```
@@ -129,9 +131,46 @@ Rscript -e 'makaraValidatr::validate_submission_cli()' /path/to/templates --rela
 
 ### Database connection
 
-`makara_db_connect()` (and `validate_relations()`/`validate_submission(relations = TRUE)`
-when no `conn` is supplied) connects using the `DBI`/`RPostgres` packages and
-the same environment variables as the Django app, with these defaults:
+When no `conn` is supplied, `validate_relations()` /
+`validate_submission(relations = TRUE)` open a connection via
+`makara_connect()`, which **auto-selects the backend from the environment**:
+
+- If `BQ_PROJECT` is set, it connects to the **BigQuery replica**
+  (`makara_bq_connect()`, using the `DBI`/`bigrquery` packages).
+- Otherwise it connects to **PostgreSQL** (`makara_db_connect()`, using
+  `DBI`/`RPostgres`), preserving the previous behavior.
+
+BigQuery is preferred whenever it is configured. Both queries are identical —
+the replica has the same tables and columns — so relation errors are the same
+regardless of backend.
+
+**BigQuery** (`makara_bq_connect()`):
+| Variable | Meaning | Default |
+| --- | --- | --- |
+| `BQ_PROJECT` | GCP project containing the replica dataset (also selects this backend) | `ggn-nmfs-pacm-dev-1` |
+| `BQ_DATASET` | BigQuery dataset holding the Makara replica tables | `makara` |
+
+Authentication uses Google [Application Default Credentials][adc] via `gargle`
+(e.g. `GOOGLE_APPLICATION_CREDENTIALS`, `gcloud auth application-default
+login`, or GCE metadata); the package does not run an interactive OAuth flow
+for you.
+
+Minimal one-time ADC setup with the [gcloud CLI][gcloud]:
+
+```sh
+# log in and set project
+gcloud auth login
+gcloud config set project ggn-nmfs-pacm-dev-1
+
+# Log in for Application Default Credentials (opens a browser)
+gcloud auth application-default login
+
+# Confirm it worked
+gcloud auth application-default print-access-token >/dev/null && echo "ADC OK"
+```
+
+**PostgreSQL** (`makara_db_connect()`) — the same environment variables as the
+Django app, with these defaults:
 
 | Variable | Default |
 | --- | --- |
@@ -141,10 +180,11 @@ the same environment variables as the Django app, with these defaults:
 | `DB_USER` | `makara` |
 | `DB_PASSWORD` | *(empty)* |
 
-Install the additional dependencies to use this feature:
+Install the additional dependencies for the backend you use:
 
 ```r
-install.packages(c("DBI", "RPostgres"))
+install.packages(c("DBI", "bigrquery"))  # BigQuery
+install.packages(c("DBI", "RPostgres"))  # PostgreSQL
 ```
 
 Foreign-key values may carry an owner-organization prefix (`ORG:CODE`) for
@@ -169,7 +209,8 @@ Required packages:
 
 Optional (only required for foreign-key relation validation):
 - DBI
-- RPostgres
+- bigrquery (BigQuery backend)
+- RPostgres (PostgreSQL backend)
 
 ## License
 

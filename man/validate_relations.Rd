@@ -28,8 +28,9 @@ definitions from this file instead of the NOAA column definition CSV
 endpoint.}
 
 \item{conn}{Optional DBI connection to the Makara database. If \code{NULL}, a
-connection is created via \code{makara_db_connect()} and closed on exit;
-an injected connection is left open for the caller to manage.}
+connection is created via \code{makara_connect()}, which auto-selects the
+BigQuery replica (when \code{BQ_PROJECT} is set) or PostgreSQL, and closed on
+exit; an injected connection is left open for the caller to manage.}
 
 \item{verbose}{Logical, whether to print detailed logging output}
 }
@@ -40,8 +41,9 @@ A tibble with columns: \code{table}, \code{type} (\code{"relation"}), \code{row}
 \description{
 For each annotated relation column (\code{relation} in column_definitions) in
 each submitted table, confirms that every referenced code resolves either
-within the submission itself or in the existing Makara PostgreSQL
-database. Mirrors the scoping semantics of the Django import-export
+within the submission itself or in the existing Makara database (the
+BigQuery replica when \code{BQ_PROJECT} is set, otherwise PostgreSQL).
+Mirrors the scoping semantics of the Django import-export
 widgets (org-scoped, deployment-scoped, and the analyses composite-key
 special case).
 }

@@ -6,7 +6,7 @@
 \alias{makaraValidatr-package}
 \title{makaraValidatr: Data validation tools for Makara passive acoustics monitoring database}
 \description{
-Tools for validating data in the Makara passive acoustics monitoring database. Includes functions for checking data types, ranges, and consistency. Designed for validating template files prior to submission to the Makara database.
+Tools for validating data in the Makara passive acoustics monitoring database. Includes functions for checking data types, ranges, consistency, and relations. Designed for validating template files prior to submission and import to the Makara database.
 }
 \author{
 \strong{Maintainer}: Jeff Walker \email{jeffrey.walker@noaa.gov}

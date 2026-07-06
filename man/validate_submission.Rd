@@ -63,7 +63,8 @@ connection; defaults to \code{FALSE} so default behavior is unchanged.}
 
 \item{conn}{Optional DBI connection to the Makara database, used only
 when \code{relations = TRUE}. If \code{NULL}, a connection is created via
-\code{makara_db_connect()} and closed on exit.}
+\code{makara_connect()}, which auto-selects the BigQuery replica (when
+\code{BQ_PROJECT} is set) or PostgreSQL, and closed on exit.}
 }
 \value{
 Logical value: TRUE if all validations passed, FALSE otherwise

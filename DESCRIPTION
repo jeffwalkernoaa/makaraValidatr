@@ -4,8 +4,8 @@ Version: 0.5.0
 Authors@R:
     person("Jeff", "Walker", , "jeffrey.walker@noaa.gov", role = c("aut", "cre"))
 Description: Tools for validating data in the Makara passive acoustics monitoring database.
-    Includes functions for checking data types, ranges, and consistency. Designed for
-    validating template files prior to submission to the Makara database.
+    Includes functions for checking data types, ranges, consistency, and relations. Designed
+    for validating template files prior to submission and import to the Makara database.
 License: Apache License (>= 2) + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -34,4 +34,6 @@ Suggests:
     usethis,
     DBI,
     RPostgres,
-    RSQLite
+    RSQLite,
+    bigrquery,
+    withr

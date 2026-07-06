@@ -517,8 +517,9 @@ check_relation_column <- function(data, table, col_def, scope, keys) {
 #'
 #' For each annotated relation column (`relation` in column_definitions) in
 #' each submitted table, confirms that every referenced code resolves either
-#' within the submission itself or in the existing Makara PostgreSQL
-#' database. Mirrors the scoping semantics of the Django import-export
+#' within the submission itself or in the existing Makara database (the
+#' BigQuery replica when `BQ_PROJECT` is set, otherwise PostgreSQL).
+#' Mirrors the scoping semantics of the Django import-export
 #' widgets (org-scoped, deployment-scoped, and the analyses composite-key
 #' special case).
 #'
@@ -532,8 +533,9 @@ check_relation_column <- function(data, table, col_def, scope, keys) {
 #'   definitions from this file instead of the NOAA column definition CSV
 #'   endpoint.
 #' @param conn Optional DBI connection to the Makara database. If `NULL`, a
-#'   connection is created via `makara_db_connect()` and closed on exit;
-#'   an injected connection is left open for the caller to manage.
+#'   connection is created via `makara_connect()`, which auto-selects the
+#'   BigQuery replica (when `BQ_PROJECT` is set) or PostgreSQL, and closed on
+#'   exit; an injected connection is left open for the caller to manage.
 #' @param verbose Logical, whether to print detailed logging output
 #'
 #' @return A tibble with columns: `table`, `type` (`"relation"`), `row`,
@@ -593,7 +595,7 @@ validate_relations <- function(data_dir,
 
   owns_conn <- is.null(conn)
   if (owns_conn) {
-    conn <- makara_db_connect()
+    conn <- makara_connect()
     on.exit(DBI::dbDisconnect(conn), add = TRUE)
   }
 

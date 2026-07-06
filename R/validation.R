@@ -355,7 +355,8 @@ validate_table <- function(data_dir, table, columns, reference_tables, manual_ru
 #'   connection; defaults to `FALSE` so default behavior is unchanged.
 #' @param conn Optional DBI connection to the Makara database, used only
 #'   when `relations = TRUE`. If `NULL`, a connection is created via
-#'   `makara_db_connect()` and closed on exit.
+#'   `makara_connect()`, which auto-selects the BigQuery replica (when
+#'   `BQ_PROJECT` is set) or PostgreSQL, and closed on exit.
 #'
 #' @return Logical value: TRUE if all validations passed, FALSE otherwise
 #'

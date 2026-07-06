@@ -60,6 +60,132 @@ makara_db_connect <- function(dbname = Sys.getenv("DB_NAME", "makara"),
   )
 }
 
+#' Connect to the Makara BigQuery replica
+#'
+#' Opens a DBI connection to the BigQuery replica of the Makara database using
+#' `bigrquery`, defaulting to the `BQ_PROJECT`, `BQ_DATASET`, and `BQ_BILLING`
+#' environment variables. The `dataset` becomes the connection's default
+#' dataset, so the same unqualified SQL used for PostgreSQL (`FROM projects`)
+#' resolves against the replica dataset unchanged.
+#'
+#' Authentication uses Application Default Credentials via `gargle` (e.g.
+#' `GOOGLE_APPLICATION_CREDENTIALS`, `gcloud` ADC, or GCE metadata); this
+#' function does not call `bigrquery::bq_auth()` itself.
+#'
+#' @param project GCP project containing the replica dataset
+#' @param dataset BigQuery dataset holding the Makara replica tables. Set as
+#'   the connection's default dataset.
+#' @param billing GCP project billed for queries (defaults to `project`)
+#'
+#' @return A DBI connection object. The caller is responsible for closing it
+#'   with `DBI::dbDisconnect()`.
+#'
+#' @examples
+#' \dontrun{
+#' conn <- makara_bq_connect()
+#' on.exit(DBI::dbDisconnect(conn))
+#' }
+#'
+#' @export
+makara_bq_connect <- function(project = Sys.getenv("BQ_PROJECT", ""),
+                              dataset = Sys.getenv("BQ_DATASET", ""),
+                              billing = Sys.getenv("BQ_BILLING", project)) {
+  if (!requireNamespace("DBI", quietly = TRUE)) {
+    stop(
+      "Package 'DBI' is required to connect to the Makara BigQuery replica. ",
+      "Install with: install.packages('DBI')",
+      call. = FALSE
+    )
+  }
+  if (!requireNamespace("bigrquery", quietly = TRUE)) {
+    stop(
+      "Package 'bigrquery' is required to connect to the Makara BigQuery ",
+      "replica. Install with: install.packages('bigrquery')",
+      call. = FALSE
+    )
+  }
+  if (!nzchar(project)) {
+    stop(
+      "No BigQuery project specified. Set the 'BQ_PROJECT' environment ",
+      "variable or pass 'project'.",
+      call. = FALSE
+    )
+  }
+  if (!nzchar(dataset)) {
+    stop(
+      "No BigQuery dataset specified. Set the 'BQ_DATASET' environment ",
+      "variable or pass 'dataset'.",
+      call. = FALSE
+    )
+  }
+
+  tryCatch(
+    DBI::dbConnect(
+      bigrquery::bigquery(),
+      project = project,
+      dataset = dataset,
+      billing = billing
+    ),
+    error = function(e) {
+      stop(
+        "Could not connect to the Makara BigQuery replica at ",
+        project, ".", dataset, " (billing: ", billing, ")",
+        ": ", conditionMessage(e),
+        call. = FALSE
+      )
+    }
+  )
+}
+
+#' Detect which relation-validation backend to use from the environment
+#'
+#' BigQuery is preferred whenever it is configured: if `BQ_PROJECT` is set,
+#' selects BigQuery; otherwise falls back to PostgreSQL (its `DB_*` env vars
+#' and localhost defaults), preserving backward-compatible behavior.
+#'
+#' @return Character, either `"bigquery"` or `"postgres"`
+#'
+#' @noRd
+.detect_backend <- function() {
+  if (nzchar(Sys.getenv("BQ_PROJECT"))) {
+    "bigquery"
+  } else {
+    "postgres"
+  }
+}
+
+#' Connect to the Makara database, auto-selecting the backend
+#'
+#' Dispatches to [makara_bq_connect()] or [makara_db_connect()] based on
+#' `backend`. When `backend` is `NULL` (the default), the backend is detected
+#' from the environment: BigQuery if `BQ_PROJECT` is set, otherwise PostgreSQL.
+#'
+#' @param backend Optional character, `"bigquery"` or `"postgres"`. When
+#'   `NULL`, detected from the environment.
+#'
+#' @return A DBI connection object. The caller is responsible for closing it
+#'   with `DBI::dbDisconnect()`.
+#'
+#' @examples
+#' \dontrun{
+#' conn <- makara_connect()
+#' on.exit(DBI::dbDisconnect(conn))
+#' }
+#'
+#' @export
+makara_connect <- function(backend = NULL) {
+  if (is.null(backend)) {
+    backend <- .detect_backend()
+  }
+  backend <- match.arg(backend, c("bigquery", "postgres"))
+
+  if (identical(backend, "bigquery")) {
+    makara_bq_connect()
+  } else {
+    makara_db_connect()
+  }
+}
+
 #' Parent tables reachable directly by organization_code
 #'
 #' @noRd
