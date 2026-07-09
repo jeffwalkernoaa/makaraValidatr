@@ -150,11 +150,14 @@ test_that("validate_relations stops with an error when the DB connection fails",
     project_code = "PROJ1"
   ))
 
-  old_host <- Sys.getenv("DB_HOST", unset = NA)
+  old_bq_project <- Sys.getenv("BQ_PROJECT", unset = NA)
+  Sys.unsetenv("BQ_PROJECT")
+  old_db_host <- Sys.getenv("DB_HOST", unset = NA)
   Sys.setenv(DB_HOST = "nonexistent-host-for-test")
   Sys.setenv(DB_PORT = "1")
   on.exit({
-    if (is.na(old_host)) Sys.unsetenv("DB_HOST") else Sys.setenv(DB_HOST = old_host)
+    if (is.na(old_bq_project)) Sys.unsetenv("BQ_PROJECT") else Sys.setenv("BQ_PROJECT" = old_bq_project)
+    if (is.na(old_db_host)) Sys.unsetenv("DB_HOST") else Sys.setenv("DB_HOST" = old_db_host)
   })
 
   expect_error(
