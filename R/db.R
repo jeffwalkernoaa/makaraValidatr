@@ -172,6 +172,7 @@ makara_bq_connect <- function(project = Sys.getenv("BQ_PROJECT", ""),
 #' on.exit(DBI::dbDisconnect(conn))
 #' }
 #'
+#' @importFrom logger log_info
 #' @export
 makara_connect <- function(backend = NULL) {
   if (is.null(backend)) {
@@ -179,6 +180,7 @@ makara_connect <- function(backend = NULL) {
   }
   backend <- match.arg(backend, c("bigquery", "postgres"))
 
+  log_info("Connecting to Makara database backend: {backend}")
   if (identical(backend, "bigquery")) {
     makara_bq_connect()
   } else {
