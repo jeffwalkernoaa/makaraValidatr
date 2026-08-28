@@ -77,6 +77,10 @@ library(makaraValidatr)
 install.packages("bigrquery")
 
 # STEP 1: Authenticate BigQuery
+
+# PAM-WW ONLY: if you are on a pam-ww workstation, run this line first (otherwise skip to the next line)
+gargle::cred_funs_add(credentials_gce = NULL) # pam-ww only!
+
 # Replace the email field with your email address
 # This should open a web browser and ask you to authorize access to your Google account
 bigrquery::bq_auth(
@@ -87,6 +91,7 @@ bigrquery::bq_auth(
     "https://www.googleapis.com/auth/cloud-platform"
   )
 )
+
 
 # STEP 2: Set Environmental Variables
 # makaraValidatr uses the `BQ_PROJECT` and `BQ_DATASET` variables to connect to the Makara dataset in BigQuery
