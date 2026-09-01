@@ -41,10 +41,10 @@ MIN_DATE <- "1980-01-01"
 REFERENCE_TABLES_URL <- "https://passiveacoustics.fisheries.noaa.gov/data/reference_tables.json"
 
 #' @noRd
-COLUMN_DEFINITIONS_URL <- "https://passiveacoustics.fisheries.noaa.gov/data/makara/templates/column_definitions.csv"
+COLUMN_DEFINITIONS_URL <- "https://passiveacoustics.fisheries.noaa.gov/data/column_definitions.csv"
 
 #' @noRd
-MANUAL_RULES_URL <- "https://passiveacoustics.fisheries.noaa.gov/data/makara/templates/manual_rules.csv"
+MANUAL_RULES_URL <- "https://passiveacoustics.fisheries.noaa.gov/data/manual_rules.csv"
 
 #' @keywords internal
 .onLoad <- function(libname, pkgname) {

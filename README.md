@@ -107,8 +107,8 @@ validate_submission("/path/to/templates", relations = TRUE)
 
 By default, the package fetches the latest validation metadata from the NOAA Passive Acoustics Server. From these files, the package automatically generates the associated validation rules.
 
-- Column definitions: https://passiveacoustics.fisheries.noaa.gov/data/makara/templates/column_definitions.csv
-- Manual rules: https://passiveacoustics.fisheries.noaa.gov/data/makara/templates/manual_rules.csv
+- Column definitions: https://passiveacoustics.fisheries.noaa.gov/data/column_definitions.csv
+- Manual rules: https://passiveacoustics.fisheries.noaa.gov/data/manual_rules.csv
 - Reference tables: https://passiveacoustics.fisheries.noaa.gov/data/reference_tables.json
 
 The downloaded CSV and JSON files are cached in the user cache directory. If the NOAA Passive Acoustics server cannot be reached later, the package uses the cached file when available.
